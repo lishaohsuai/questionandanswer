@@ -1,0 +1,40 @@
+\contentsline {section}{\numberline {1}Spring}{3}% 
+\contentsline {subsubsection}{\numberline {1.0.1}Spring 框架能带来哪些好处}{3}% 
+\contentsline {subsubsection}{\numberline {1.0.2}什么是控制反转(IOC)}{3}% 
+\contentsline {subsubsection}{\numberline {1.0.3}什么是依赖注入?}{3}% 
+\contentsline {subsubsection}{\numberline {1.0.4}第三个三级标题}{3}% 
+\contentsline {section}{\numberline {2}java基础}{3}% 
+\contentsline {subsubsection}{\numberline {2.0.1}快速失败(fail-fast) 和 安全失败(fail-safe) 的区别是什么?}{3}% 
+\contentsline {subsubsection}{\numberline {2.0.2}hashmap的数据结构}{4}% 
+\contentsline {subsubsection}{\numberline {2.0.3}heap和stack有什么区别}{4}% 
+\contentsline {subsubsection}{\numberline {2.0.4}Array 和 ArrayList 的区别}{4}% 
+\contentsline {subsubsection}{\numberline {2.0.5}Collection 和 Collections 的区别}{4}% 
+\contentsline {section}{\numberline {3}JVM}{5}% 
+\contentsline {subsubsection}{\numberline {3.0.1}GC的三种收集方法: 标记清除, 标记整理, 复制算法的原理与特点, 分别用在什么地方, 如果让你优化收集方法, 有什么思路}{5}% 
+\contentsline {subsubsection}{\numberline {3.0.2}JVM的主要组成部分及其作用?}{6}% 
+\contentsline {subsubsection}{\numberline {3.0.3}JVM运行时数据区}{6}% 
+\contentsline {subsubsection}{\numberline {3.0.4}说一下堆栈的区别?}{7}% 
+\contentsline {subsubsection}{\numberline {3.0.5}对象的访问定位?}{7}% 
+\contentsline {subsubsection}{\numberline {3.0.6}垃圾回收器的基本原理是什么?}{8}% 
+\contentsline {subsubsection}{\numberline {3.0.7}在java中, 对象什么时候可以被垃圾回收?}{9}% 
+\contentsline {section}{\numberline {4}Redis}{9}% 
+\contentsline {subsubsection}{\numberline {4.0.1}什么是Redis?}{9}% 
+\contentsline {subsubsection}{\numberline {4.0.2}AOF和RDB两种持久化方式区别}{9}% 
+\contentsline {subsubsection}{\numberline {4.0.3}为什么要使用Redis}{9}% 
+\contentsline {subsubsection}{\numberline {4.0.4}为什么要使用Redis而不用map/guavaCache做缓存}{10}% 
+\contentsline {subsubsection}{\numberline {4.0.5}分布式锁如何使用redis实现}{10}% 
+\contentsline {subsubsection}{\numberline {4.0.6}Redis的内存淘汰策略有哪些}{10}% 
+\contentsline {subsubsection}{\numberline {4.0.7}Redis事物的概念}{10}% 
+\contentsline {subsubsection}{\numberline {4.0.8}RedisSharding}{11}% 
+\contentsline {subsubsection}{\numberline {4.0.9}缓存雪崩}{11}% 
+\contentsline {subsubsection}{\numberline {4.0.10}缓存穿透}{12}% 
+\contentsline {subsubsection}{\numberline {4.0.11}缓存击穿}{12}% 
+\contentsline {subsubsection}{\numberline {4.0.12}缓存预热}{12}% 
+\contentsline {section}{\numberline {5}公式的写作}{12}% 
+\contentsline {subsubsection}{\numberline {5.0.1}小练习}{13}% 
+\contentsline {subsubsection}{\numberline {5.0.2}三级标题}{13}% 
+\contentsline {subsubsection}{\numberline {5.0.3}第二个三级标题}{13}% 
+\contentsline {subsubsection}{\numberline {5.0.4}第三个三级标题}{13}% 
+\contentsline {section}{\numberline {6}公式的写作}{13}% 
+\contentsline {subsubsection}{\numberline {6.0.1}练习}{14}% 
+\contentsline {subsubsection}{\numberline {6.0.2}表格的插入}{14}% 

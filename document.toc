@@ -1,40 +1,60 @@
-\contentsline {section}{\numberline {1}Spring}{3}% 
-\contentsline {subsubsection}{\numberline {1.0.1}Spring 框架能带来哪些好处}{3}% 
-\contentsline {subsubsection}{\numberline {1.0.2}什么是控制反转(IOC)}{3}% 
-\contentsline {subsubsection}{\numberline {1.0.3}什么是依赖注入?}{3}% 
-\contentsline {subsubsection}{\numberline {1.0.4}第三个三级标题}{3}% 
-\contentsline {section}{\numberline {2}java基础}{3}% 
-\contentsline {subsubsection}{\numberline {2.0.1}快速失败(fail-fast) 和 安全失败(fail-safe) 的区别是什么?}{3}% 
-\contentsline {subsubsection}{\numberline {2.0.2}hashmap的数据结构}{4}% 
-\contentsline {subsubsection}{\numberline {2.0.3}heap和stack有什么区别}{4}% 
-\contentsline {subsubsection}{\numberline {2.0.4}Array 和 ArrayList 的区别}{4}% 
-\contentsline {subsubsection}{\numberline {2.0.5}Collection 和 Collections 的区别}{4}% 
-\contentsline {section}{\numberline {3}JVM}{5}% 
-\contentsline {subsubsection}{\numberline {3.0.1}GC的三种收集方法: 标记清除, 标记整理, 复制算法的原理与特点, 分别用在什么地方, 如果让你优化收集方法, 有什么思路}{5}% 
-\contentsline {subsubsection}{\numberline {3.0.2}JVM的主要组成部分及其作用?}{6}% 
-\contentsline {subsubsection}{\numberline {3.0.3}JVM运行时数据区}{6}% 
-\contentsline {subsubsection}{\numberline {3.0.4}说一下堆栈的区别?}{7}% 
-\contentsline {subsubsection}{\numberline {3.0.5}对象的访问定位?}{7}% 
-\contentsline {subsubsection}{\numberline {3.0.6}垃圾回收器的基本原理是什么?}{8}% 
-\contentsline {subsubsection}{\numberline {3.0.7}在java中, 对象什么时候可以被垃圾回收?}{9}% 
-\contentsline {section}{\numberline {4}Redis}{9}% 
-\contentsline {subsubsection}{\numberline {4.0.1}什么是Redis?}{9}% 
-\contentsline {subsubsection}{\numberline {4.0.2}AOF和RDB两种持久化方式区别}{9}% 
-\contentsline {subsubsection}{\numberline {4.0.3}为什么要使用Redis}{9}% 
-\contentsline {subsubsection}{\numberline {4.0.4}为什么要使用Redis而不用map/guavaCache做缓存}{10}% 
-\contentsline {subsubsection}{\numberline {4.0.5}分布式锁如何使用redis实现}{10}% 
-\contentsline {subsubsection}{\numberline {4.0.6}Redis的内存淘汰策略有哪些}{10}% 
-\contentsline {subsubsection}{\numberline {4.0.7}Redis事物的概念}{10}% 
-\contentsline {subsubsection}{\numberline {4.0.8}RedisSharding}{11}% 
-\contentsline {subsubsection}{\numberline {4.0.9}缓存雪崩}{11}% 
-\contentsline {subsubsection}{\numberline {4.0.10}缓存穿透}{12}% 
-\contentsline {subsubsection}{\numberline {4.0.11}缓存击穿}{12}% 
-\contentsline {subsubsection}{\numberline {4.0.12}缓存预热}{12}% 
-\contentsline {section}{\numberline {5}公式的写作}{12}% 
-\contentsline {subsubsection}{\numberline {5.0.1}小练习}{13}% 
-\contentsline {subsubsection}{\numberline {5.0.2}三级标题}{13}% 
-\contentsline {subsubsection}{\numberline {5.0.3}第二个三级标题}{13}% 
-\contentsline {subsubsection}{\numberline {5.0.4}第三个三级标题}{13}% 
-\contentsline {section}{\numberline {6}公式的写作}{13}% 
-\contentsline {subsubsection}{\numberline {6.0.1}练习}{14}% 
-\contentsline {subsubsection}{\numberline {6.0.2}表格的插入}{14}% 
+\contentsline {section}{\numberline {1}Spring}{4}% 
+\contentsline {subsubsection}{\numberline {1.0.1}Spring 框架能带来哪些好处}{4}% 
+\contentsline {subsubsection}{\numberline {1.0.2}什么是控制反转(IOC)}{4}% 
+\contentsline {subsubsection}{\numberline {1.0.3}什么是依赖注入?}{4}% 
+\contentsline {subsubsection}{\numberline {1.0.4}Spring 对对象进行创建流程}{4}% 
+\contentsline {subsubsection}{\numberline {1.0.5}第三个三级标题}{5}% 
+\contentsline {section}{\numberline {2}java基础}{5}% 
+\contentsline {subsubsection}{\numberline {2.0.1}快速失败(fail-fast) 和 安全失败(fail-safe) 的区别是什么?}{5}% 
+\contentsline {subsubsection}{\numberline {2.0.2}红黑树}{5}% 
+\contentsline {subsubsection}{\numberline {2.0.3}hashmap的数据结构}{5}% 
+\contentsline {subsubsection}{\numberline {2.0.4}heap和stack有什么区别}{6}% 
+\contentsline {subsubsection}{\numberline {2.0.5}Array 和 ArrayList 的区别}{6}% 
+\contentsline {subsubsection}{\numberline {2.0.6}Java各种锁: 悲观锁, 泪管所, 自旋锁, 偏向锁, 轻量/重量锁, 读写锁, 可重入锁}{6}% 
+\contentsline {subsubsection}{\numberline {2.0.7}Collection 和 Collections 的区别}{6}% 
+\contentsline {subsubsection}{\numberline {2.0.8}接口与抽象类区别}{7}% 
+\contentsline {subsubsection}{\numberline {2.0.9}ArrayList和LinkedList内部实现大致是怎样的? 他们之间的区别和优缺点}{8}% 
+\contentsline {subsubsection}{\numberline {2.0.10}==和equals的区别}{8}% 
+\contentsline {subsubsection}{\numberline {2.0.11}hashCode方法的作用}{8}% 
+\contentsline {subsubsection}{\numberline {2.0.12}反射}{8}% 
+\contentsline {section}{\numberline {3}JVM}{9}% 
+\contentsline {subsubsection}{\numberline {3.0.1}GC的三种收集方法: 标记清除, 标记整理, 复制算法的原理与特点, 分别用在什么地方, 如果让你优化收集方法, 有什么思路}{9}% 
+\contentsline {subsubsection}{\numberline {3.0.2}JVM的主要组成部分及其作用?}{10}% 
+\contentsline {subsubsection}{\numberline {3.0.3}JVM运行时数据区}{10}% 
+\contentsline {subsubsection}{\numberline {3.0.4}永久代PermGen 和 元空间Metaspace 区别}{11}% 
+\contentsline {subsubsection}{\numberline {3.0.5}说一下堆栈的区别?}{11}% 
+\contentsline {subsubsection}{\numberline {3.0.6}对象的访问定位?}{12}% 
+\contentsline {subsubsection}{\numberline {3.0.7}垃圾回收器的基本原理是什么?}{13}% 
+\contentsline {subsubsection}{\numberline {3.0.8}在java中, 对象什么时候可以被垃圾回收?}{13}% 
+\contentsline {section}{\numberline {4}Redis}{13}% 
+\contentsline {subsubsection}{\numberline {4.0.1}什么是Redis?}{13}% 
+\contentsline {subsubsection}{\numberline {4.0.2}简述Redis单线程模型?}{13}% 
+\contentsline {subsubsection}{\numberline {4.0.3}Redis五中类型数据的实现方式}{14}% 
+\contentsline {subsubsection}{\numberline {4.0.4}redis字典的底层实现hashTable相关问题}{15}% 
+\contentsline {subsubsection}{\numberline {4.0.5}压缩链表原理ziplist}{15}% 
+\contentsline {subsubsection}{\numberline {4.0.6}zset}{15}% 
+\contentsline {subsubsection}{\numberline {4.0.7}AOF和RDB两种持久化方式区别}{16}% 
+\contentsline {subsubsection}{\numberline {4.0.8}Redis中过期策略和缓存淘汰机制}{16}% 
+\contentsline {subsubsection}{\numberline {4.0.9}为什么要使用Redis}{16}% 
+\contentsline {subsubsection}{\numberline {4.0.10}Redis底层实现跳表介绍一下}{16}% 
+\contentsline {subsubsection}{\numberline {4.0.11}为什么要使用Redis而不用map/guavaCache做缓存}{17}% 
+\contentsline {subsubsection}{\numberline {4.0.12}分布式锁如何使用redis实现}{17}% 
+\contentsline {subsubsection}{\numberline {4.0.13}Redis的内存淘汰策略有哪些}{17}% 
+\contentsline {subsubsection}{\numberline {4.0.14}Redis事物的概念}{18}% 
+\contentsline {subsubsection}{\numberline {4.0.15}RedisSharding}{18}% 
+\contentsline {subsubsection}{\numberline {4.0.16}缓存雪崩}{19}% 
+\contentsline {subsubsection}{\numberline {4.0.17}缓存穿透}{19}% 
+\contentsline {subsubsection}{\numberline {4.0.18}缓存击穿}{19}% 
+\contentsline {subsubsection}{\numberline {4.0.19}缓存预热}{20}% 
+\contentsline {subsubsection}{\numberline {4.0.20}Redis6.0 为什么要引入多线程呢?}{20}% 
+\contentsline {subsubsection}{\numberline {4.0.21}Redis主从复制模式}{20}% 
+\contentsline {subsubsection}{\numberline {4.0.22}Redis中持久化机制}{20}% 
+\contentsline {section}{\numberline {5}计算机网络}{20}% 
+\contentsline {section}{\numberline {6}附录: 相关样例}{20}% 
+\contentsline {subsubsection}{\numberline {6.0.1}小练习}{21}% 
+\contentsline {subsubsection}{\numberline {6.0.2}三级标题}{21}% 
+\contentsline {subsubsection}{\numberline {6.0.3}第二个三级标题}{22}% 
+\contentsline {subsubsection}{\numberline {6.0.4}第三个三级标题}{22}% 
+\contentsline {section}{\numberline {7}公式的写作}{22}% 
+\contentsline {subsubsection}{\numberline {7.0.1}练习}{22}% 
+\contentsline {subsubsection}{\numberline {7.0.2}表格的插入}{23}% 

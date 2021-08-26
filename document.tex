@@ -147,6 +147,10 @@ class对象反射 ---> 实例化 ---> 生成对象 ---> 属性填充(依赖注�
 	
 \section{java基础}
 %\subsection{二级标题}
+\subsubsection{如何防止SQL注入}
+使用预编译的方法来, 比如PrepareStatement类下面的setString方法来对参数进行处理, 简单来说
+\subsubsection{如何实现10000个qq判断是否在线的情况}
+java 中有BitSet这个类, 然后使用这个类来实现判断是否在线的情况 \par
 \subsubsection{hashmap死锁产生情况}
 1.7 版本的死锁是在 rehash方法中的transfer方法产生的, 因为在扩容的过程中, 主要关于两个指正, e指正指向当前节点, next是e的下一个指针, 因为采用头插法会前后顺序调换, 导致产生换的现象. \par
 \subsubsection{谈谈对ConcurrentHashMap的扩容机制}
@@ -1119,6 +1123,45 @@ Redis将所有数据放在内存中, 内存的相应市场大约100ns, 对于小
 
 \section{计算机网络}
 %\subsection{二级标题}
+\subsubsection{SYN-RCVD状态}
+简单来说, 就是三次建立连接的时候, 对方没有把最后一次ack发送回来的时候的状态. 可能是别人攻击服务器产生的. \par
+
+开启cookie检查校验连接的合法性
+
+net.ipv4.tcp\_syncookies = 1
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/tcpsynrcvd.png}
+	\caption{tcpsynrcvd}
+	\label{fig:tcpsynrcvd}
+\end{figure}
+\subsubsection{TCP四个计时器}
+1、重传计时器 
+
+一段时间没有接收到应答,则开始重新传输数据, 约60s
+
+2. FIN 时间等待计时器
+
+时间等待计时器是在连接终止期间使用的 。当TCP关闭一个连接时，它并不认为这个连接马上就真正地关闭了。在时间等待期间中，连接还处于一种中间过渡状态。这就可以使重复的FIN报文段（如果有的话）可以到达目的站因而可将其丢弃。这个计时器的值 通常设置为一个报文段的寿命期待值的两倍 。
+
+3. 保活计时器 
+
+保活计时器 通常设置为2小时 。若服务器过了2小时还没有收到客户的信息，它就发送探测报文段。若发送了10个探测报文段（每一个相隔75秒）还没有响应，就假定客户出了故障，因而就终止该连接。 
+
+4、坚持计时器
+
+当发送TCP收到一个窗口大小为零的确认时，就启动坚持计时器 。 当坚持计时器期限到时，发送TCP就发送一个特殊的报文段， 叫做 探测报文段 。这个报文段只有一个字节的数据。它有一个序号，但它的序号永远不需要确认；甚至在计算对其他部分的数据的确认时该序号也被忽略。探测报文段提醒对端：确认已丢失，必须重传。 
+\subsubsection{TCP流量控制}
+简单来说, 接收端通过返回一个win参数告诉发送端还能发送多少. 如果不能发送了的话, 开启坚持定时器, 去发送试探帧, 如果又可以发送了的话,继续发送. \par
+新一代算法采用google的BBR算法.
+
+TCP BBR \textbf{不再使用丢包作为拥塞的信号}，也不使用 “加性增，乘性减” 来维护发送窗口大小，而是分别估计极大带宽和极小延迟，把它们的乘积作为发送窗口大小。 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/liuliangkongzhi.png}
+	\caption{liuliangkongzhi}
+	\label{fig:liuliangkongzhi}
+\end{figure}
 \subsubsection{HTTPS访问过程, SSL 握手的过程}
 证书主要作用是在SSL握手中，我们来看一下SSL的握手过程
 
@@ -1194,8 +1237,43 @@ session 的运行依赖 session id, 而 session id 是存在 cookie 中的, 也�
 cookie存在大小限制, 单个不超过4k, 浏览器中Cookie个数也有限制.
 Session没有大小限制, 是和服务器内存有关的.
 \subsubsection{HTTP1.1 和 HTTP1.0的比较}
-HTTP1.1 默认长链接, 长连接只需要建立一次TCP连接, 进行多次HTTP通信.
+HTTP1.1 默认长链接, 长连接只需要建立一次TCP连接, 进行多次HTTP通信. 
+
+纯文本协议
+
+
 HTTP1.0 默认短连接, 每进行一次HTTP通信就要新建一个TCP连接.
+\subsubsection{HTTP2.0 和 HTTP1.1的比较}
+2.0 特点
+
+多路复用: 所有HTTP2.0通信都在一个TCP链接上完成，这个链接可以承载任意流量的双向数据流。
+
+二进制分帧: + 头部压缩
+
+服务器推送:服务器除了最初请求的响应外，服务器还可以额外向客户端推送资源，而无需客户端明确的需求。
+
+也会遇到队头阻塞, TCP层面上. 
+
+1.1 
+
+对头阻塞: 如果4丢了, 那么收到的5-8都没用.
+
+\subsubsection{HTTP3.0}
+
+QUIC协议: 
+
+前项纠错机制: 称为向前纠错(Foward Error Connec，FEC)，每个数据包除了它本身的内容之外还包括了其他数据包的数据，因此少量的丢包可以通过其他包的冗余数据直接组装而无需重传。
+
+基于UDP的协议. 
+
+自定义连接机制:
+
+TCP基于四元数,IP, 目标IP, 目标port, 自己的port. 一旦一个元素发生变化,就会重新建立连接. 
+但是, QUIC使用一个64位随机数来确定这个连接. 三次握手的时间减少. 也减少二路TLS的时间.
+
+
+
+
 \subsubsection{HTTPS加密}
 使用SSL连接. HTTPS采用混合加密算法, 使用非对称加密和对称加密, 非对称加密用于传输对称秘钥来保证传输过程的安全性, 之后使用对称秘钥加密进行通信来保证通信过程的效率. 
 \par
@@ -1221,6 +1299,10 @@ HTTPS加密过程:
 \end{enumerate}
 \section{mysql}
 %\subsection{二级标题}
+\subsubsection{mybatis\#和\$区别以及原理} 
+\#{ }可以防止Sql 注入，它会将所有传入的参数作为一个字符串来处理。
+
+\$ {} 则将传入的参数拼接到Sql上去执行，一般用于表名和字段名参数，\$ 所对应的参数应该由服务器端提供，前端可以用参数进行选择，避免 Sql 注入的风险
 \subsubsection{redo log 和 undo log, bin log }
 如果修改直接修改到日志中的话, 性能开销比较大, mysql 会将要写的数据先写到redolog中,然后再讲redolog存储到磁盘中, 使用场景系统崩溃恢复 \par
 bin log: 归档日志, 通过追加方式记录, 使用场景: 主从复制和数据恢复 \par
@@ -1577,6 +1659,9 @@ public class TestPC2
 \subsubsection{Serializable}
 序列化接口, 只有实现这个接口才能序列化, 默认计算一个serialVersionUID, 可以进行自定义.
 \section{C++}
+\subsubsection{set, multiset, map, multiset}
+底层数据结构 使用红黑树, map/multimap使用pair作为基础元素. set/multiset value和key相同 \par
+底层红黑树multi/nonulti 使用 insert\_unique 和 insert\_equal之间的差别 \par
 \subsubsection{定义的静态全局变量作用于是}
 本文件
 \subsubsection{如何判断一段程序是由C编译器编译还是由C++编译器编译的}

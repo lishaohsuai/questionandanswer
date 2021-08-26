@@ -13,62 +13,64 @@
 \contentsline {subsubsection}{\numberline {1.0.12}简单阐述SpringMVC的流程}{12}% 
 \contentsline {subsubsection}{\numberline {1.0.13}第三个三级标题}{12}% 
 \contentsline {section}{\numberline {2}java基础}{12}% 
-\contentsline {subsubsection}{\numberline {2.0.1}hashmap死锁产生情况}{12}% 
-\contentsline {subsubsection}{\numberline {2.0.2}谈谈对ConcurrentHashMap的扩容机制}{13}% 
-\contentsline {subsubsection}{\numberline {2.0.3}造成死锁的原因}{14}% 
-\contentsline {subsubsection}{\numberline {2.0.4}深拷贝和浅拷贝}{14}% 
-\contentsline {subsubsection}{\numberline {2.0.5}如果你提交任务时, 线程池队列已满, 这时会发生什么}{14}% 
-\contentsline {subsubsection}{\numberline {2.0.6}遇到过哪些设计模式}{14}% 
-\contentsline {subsubsection}{\numberline {2.0.7}Spring中Bean是线程安全的吗?}{15}% 
-\contentsline {subsubsection}{\numberline {2.0.8}说说你了解的分布式锁实现}{15}% 
-\contentsline {subsubsection}{\numberline {2.0.9}如何查看线程死锁}{15}% 
-\contentsline {subsubsection}{\numberline {2.0.10}线程之间如何进行通讯的}{16}% 
-\contentsline {subsubsection}{\numberline {2.0.11}快速失败(fail-fast) 和 安全失败(fail-safe) 的区别是什么?}{16}% 
-\contentsline {subsubsection}{\numberline {2.0.12}异常}{16}% 
-\contentsline {subsubsection}{\numberline {2.0.13}synchronized的底层实现细节}{16}% 
-\contentsline {subsubsection}{\numberline {2.0.14}线程池参数}{16}% 
-\contentsline {subsubsection}{\numberline {2.0.15}sychronized和ReentrantLock的区别}{17}% 
-\contentsline {subsubsection}{\numberline {2.0.16}线程池中使用的BlockQueue}{17}% 
-\contentsline {subsubsection}{\numberline {2.0.17}Executors 工厂类实现线程池}{18}% 
-\contentsline {subsubsection}{\numberline {2.0.18}线程池的拒绝策略}{18}% 
-\contentsline {subsubsection}{\numberline {2.0.19}8种基本数据类型}{19}% 
-\contentsline {subsubsection}{\numberline {2.0.20}Comparable \& Comparator 区别}{19}% 
-\contentsline {subsubsection}{\numberline {2.0.21}java采用值传递还是引用传递?}{20}% 
-\contentsline {subsubsection}{\numberline {2.0.22}java深拷贝和浅拷贝}{20}% 
-\contentsline {subsubsection}{\numberline {2.0.23}java"==" 和 equals 的区别}{20}% 
-\contentsline {subsubsection}{\numberline {2.0.24}String和StringBuilder, StringBuffer的区别}{20}% 
-\contentsline {subsubsection}{\numberline {2.0.25}Java反射机制}{21}% 
-\contentsline {subsubsection}{\numberline {2.0.26}简述面向对象三大特征, 继承, 封装, 多态}{21}% 
-\contentsline {subsubsection}{\numberline {2.0.27}多态}{21}% 
-\contentsline {subsubsection}{\numberline {2.0.28}内部类}{21}% 
-\contentsline {subsubsection}{\numberline {2.0.29}红黑树}{21}% 
-\contentsline {subsubsection}{\numberline {2.0.30}hashmap的数据结构}{22}% 
-\contentsline {subsubsection}{\numberline {2.0.31}hashmap的put方法}{22}% 
-\contentsline {subsubsection}{\numberline {2.0.32}介绍一下ThreadLocal}{23}% 
-\contentsline {subsubsection}{\numberline {2.0.33}heap和stack有什么区别}{23}% 
-\contentsline {subsubsection}{\numberline {2.0.34}Array 和 ArrayList 的区别}{23}% 
-\contentsline {subsubsection}{\numberline {2.0.35}Java各种锁: 悲观锁, 泪管所, 自旋锁, 偏向锁, 轻量/重量锁, 读写锁, 可重入锁}{24}% 
-\contentsline {subsubsection}{\numberline {2.0.36}Collection 和 Collections 的区别}{24}% 
-\contentsline {subsubsection}{\numberline {2.0.37}接口与抽象类区别}{24}% 
-\contentsline {subsubsection}{\numberline {2.0.38}ArrayList和LinkedList内部实现大致是怎样的? 他们之间的区别和优缺点}{25}% 
-\contentsline {subsubsection}{\numberline {2.0.39}==和equals的区别}{26}% 
-\contentsline {subsubsection}{\numberline {2.0.40}hashCode方法的作用}{26}% 
-\contentsline {subsubsection}{\numberline {2.0.41}反射}{26}% 
-\contentsline {subsubsection}{\numberline {2.0.42}简述Java内存模型(JMM)}{26}% 
-\contentsline {subsubsection}{\numberline {2.0.43}Java内存模型中的可见性, 原子性和有序性}{26}% 
-\contentsline {subsubsection}{\numberline {2.0.44}happen-before原则}{27}% 
-\contentsline {subsubsection}{\numberline {2.0.45}wait/notify, await/singal}{27}% 
-\contentsline {subsubsection}{\numberline {2.0.46}多线程wait和sleep区别}{28}% 
-\contentsline {subsubsection}{\numberline {2.0.47}Collection<? extends Person> s}{28}% 
-\contentsline {subsubsection}{\numberline {2.0.48}线程的状态有哪些?}{34}% 
-\contentsline {subsubsection}{\numberline {2.0.49}创建线程的几种方式}{35}% 
-\contentsline {subsubsection}{\numberline {2.0.50}synchronized锁升级: 无锁, 偏向锁, 轻量级锁, 重量级锁(与锁的优化一起学习}{36}% 
-\contentsline {subsubsection}{\numberline {2.0.51}如何使用synchronized}{36}% 
+\contentsline {subsubsection}{\numberline {2.0.1}如何防止SQL注入}{12}% 
+\contentsline {subsubsection}{\numberline {2.0.2}如何实现10000个qq判断是否在线的情况}{13}% 
+\contentsline {subsubsection}{\numberline {2.0.3}hashmap死锁产生情况}{13}% 
+\contentsline {subsubsection}{\numberline {2.0.4}谈谈对ConcurrentHashMap的扩容机制}{13}% 
+\contentsline {subsubsection}{\numberline {2.0.5}造成死锁的原因}{14}% 
+\contentsline {subsubsection}{\numberline {2.0.6}深拷贝和浅拷贝}{14}% 
+\contentsline {subsubsection}{\numberline {2.0.7}如果你提交任务时, 线程池队列已满, 这时会发生什么}{14}% 
+\contentsline {subsubsection}{\numberline {2.0.8}遇到过哪些设计模式}{15}% 
+\contentsline {subsubsection}{\numberline {2.0.9}Spring中Bean是线程安全的吗?}{15}% 
+\contentsline {subsubsection}{\numberline {2.0.10}说说你了解的分布式锁实现}{15}% 
+\contentsline {subsubsection}{\numberline {2.0.11}如何查看线程死锁}{15}% 
+\contentsline {subsubsection}{\numberline {2.0.12}线程之间如何进行通讯的}{15}% 
+\contentsline {subsubsection}{\numberline {2.0.13}快速失败(fail-fast) 和 安全失败(fail-safe) 的区别是什么?}{16}% 
+\contentsline {subsubsection}{\numberline {2.0.14}异常}{16}% 
+\contentsline {subsubsection}{\numberline {2.0.15}synchronized的底层实现细节}{16}% 
+\contentsline {subsubsection}{\numberline {2.0.16}线程池参数}{17}% 
+\contentsline {subsubsection}{\numberline {2.0.17}sychronized和ReentrantLock的区别}{17}% 
+\contentsline {subsubsection}{\numberline {2.0.18}线程池中使用的BlockQueue}{18}% 
+\contentsline {subsubsection}{\numberline {2.0.19}Executors 工厂类实现线程池}{18}% 
+\contentsline {subsubsection}{\numberline {2.0.20}线程池的拒绝策略}{19}% 
+\contentsline {subsubsection}{\numberline {2.0.21}8种基本数据类型}{19}% 
+\contentsline {subsubsection}{\numberline {2.0.22}Comparable \& Comparator 区别}{19}% 
+\contentsline {subsubsection}{\numberline {2.0.23}java采用值传递还是引用传递?}{20}% 
+\contentsline {subsubsection}{\numberline {2.0.24}java深拷贝和浅拷贝}{20}% 
+\contentsline {subsubsection}{\numberline {2.0.25}java"==" 和 equals 的区别}{20}% 
+\contentsline {subsubsection}{\numberline {2.0.26}String和StringBuilder, StringBuffer的区别}{21}% 
+\contentsline {subsubsection}{\numberline {2.0.27}Java反射机制}{21}% 
+\contentsline {subsubsection}{\numberline {2.0.28}简述面向对象三大特征, 继承, 封装, 多态}{21}% 
+\contentsline {subsubsection}{\numberline {2.0.29}多态}{21}% 
+\contentsline {subsubsection}{\numberline {2.0.30}内部类}{21}% 
+\contentsline {subsubsection}{\numberline {2.0.31}红黑树}{22}% 
+\contentsline {subsubsection}{\numberline {2.0.32}hashmap的数据结构}{22}% 
+\contentsline {subsubsection}{\numberline {2.0.33}hashmap的put方法}{23}% 
+\contentsline {subsubsection}{\numberline {2.0.34}介绍一下ThreadLocal}{23}% 
+\contentsline {subsubsection}{\numberline {2.0.35}heap和stack有什么区别}{23}% 
+\contentsline {subsubsection}{\numberline {2.0.36}Array 和 ArrayList 的区别}{24}% 
+\contentsline {subsubsection}{\numberline {2.0.37}Java各种锁: 悲观锁, 泪管所, 自旋锁, 偏向锁, 轻量/重量锁, 读写锁, 可重入锁}{24}% 
+\contentsline {subsubsection}{\numberline {2.0.38}Collection 和 Collections 的区别}{24}% 
+\contentsline {subsubsection}{\numberline {2.0.39}接口与抽象类区别}{24}% 
+\contentsline {subsubsection}{\numberline {2.0.40}ArrayList和LinkedList内部实现大致是怎样的? 他们之间的区别和优缺点}{26}% 
+\contentsline {subsubsection}{\numberline {2.0.41}==和equals的区别}{26}% 
+\contentsline {subsubsection}{\numberline {2.0.42}hashCode方法的作用}{26}% 
+\contentsline {subsubsection}{\numberline {2.0.43}反射}{26}% 
+\contentsline {subsubsection}{\numberline {2.0.44}简述Java内存模型(JMM)}{27}% 
+\contentsline {subsubsection}{\numberline {2.0.45}Java内存模型中的可见性, 原子性和有序性}{27}% 
+\contentsline {subsubsection}{\numberline {2.0.46}happen-before原则}{27}% 
+\contentsline {subsubsection}{\numberline {2.0.47}wait/notify, await/singal}{28}% 
+\contentsline {subsubsection}{\numberline {2.0.48}多线程wait和sleep区别}{28}% 
+\contentsline {subsubsection}{\numberline {2.0.49}Collection<? extends Person> s}{28}% 
+\contentsline {subsubsection}{\numberline {2.0.50}线程的状态有哪些?}{34}% 
+\contentsline {subsubsection}{\numberline {2.0.51}创建线程的几种方式}{35}% 
+\contentsline {subsubsection}{\numberline {2.0.52}synchronized锁升级: 无锁, 偏向锁, 轻量级锁, 重量级锁(与锁的优化一起学习}{36}% 
+\contentsline {subsubsection}{\numberline {2.0.53}如何使用synchronized}{37}% 
 \contentsline {section}{\numberline {3}JVM}{37}% 
 \contentsline {subsubsection}{\numberline {3.0.1}说一下JVM中, 哪些是共享区, 哪些可以作为gc root}{37}% 
 \contentsline {subsubsection}{\numberline {3.0.2}你们项目如何排查JVM问题}{37}% 
 \contentsline {subsubsection}{\numberline {3.0.3}GC的三种收集方法: 标记清除, 标记整理, 复制算法的原理与特点, 分别用在什么地方, 如果让你优化收集方法, 有什么思路}{37}% 
-\contentsline {subsubsection}{\numberline {3.0.4}JVM的主要组成部分及其作用?}{37}% 
+\contentsline {subsubsection}{\numberline {3.0.4}JVM的主要组成部分及其作用?}{38}% 
 \contentsline {subsubsection}{\numberline {3.0.5}JVM运行时数据区}{39}% 
 \contentsline {subsubsection}{\numberline {3.0.6}JVM运行时数据区这些方法的关系}{40}% 
 \contentsline {subsubsection}{\numberline {3.0.7}永久代PermGen 和 元空间Metaspace 区别}{40}% 
@@ -108,92 +110,96 @@
 \contentsline {subsubsection}{\numberline {4.0.23}Redis主从复制模式}{54}% 
 \contentsline {subsubsection}{\numberline {4.0.24}Redis中持久化机制}{55}% 
 \contentsline {section}{\numberline {5}计算机网络}{55}% 
-\contentsline {subsubsection}{\numberline {5.0.1}HTTPS访问过程, SSL 握手的过程}{55}% 
-\contentsline {subsubsection}{\numberline {5.0.2}计算机网络分层}{55}% 
-\contentsline {subsubsection}{\numberline {5.0.3}TCP和UDP区别?}{55}% 
-\contentsline {subsubsection}{\numberline {5.0.4}TCP三次握手相关问题}{55}% 
-\contentsline {subsubsection}{\numberline {5.0.5}TCP四次挥手问题}{57}% 
-\contentsline {subsubsection}{\numberline {5.0.6}TCP协议-如何保证传输的可靠性}{57}% 
-\contentsline {subsubsection}{\numberline {5.0.7}Cookie作用, 安全性问题和Session的比较}{58}% 
-\contentsline {subsubsection}{\numberline {5.0.8}HTTP1.1 和 HTTP1.0的比较}{58}% 
-\contentsline {subsubsection}{\numberline {5.0.9}HTTPS加密}{58}% 
-\contentsline {subsubsection}{\numberline {5.0.10}输入网址发生的事情}{59}% 
-\contentsline {section}{\numberline {6}mysql}{59}% 
-\contentsline {subsubsection}{\numberline {6.0.1}redo log 和 undo log, bin log }{59}% 
-\contentsline {subsubsection}{\numberline {6.0.2}隔离级别}{60}% 
-\contentsline {subsubsection}{\numberline {6.0.3}ACID}{60}% 
-\contentsline {subsubsection}{\numberline {6.0.4}乐观锁和悲观锁}{60}% 
-\contentsline {subsubsection}{\numberline {6.0.5}MVCC}{61}% 
-\contentsline {subsubsection}{\numberline {6.0.6}RR和RC隔离级别下的InnoDB快照读有什么区别}{61}% 
-\contentsline {subsubsection}{\numberline {6.0.7}B+/B树之间的比较}{61}% 
-\contentsline {subsubsection}{\numberline {6.0.8}聚集索引\&非聚集索引}{61}% 
-\contentsline {subsubsection}{\numberline {6.0.9}创建索引的优点}{61}% 
-\contentsline {subsubsection}{\numberline {6.0.10}创建索引的缺点}{62}% 
-\contentsline {subsubsection}{\numberline {6.0.11}MYSQL优化}{62}% 
-\contentsline {subsubsection}{\numberline {6.0.12}InnoDB \& MyISAM}{62}% 
-\contentsline {subsubsection}{\numberline {6.0.13}创建存储过程}{62}% 
-\contentsline {subsubsection}{\numberline {6.0.14}热备份和冷备份}{62}% 
-\contentsline {subsubsection}{\numberline {6.0.15}Innode加锁}{63}% 
-\contentsline {subsubsection}{\numberline {6.0.16}INNODB解决死锁}{63}% 
-\contentsline {subsubsection}{\numberline {6.0.17}Mysql锁你了解哪些}{63}% 
-\contentsline {subsubsection}{\numberline {6.0.18}Mysql数据库中, 什么情况下设置了索引但是无法使用?}{63}% 
-\contentsline {section}{\numberline {7}操作系统}{64}% 
-\contentsline {subsubsection}{\numberline {7.0.1}协程与线程进行比较}{64}% 
-\contentsline {subsubsection}{\numberline {7.0.2}进程之间的通信方式有哪些?}{64}% 
-\contentsline {subsubsection}{\numberline {7.0.3}进程调度算法}{64}% 
-\contentsline {subsubsection}{\numberline {7.0.4}epoll和poll的区别}{64}% 
-\contentsline {section}{\numberline {8}设计模式}{65}% 
-\contentsline {subsubsection}{\numberline {8.0.1}多线程下单例设计模式}{65}% 
-\contentsline {subsubsection}{\numberline {8.0.2}为什么在wait代码块中要用while而不用if}{68}% 
-\contentsline {subsubsection}{\numberline {8.0.3}Serializable}{73}% 
-\contentsline {section}{\numberline {9}C++}{73}% 
-\contentsline {subsubsection}{\numberline {9.0.1}定义的静态全局变量作用于是}{73}% 
-\contentsline {subsubsection}{\numberline {9.0.2}如何判断一段程序是由C编译器编译还是由C++编译器编译的}{73}% 
-\contentsline {subsubsection}{\numberline {9.0.3}在C++程序中调用被C编译器编译后的函数, 为什么要加extern"C"}{73}% 
-\contentsline {subsubsection}{\numberline {9.0.4}C++, const 和 \#define 之间的区别}{73}% 
-\contentsline {subsubsection}{\numberline {9.0.5}指针和引用之间的区别}{74}% 
-\contentsline {subsubsection}{\numberline {9.0.6}inline的优劣}{74}% 
-\contentsline {subsubsection}{\numberline {9.0.7}C++11有什么你使用到的新特性}{74}% 
-\contentsline {subsubsection}{\numberline {9.0.8}C++中有malloc/free, 为什么还需要new/delete}{74}% 
-\contentsline {subsubsection}{\numberline {9.0.9}面向对象技术的基本概念是什么，三个基本特征是什么?}{74}% 
-\contentsline {subsubsection}{\numberline {9.0.10}为什么基类的析构函数是虚函数?}{74}% 
-\contentsline {subsubsection}{\numberline {9.0.11}为什么构造函数不能为虚函数？}{75}% 
-\contentsline {subsubsection}{\numberline {9.0.12}如果虚函数是有效的，那为什么不把所有函数设为虚函数？}{75}% 
-\contentsline {subsubsection}{\numberline {9.0.13}什么是多态？多态有什么作用？}{75}% 
-\contentsline {subsubsection}{\numberline {9.0.14}重载和覆盖有什么区别？}{75}% 
-\contentsline {subsubsection}{\numberline {9.0.15}什么是虚指针？}{75}% 
-\contentsline {subsubsection}{\numberline {9.0.16}main函数执行之前会执行什么？执行之后还能执行代码吗？}{75}% 
-\contentsline {subsubsection}{\numberline {9.0.17}经常要操作的内存分为那几个类别？}{76}% 
-\contentsline {subsubsection}{\numberline {9.0.18}函数指针与指针函数}{76}% 
-\contentsline {subsubsection}{\numberline {9.0.19}内部连接和外部链接有什么区别?}{76}% 
-\contentsline {subsubsection}{\numberline {9.0.20}声明与定义的区别}{76}% 
-\contentsline {subsubsection}{\numberline {9.0.21}编译链接过程}{76}% 
-\contentsline {subsubsection}{\numberline {9.0.22}C++函数中值的传递方式有哪几种?}{77}% 
-\contentsline {subsubsection}{\numberline {9.0.23}信号量和互斥量}{77}% 
-\contentsline {subsubsection}{\numberline {9.0.24}RVO和NRVO}{77}% 
-\contentsline {subsubsection}{\numberline {9.0.25}听说过mangling么？}{78}% 
-\contentsline {subsubsection}{\numberline {9.0.26}模板代码如何组织？模板的编译以及实例化过程？}{78}% 
-\contentsline {subsubsection}{\numberline {9.0.27}C++中四种Cast的使用场景}{78}% 
-\contentsline {subsubsection}{\numberline {9.0.28}C++什么是常量折叠}{78}% 
-\contentsline {subsubsection}{\numberline {9.0.29}为什么const修饰成员函数后不能修改成员变量}{79}% 
-\contentsline {subsubsection}{\numberline {9.0.30}auto\_ptr 被弃用了}{79}% 
-\contentsline {subsubsection}{\numberline {9.0.31}const int*}{79}% 
-\contentsline {subsubsection}{\numberline {9.0.32}C++虚函数原理}{79}% 
-\contentsline {subsubsection}{\numberline {9.0.33}C++虚函数表的开销}{79}% 
-\contentsline {subsubsection}{\numberline {9.0.34}epoll水平触发\&epoll边缘触发}{79}% 
-\contentsline {subsubsection}{\numberline {9.0.35}传统IO和mmap}{80}% 
-\contentsline {subsubsection}{\numberline {9.0.36}write 和 fwrite}{80}% 
-\contentsline {section}{\numberline {10}项目解析}{80}% 
-\contentsline {subsubsection}{\numberline {10.0.1}华为软件精英挑战赛2020}{80}% 
-\contentsline {subsubsection}{\numberline {10.0.2}华为软件精英挑战赛2021}{81}% 
-\contentsline {subsubsection}{\numberline {10.0.3}数学建模2020}{83}% 
-\contentsline {subsubsection}{\numberline {10.0.4}之江天枢深度学习可视化项目}{84}% 
-\contentsline {section}{\numberline {11}自我介绍}{85}% 
-\contentsline {section}{\numberline {12}附录: 相关样例}{85}% 
-\contentsline {subsubsection}{\numberline {12.0.1}小练习}{86}% 
-\contentsline {subsubsection}{\numberline {12.0.2}三级标题}{86}% 
-\contentsline {subsubsection}{\numberline {12.0.3}第二个三级标题}{87}% 
-\contentsline {subsubsection}{\numberline {12.0.4}第三个三级标题}{87}% 
-\contentsline {section}{\numberline {13}公式的写作}{87}% 
-\contentsline {subsubsection}{\numberline {13.0.1}练习}{87}% 
-\contentsline {subsubsection}{\numberline {13.0.2}表格的插入}{88}% 
+\contentsline {subsubsection}{\numberline {5.0.1}SYN-RCVD状态}{55}% 
+\contentsline {subsubsection}{\numberline {5.0.2}TCP四个计时器}{55}% 
+\contentsline {subsubsection}{\numberline {5.0.3}TCP流量控制}{56}% 
+\contentsline {subsubsection}{\numberline {5.0.4}HTTPS访问过程, SSL 握手的过程}{57}% 
+\contentsline {subsubsection}{\numberline {5.0.5}计算机网络分层}{57}% 
+\contentsline {subsubsection}{\numberline {5.0.6}TCP和UDP区别?}{58}% 
+\contentsline {subsubsection}{\numberline {5.0.7}TCP三次握手相关问题}{58}% 
+\contentsline {subsubsection}{\numberline {5.0.8}TCP四次挥手问题}{58}% 
+\contentsline {subsubsection}{\numberline {5.0.9}TCP协议-如何保证传输的可靠性}{58}% 
+\contentsline {subsubsection}{\numberline {5.0.10}Cookie作用, 安全性问题和Session的比较}{59}% 
+\contentsline {subsubsection}{\numberline {5.0.11}HTTP1.1 和 HTTP1.0的比较}{60}% 
+\contentsline {subsubsection}{\numberline {5.0.12}HTTPS加密}{60}% 
+\contentsline {subsubsection}{\numberline {5.0.13}输入网址发生的事情}{61}% 
+\contentsline {section}{\numberline {6}mysql}{61}% 
+\contentsline {subsubsection}{\numberline {6.0.1}mybatis\#和\$区别以及原理}{61}% 
+\contentsline {subsubsection}{\numberline {6.0.2}redo log 和 undo log, bin log }{61}% 
+\contentsline {subsubsection}{\numberline {6.0.3}隔离级别}{61}% 
+\contentsline {subsubsection}{\numberline {6.0.4}ACID}{62}% 
+\contentsline {subsubsection}{\numberline {6.0.5}乐观锁和悲观锁}{62}% 
+\contentsline {subsubsection}{\numberline {6.0.6}MVCC}{62}% 
+\contentsline {subsubsection}{\numberline {6.0.7}RR和RC隔离级别下的InnoDB快照读有什么区别}{63}% 
+\contentsline {subsubsection}{\numberline {6.0.8}B+/B树之间的比较}{63}% 
+\contentsline {subsubsection}{\numberline {6.0.9}聚集索引\&非聚集索引}{63}% 
+\contentsline {subsubsection}{\numberline {6.0.10}创建索引的优点}{63}% 
+\contentsline {subsubsection}{\numberline {6.0.11}创建索引的缺点}{63}% 
+\contentsline {subsubsection}{\numberline {6.0.12}MYSQL优化}{64}% 
+\contentsline {subsubsection}{\numberline {6.0.13}InnoDB \& MyISAM}{64}% 
+\contentsline {subsubsection}{\numberline {6.0.14}创建存储过程}{64}% 
+\contentsline {subsubsection}{\numberline {6.0.15}热备份和冷备份}{64}% 
+\contentsline {subsubsection}{\numberline {6.0.16}Innode加锁}{64}% 
+\contentsline {subsubsection}{\numberline {6.0.17}INNODB解决死锁}{65}% 
+\contentsline {subsubsection}{\numberline {6.0.18}Mysql锁你了解哪些}{65}% 
+\contentsline {subsubsection}{\numberline {6.0.19}Mysql数据库中, 什么情况下设置了索引但是无法使用?}{65}% 
+\contentsline {section}{\numberline {7}操作系统}{65}% 
+\contentsline {subsubsection}{\numberline {7.0.1}协程与线程进行比较}{65}% 
+\contentsline {subsubsection}{\numberline {7.0.2}进程之间的通信方式有哪些?}{66}% 
+\contentsline {subsubsection}{\numberline {7.0.3}进程调度算法}{66}% 
+\contentsline {subsubsection}{\numberline {7.0.4}epoll和poll的区别}{66}% 
+\contentsline {section}{\numberline {8}设计模式}{67}% 
+\contentsline {subsubsection}{\numberline {8.0.1}多线程下单例设计模式}{67}% 
+\contentsline {subsubsection}{\numberline {8.0.2}为什么在wait代码块中要用while而不用if}{70}% 
+\contentsline {subsubsection}{\numberline {8.0.3}Serializable}{75}% 
+\contentsline {section}{\numberline {9}C++}{75}% 
+\contentsline {subsubsection}{\numberline {9.0.1}定义的静态全局变量作用于是}{75}% 
+\contentsline {subsubsection}{\numberline {9.0.2}如何判断一段程序是由C编译器编译还是由C++编译器编译的}{75}% 
+\contentsline {subsubsection}{\numberline {9.0.3}在C++程序中调用被C编译器编译后的函数, 为什么要加extern"C"}{75}% 
+\contentsline {subsubsection}{\numberline {9.0.4}C++, const 和 \#define 之间的区别}{75}% 
+\contentsline {subsubsection}{\numberline {9.0.5}指针和引用之间的区别}{75}% 
+\contentsline {subsubsection}{\numberline {9.0.6}inline的优劣}{76}% 
+\contentsline {subsubsection}{\numberline {9.0.7}C++11有什么你使用到的新特性}{76}% 
+\contentsline {subsubsection}{\numberline {9.0.8}C++中有malloc/free, 为什么还需要new/delete}{76}% 
+\contentsline {subsubsection}{\numberline {9.0.9}面向对象技术的基本概念是什么，三个基本特征是什么?}{76}% 
+\contentsline {subsubsection}{\numberline {9.0.10}为什么基类的析构函数是虚函数?}{76}% 
+\contentsline {subsubsection}{\numberline {9.0.11}为什么构造函数不能为虚函数？}{76}% 
+\contentsline {subsubsection}{\numberline {9.0.12}如果虚函数是有效的，那为什么不把所有函数设为虚函数？}{77}% 
+\contentsline {subsubsection}{\numberline {9.0.13}什么是多态？多态有什么作用？}{77}% 
+\contentsline {subsubsection}{\numberline {9.0.14}重载和覆盖有什么区别？}{77}% 
+\contentsline {subsubsection}{\numberline {9.0.15}什么是虚指针？}{77}% 
+\contentsline {subsubsection}{\numberline {9.0.16}main函数执行之前会执行什么？执行之后还能执行代码吗？}{77}% 
+\contentsline {subsubsection}{\numberline {9.0.17}经常要操作的内存分为那几个类别？}{77}% 
+\contentsline {subsubsection}{\numberline {9.0.18}函数指针与指针函数}{78}% 
+\contentsline {subsubsection}{\numberline {9.0.19}内部连接和外部链接有什么区别?}{78}% 
+\contentsline {subsubsection}{\numberline {9.0.20}声明与定义的区别}{78}% 
+\contentsline {subsubsection}{\numberline {9.0.21}编译链接过程}{78}% 
+\contentsline {subsubsection}{\numberline {9.0.22}C++函数中值的传递方式有哪几种?}{78}% 
+\contentsline {subsubsection}{\numberline {9.0.23}信号量和互斥量}{78}% 
+\contentsline {subsubsection}{\numberline {9.0.24}RVO和NRVO}{79}% 
+\contentsline {subsubsection}{\numberline {9.0.25}听说过mangling么？}{80}% 
+\contentsline {subsubsection}{\numberline {9.0.26}模板代码如何组织？模板的编译以及实例化过程？}{80}% 
+\contentsline {subsubsection}{\numberline {9.0.27}C++中四种Cast的使用场景}{80}% 
+\contentsline {subsubsection}{\numberline {9.0.28}C++什么是常量折叠}{80}% 
+\contentsline {subsubsection}{\numberline {9.0.29}为什么const修饰成员函数后不能修改成员变量}{80}% 
+\contentsline {subsubsection}{\numberline {9.0.30}auto\_ptr 被弃用了}{81}% 
+\contentsline {subsubsection}{\numberline {9.0.31}const int*}{81}% 
+\contentsline {subsubsection}{\numberline {9.0.32}C++虚函数原理}{81}% 
+\contentsline {subsubsection}{\numberline {9.0.33}C++虚函数表的开销}{81}% 
+\contentsline {subsubsection}{\numberline {9.0.34}epoll水平触发\&epoll边缘触发}{81}% 
+\contentsline {subsubsection}{\numberline {9.0.35}传统IO和mmap}{82}% 
+\contentsline {subsubsection}{\numberline {9.0.36}write 和 fwrite}{82}% 
+\contentsline {section}{\numberline {10}项目解析}{82}% 
+\contentsline {subsubsection}{\numberline {10.0.1}华为软件精英挑战赛2020}{82}% 
+\contentsline {subsubsection}{\numberline {10.0.2}华为软件精英挑战赛2021}{83}% 
+\contentsline {subsubsection}{\numberline {10.0.3}数学建模2020}{84}% 
+\contentsline {subsubsection}{\numberline {10.0.4}之江天枢深度学习可视化项目}{86}% 
+\contentsline {section}{\numberline {11}自我介绍}{87}% 
+\contentsline {section}{\numberline {12}附录: 相关样例}{87}% 
+\contentsline {subsubsection}{\numberline {12.0.1}小练习}{87}% 
+\contentsline {subsubsection}{\numberline {12.0.2}三级标题}{88}% 
+\contentsline {subsubsection}{\numberline {12.0.3}第二个三级标题}{88}% 
+\contentsline {subsubsection}{\numberline {12.0.4}第三个三级标题}{88}% 
+\contentsline {section}{\numberline {13}公式的写作}{88}% 
+\contentsline {subsubsection}{\numberline {13.0.1}练习}{89}% 
+\contentsline {subsubsection}{\numberline {13.0.2}表格的插入}{89}% 

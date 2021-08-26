@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.7.20)  26 AUG 2021 14:42
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.7.20)  26 AUG 2021 15:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -820,7 +820,7 @@ Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
 
-Overfull \hbox (9.6921pt too wide) in paragraph at lines 173--173
+Overfull \hbox (9.6921pt too wide) in paragraph at lines 177--177
 []\TU/lmr/m/n/10.53937 4. \TU/SimSun(0)/m/n/10.53937 使 用 \TU/lmr/m/n/10.53937 j
 stack \TU/SimSun(0)/m/n/10.53937 来 查 看 \TU/lmr/m/n/10.53937 dump \TU/SimSun(0)/
 m/n/10.53937 文 件 $[][][][][] [] [] [] [][][][] [] [][][][] [] [][][] [] [][][][
@@ -831,20 +831,20 @@ m/n/10.53937 文 件 $[][][][][] [] [] [] [][][][] [] [][][][] [] [][][] [] [][]
 File: figures/redission.png Graphic file (type bmp)
 <figures/redission.png>
 
-Overfull \hbox (38.70662pt too wide) in paragraph at lines 208--208
+Overfull \hbox (38.70662pt too wide) in paragraph at lines 212--212
 []\TU/lmr/m/n/10.53937 2. \TU/SimSun(0)/m/n/10.53937 对 于 \TU/lmr/m/n/10.53937 m
 ysql \TU/SimSun(0)/m/n/10.53937 使 用 \TU/lmr/m/n/10.53937 select * from INFOMATI
 ON_SCHEMA.INNODB_LOCKS
  []
 
 
-Overfull \hbox (121.73248pt too wide) in paragraph at lines 209--209
+Overfull \hbox (121.73248pt too wide) in paragraph at lines 213--213
 []\TU/lmr/m/n/10.53937 3. \TU/SimSun(0)/m/n/10.53937 查 看 等 待 锁 的 事 物 \TU/lmr/m/
 n/10.53937 SELECT * FROM INFORMATION_SCHEMA.INNODB_LOCK_WAITS 
  []
 
 [15]
-Overfull \hbox (6.16397pt too wide) in paragraph at lines 215--216
+Overfull \hbox (6.16397pt too wide) in paragraph at lines 219--220
 []\TU/lmr/m/n/10.53937 java.util \TU/SimSun(0)/m/n/10.53937 包 下 面 的 所 有 的 集 合 类
  都 是 快 速 失 败 的\TU/lmr/m/n/10.53937 , \TU/SimSun(0)/m/n/10.53937 而 \TU/lmr/m/n/1
 0.53937 java.util.concurrent
@@ -853,54 +853,54 @@ Overfull \hbox (6.16397pt too wide) in paragraph at lines 215--216
 [16] [17] [18] [19] [20]
 File: figures/red_black.jpg Graphic file (type bmp)
 <figures/red_black.jpg>
- [21] [22] [23] [24] [25]
+ [21] [22] [23] [24] [25] [26]
 File: figures/JMM.png Graphic file (type bmp)
 <figures/JMM.png>
- [26] [27] [28]
-Overfull \hbox (15.45003pt too wide) in paragraph at lines 524--525
+ [27] [28] [29]
+Overfull \hbox (15.45003pt too wide) in paragraph at lines 528--529
 [][][][][] 
  []
 
 
-Overfull \hbox (10.15529pt too wide) in paragraph at lines 525--526
-[][] 
- []
-
-[29]
-Overfull \hbox (3.8316pt too wide) in paragraph at lines 526--527
+Overfull \hbox (10.15529pt too wide) in paragraph at lines 529--530
 [][] 
  []
 
 
-Overfull \hbox (22.80266pt too wide) in paragraph at lines 527--528
+Overfull \hbox (3.8316pt too wide) in paragraph at lines 530--531
+[][] 
+ []
+
+
+Overfull \hbox (22.80266pt too wide) in paragraph at lines 531--532
 [][] 
  []
 
 [30]
-Overfull \hbox (15.45003pt too wide) in paragraph at lines 551--552
+Overfull \hbox (15.45003pt too wide) in paragraph at lines 555--556
 [][][][][] 
  []
 
 
-Overfull \hbox (10.15529pt too wide) in paragraph at lines 552--553
+Overfull \hbox (10.15529pt too wide) in paragraph at lines 556--557
 [][] 
  []
 
 
-Overfull \hbox (3.8316pt too wide) in paragraph at lines 553--554
+Overfull \hbox (3.8316pt too wide) in paragraph at lines 557--558
 [][] 
  []
 
-
-Overfull \hbox (22.80266pt too wide) in paragraph at lines 554--555
+[31]
+Overfull \hbox (22.80266pt too wide) in paragraph at lines 558--559
 [][] 
  []
 
-[31] [32] [33]
+[32] [33] [34]
 File: figures/javaThreadState.png Graphic file (type bmp)
 <figures/javaThreadState.png>
- [34] [35] [36]
-Overfull \hbox (92.68085pt too wide) in paragraph at lines 680--680
+ [35] [36]
+Overfull \hbox (92.68085pt too wide) in paragraph at lines 684--684
 []\TU/lmr/m/n/10.53937 2. \TU/SimSun(0)/m/n/10.53937 对 于 已 经 发 生 了 \TU/lmr/m/n/
 10.53937 oom \TU/SimSun(0)/m/n/10.53937 异 常 的\TU/lmr/m/n/10.53937 , \TU/SimSun(
 0)/m/n/10.53937 生 成 \TU/lmr/m/n/10.53937 dump \TU/SimSun(0)/m/n/10.53937 文 件 \T
@@ -935,7 +935,7 @@ File: figures/jvm_point.jpg Graphic file (type bmp)
 File: figures/redis_file_event.jpg Graphic file (type bmp)
 <figures/redis_file_event.jpg>
 
-Overfull \hbox (86.38875pt too wide) in paragraph at lines 924--952
+Overfull \hbox (86.38875pt too wide) in paragraph at lines 928--956
  [][] 
  []
 
@@ -949,22 +949,29 @@ File: figures/jump_table.jpg Graphic file (type bmp)
 File: figures/redis_sharding.png Graphic file (type bmp)
 <figures/redis_sharding.png>
  [53] [54]
+File: figures/tcpsynrcvd.png Graphic file (type bmp)
+<figures/tcpsynrcvd.png>
+ [55]
+File: figures/liuliangkongzhi.png Graphic file (type bmp)
+<figures/liuliangkongzhi.png>
+ [56]
 File: figures/https.png Graphic file (type bmp)
 <figures/https.png>
 File: figures/TCP_IP_OSI.png Graphic file (type bmp)
 <figures/TCP_IP_OSI.png>
- [55] [56]
+ [57] [58]
 File: figures/tcp.png Graphic file (type bmp)
 <figures/tcp.png>
- [57] [58] [59] [60] [61] [62]
-Overfull \hbox (1.30035pt too wide) in paragraph at lines 1298--1298
+ [59] [60] [61] [62]
+[63]
+Overfull \hbox (1.30035pt too wide) in paragraph at lines 1342--1342
 []\TU/lmr/m/n/10.53937 (3) \TU/SimSun(0)/m/n/10.53937 排 它 锁 \TU/lmr/m/n/10.5393
 7 (X): SELECT * from tableName where ... FOR UPDATE(\TU/SimSun(0)/m/n/10.53937 
 独
  []
 
-[63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77]
-[78] [79] [80] [81] [82] [83] [84] [85] [86] [87] [88] (./document.aux)
+[64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78]
+[79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90] (./document.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.41063pt have occurred.
@@ -974,12 +981,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19828 strings out of 492922
- 443018 string characters out of 6124629
- 754201 words of memory out of 5000000
- 23656 multiletter control sequences out of 15000+600000
+ 19838 strings out of 492922
+ 443261 string characters out of 6124629
+ 772201 words of memory out of 5000000
+ 23664 multiletter control sequences out of 15000+600000
  537728 words of font info for 78 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  54i,8n,68p,666b,933s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on document.pdf (88 pages).
+Output written on document.pdf (90 pages).

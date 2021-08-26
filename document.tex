@@ -5,6 +5,7 @@
 \graphicspath{{figures/}}
 \usepackage{listings} 
 \usepackage{xcolor}
+\usepackage{url}
 \lstset{
 	language=c,  %代码语言使用的是matlab
 	frame=shadowbox, %把代码用带有阴影的框圈起来
@@ -93,7 +94,7 @@ class对象反射 ---> 实例化 ---> 生成对象 ---> 属性填充(依赖注�
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{figures/bean_live.jpg}
-	\caption{}
+	\caption{beanlive}
 	\label{fig:bean_live}
 	
 \end{figure}
@@ -138,7 +139,7 @@ class对象反射 ---> 实例化 ---> 生成对象 ---> 属性填充(依赖注�
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{figures/SpringModelAndView.png}
-	\caption{}
+	\caption{SpringModelAndView}
 	\label{fig:SpringModelAndView}
 \end{figure}
 	\subsubsection{第三个三级标题}
@@ -198,7 +199,7 @@ Spring本身并没有针对bean做线程安全处理, 所以 \par
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{figures/redission.png}
-	\caption{}
+	\caption{redission}
 	\label{fig:redission}
 \end{figure}
 \subsubsection{如何查看线程死锁}
@@ -349,7 +350,7 @@ String是不可变字符串对象(final的char数组), StringBuilder和StringBuf
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{figures/red_black.jpg}
-	\caption{}
+	\caption{redblack}
 	\label{fig:jvm_copy}
 \end{figure}
 \begin{enumerate}
@@ -461,7 +462,7 @@ public interface InterfaceJDK8 {
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{figures/JMM.png}
-	\caption{}
+	\caption{JMM}
 	\label{fig:JMM}
 \end{figure}
 \subsubsection{Java内存模型中的可见性, 原子性和有序性}
@@ -638,7 +639,7 @@ public class App {
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{figures/javaThreadState.png}
-	\caption{}
+	\caption{javaThreadState}
 	\label{fig:javaThreadState}
 \end{figure}
 \subsubsection{创建线程的几种方式}
@@ -684,7 +685,7 @@ public class App {
 	\begin{figure}
 		\centering
 		\includegraphics[width=0.7\linewidth]{figures/sign_remove.png}
-		\caption{}
+		\caption{signremove}
 		\label{fig:sign_remove}
 	\end{figure}
 	\item 标记整理: 标记完毕之后, 让所有存活的对象向一端移动
@@ -692,7 +693,7 @@ public class App {
 	\begin{figure}
 		\centering
 		\includegraphics[width=0.7\linewidth]{figures/jvm_copy.jpg}
-		\caption{}
+		\caption{jvmcopy}
 		\label{fig:jvm_copy}
 	\end{figure}
 	\item 分代收集算法-重点 \par
@@ -728,14 +729,14 @@ Java程序运行机制步骤
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{figures/jvm.jpg}
-	\caption{}
+	\caption{jvm}
 	\label{fig:jvm}
 \end{figure}
 \subsubsection{JVM运行时数据区这些方法的关系}
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{figures/jvmRunTime.jpg}
-	\caption{}
+	\caption{jvmRunTime}
 	\label{fig:jvmRunTime}
 \end{figure}
 可以看到PC指针和虚拟机栈和本地方法栈是线程独有的. 而堆,方法区和运行时常量池是属于线程共享
@@ -771,14 +772,14 @@ TIPS:
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{figures/Serial.png}
-	\caption{}
+	\caption{Serial}
 	\label{fig:Serial}
 \end{figure}
 (2) ParNew(Parallel Old)收集器, 是Serial收集器的多线程版本. 然后, 并行收集垃圾工作, 此时用户线程也是停止的状态 \par
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{figures/ParNew.png}
-	\caption{}
+	\caption{ParNew}
 	\label{fig:ParNew}
 \end{figure}
 (3) Parallel Scavenge 收集器(新生代) \par
@@ -786,7 +787,7 @@ TIPS:
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{figures/parallelscavenge.png}
-	\caption{}
+	\caption{parallelscavenge}
 	\label{fig:parallelscavenge}
 \end{figure}
 (4) Serial Old 收集器(老年代) \par
@@ -798,7 +799,7 @@ TIPS:
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{figures/cms.png}
-	\caption{}
+	\caption{cms}
 	\label{fig:cms}
 \end{figure}
 (7) G1 收集器 \par
@@ -839,7 +840,7 @@ Java堆中划分出一块内存作为句柄池, 引用中存储对象的句柄�
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{figures/jvm_handler.jpg}
-	\caption{}
+	\caption{jvmhandler}
 	\label{fig:jvm_handler}
 \end{figure}
 \textbf{直接指针}
@@ -847,7 +848,7 @@ Java堆中划分出一块内存作为句柄池, 引用中存储对象的句柄�
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{figures/jvm_point.jpg}
-	\caption{}
+	\caption{jvmpoint}
 	\label{fig:jvm_point}
 \end{figure}
 \subsubsection{垃圾回收器的基本原理是什么?}
@@ -913,7 +914,7 @@ Cluster模式: 槽分配. 支持多主多从
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{figures/redis_file_event.jpg}
-	\caption{}
+	\caption{redisfileevent}
 	\label{fig:redis_file_event}
 \end{figure}
 \subsubsection{Redis五种类型数据的实现方式}
@@ -967,7 +968,7 @@ Cluster模式: 槽分配. 支持多主多从
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{figures/ziplist.png}
-	\caption{}
+	\caption{ziplist}
 	\label{fig:ziplist}
 \end{figure}
 \subsubsection{zset}
@@ -1001,7 +1002,7 @@ skiplist与平衡树, 哈希表的比较
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{figures/jump_table.jpg}
-	\caption{}
+	\caption{jumptable}
 	\label{fig:redissharding}
 \end{figure}
 \begin{enumerate}
@@ -1013,7 +1014,7 @@ skiplist与平衡树, 哈希表的比较
 
 \subsubsection{为什么要使用Redis而不用map/guavaCache做缓存}
 \begin{enumerate}
-	\item guavaCache实现的是本地缓存, 最主要的特点是轻量化以及快速, 生命周期随着jvm的销毁而结束, 冰洁在多实例的情况下, 每个实例都需要个字保存一份缓存, 缓存容易出现不一致性.
+	\item guavaCache实现的是本地缓存, 最主要的特点是轻量化以及快速, 生命周期随着jvm的销毁而结束, 并且在多实例的情况下, 每个实例都需要个字保存一份缓存, 缓存容易出现不一致性.
 	\item 使用redis之类的缓存称为分布式缓存, 在多实例的情况下, 各实例公用一份缓存数据, 缓存具有一致性.
 \end{enumerate}
 \subsubsection{分布式锁如何使用redis实现}
@@ -1059,7 +1060,7 @@ Redis事物的本质通过MULTI, EXEC, WATCH等一组命令的集合.
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{figures/redis_sharding.png}
-	\caption{}
+	\caption{redis\_sharding}
 	\label{fig:redissharding}
 \end{figure}
 \subsubsection{缓存雪崩}
@@ -1118,19 +1119,38 @@ Redis将所有数据放在内存中, 内存的相应市场大约100ns, 对于小
 
 \section{计算机网络}
 %\subsection{二级标题}
+\subsubsection{HTTPS访问过程, SSL 握手的过程}
+证书主要作用是在SSL握手中，我们来看一下SSL的握手过程
+
+1. 客户端提交https请求
+
+2. 服务器响应客户，并把证书公钥发给客户端
+
+3. 客户端验证证书公钥的有效性
+
+4. 有效后，会生成一个会话密钥
+
+5. 用证书公钥加密这个会话密钥后，发送给服务器
+
+6. 服务器收到公钥加密的会话密钥后，用私钥解密，回去会话密钥
+
+7. 客户端与服务器双方利用这个会话密钥加密要传输的数据进行通信
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/https.png}
+	\caption{https}
+	\label{fig:https}
+\end{figure}
+
 \subsubsection{计算机网络分层}
-计算机网络OSI模型是七层, 如果是TCP/IP
-应用层(HTTP/FTP) - 应用层
-\par 
-~ - 表示层
-~ - 会话层
-\par
-传输层(UDP/TCP) - 传输层
-\par
-网际层(IP) - 网络层
-\par 
-主机至网络层 - 数据链路层
-~ - 物理层
+计算机网络OSI模型是七层, 如果是TCP/IP则是四层
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/TCP_IP_OSI.png}
+	\caption{TCP\_IP\_OSI}
+	\label{fig:TCP_IP_OSI}
+\end{figure}
 \subsubsection{TCP和UDP区别?}
 \par
 UDP: 面向报文, 支持1对1, 1对多, 多对1的交互通信
@@ -1157,7 +1177,7 @@ TCP: 面向连接, 提供可靠交付, 有流量控制, 拥塞控制, 提供全�
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{figures/tcp.png}
-	\caption{}
+	\caption{tcp}
 	\label{fig:tcp}
 \end{figure}
 \subsubsection{Cookie作用, 安全性问题和Session的比较}
@@ -1245,17 +1265,19 @@ MVCC用于提交读和可重复读这两种隔离级别. 使用undolog实现
 \subsubsection{B+/B树之间的比较}
 (1) B+树空间利用率更高, 可减少IO次数. \par
 (2) B+树所有关键字的查询路径长度相同(因为关键字在叶子节点), 导致每一次查询的效率相当, 更加稳定. \par
-(3) b+叶子节点有指针, 支持between查找很方便.
+(3) B+叶子节点有指针, 支持between查找很方便.
 \subsubsection{聚集索引\&非聚集索引}
 简单来说, 一个表只有一个聚集索引, 类似于主键索引.
-\par
+
 一个表可以有多个非聚集索引, 打比方, 新华字典A-Z的查询事主键索引, 新华字典偏旁查询事非聚集索引. 是会跳跃的.
+
+
 \subsubsection{创建索引的优点}
 (1) 当数据量增大的时候, 索引可以极大的加快数据的查找速度
 \subsubsection{创建索引的缺点}
 (1) 对于一个表而言, 不单单要维护数据的存储, 也要维护索引的存储. (空间增大)
 \par
-(2) 对表中的数据进行修改的时候, 索引也要哦进行动态维护, 这样就降低了数据的维护速度.
+(2) 对表中的数据进行修改的时候, 索引也要进行动态维护, 这样就降低了数据的维护速度.
 \subsubsection{MYSQL优化}
 (1) 最左前缀法则 \par
 (2) 较长的数据列建立前缀索引 \par
@@ -1300,7 +1322,7 @@ MVCC用于提交读和可重复读这两种隔离级别. 使用undolog实现
 \subsubsection{进程之间的通信方式有哪些?}
 (1) 命名管道FIFO: 半双工方式 \par
 (2) 消息队列: 克服了信号传递信息少, 管道只能承载无格式字节流以及缓冲区大小受限等缺点. \par
-(3) 共享内存: 共享内存你是最快的IPC方式. \par
+(3) 共享内存: 共享内存是最快的IPC方式. \par
 (4) 信号量: 信号量是一个计数器. \par
 (5) 套接字:socket 可以用于不同机器间的进程通信. \par
 (6) 信号: 信号是一种比较复杂的通信方式, 用于通知接收进程某个事件已经发生, 比如linux中的kill命令通知进程进行关闭. \par
@@ -1312,7 +1334,7 @@ MVCC用于提交读和可重复读这两种隔离级别. 使用undolog实现
 (5) 基于时间片轮转调度算法 \par
 \subsubsection{epoll和poll的区别}
 1. select模型, 使用的是数组来存储Socket连接文件描述符, 容量是固定的, 需要通过轮询来判断是否发生了IO事件\par
-2. poll模型, 使用的是链表来存储Socket连接文件描述符, 容量是不固定的, 童谣需要通过轮询来判断是否发生了IO事件 \par
+2. poll模型, 使用的是链表来存储Socket连接文件描述符, 容量是不固定的, 同样需要通过轮询来判断是否发生了IO事件 \par
 3. epoll模型, epoll和poll是完全不同的, epoll是一种事件通知模型, 大发生了IO事件时, 应用程序才进行IO操作, 不需要像poll模型那样主动去轮询 \par
 \section{设计模式}
 \subsubsection{多线程下单例设计模式}
@@ -1561,8 +1583,8 @@ public class TestPC2
 有内置宏 \_\_cplusplus 是C++编译的
 \subsubsection{在C++程序中调用被C编译器编译后的函数, 为什么要加extern"C"}
 extern "C" 是修饰的变量和函数是按照C语言方式编译和链接的, 因为C编译器和C++编译器对一个函数的编译后的函数名是不同的, 这样为了实现混合查找函数名在类库中的实现,解决名字匹配问题. \par
-\subsubsection{C++, const 和 #define 之间的区别}
-const和#define 都能定义常量, 但是#define只做单纯的替换, 但是const能进行代码安全检查. 
+\subsubsection{C++, const 和 \#define 之间的区别}
+const和\#define 都能定义常量, 但是\#define只做单纯的替换, 但是const能进行代码安全检查. 
 \subsubsection{指针和引用之间的区别}
 1. 指针可以指向空值 但是引用不能指向空值. \par
 2. 指针可以不初始化, 引用必须初始化. \par
@@ -1598,9 +1620,13 @@ malloc/free是C/C++标准可以函数, new/delete是C++运算法. 他们都可�
 2. 可以，可以用atexit注册一个函数(函数参数是一个函数指针)，它会在main 之后执行; \par
 \subsubsection{经常要操作的内存分为那几个类别？} 
 (1) 栈区：由编译器自动分配和释放，存放函数的参数值、局部变量的值等；
+
 (2) 堆：一般由程序员分配和释放，存放动态分配的变量；
+
 (3) 全局区(静态区)：全局变量和(全局或局部)静态变量存放在这一块，初始化的和未初始化的分开放；
+
 (4) 文字常量区：常量字符串就放在这里，程序结束自动释放；
+
 (5) 程序代码区：参访函数体的二进制代码。
 \subsubsection{函数指针与指针函数}
 指针函数: 是函数, 但是返回指针(有两个括号) \par
@@ -1614,7 +1640,7 @@ malloc/free是C/C++标准可以函数, new/delete是C++运算法. 他们都可�
 声明, 表示告诉编译器这个符号是存在的, 你先让我编译通过, 让连接器去找这个符号在哪里 \par
 对于变量来说, 定义就是声明, 对于函数来说是有区别的, 如果没有实现函数体, 那么就是声明, 表示有这么一个函数. 至于函数在哪里.
 \subsubsection{编译链接过程}
-1. 预编译, 将#include 和 #define 展开, 生成.i文件 \par
+1. 预编译, 将\#include 和 \#define 展开, 生成.i文件 \par
 2. 编译, 进行词法分析, 语法分析, 语义分析, 中间代码生成, 目标代码生成, 优化, 生成.s文件 \par
 3. 汇编, 生成.o文件, 将汇编码翻译成机器码 \par
 4. 链接, 地址和空间分配, 生成 .out 文件 \par
@@ -1673,10 +1699,98 @@ reinterpret\_cast<>(): 低层次的类型转换, 可以将指针转为int类型�
 \subsubsection{const int*}
 const int * a1 = \&b; // 相当于 *a1 是固定的, a1是可变的 \par
 int *const a2 = \&b; // 相当于 a2 是固定的, *a2是可变的 
+
 int const *a3 = \&b; // 等价于第一个 a1
-\subsubsection{c++虚函数原理}
+\subsubsection{C++虚函数原理}
 1. 简单来说, 每一个含有虚函数的类都至少有一个与之对应的虚函数表, 其中存放着该类所有的虚函数对应的函数指针 \par
-2. 
+2. 在运行时, 会根据调用的指针指向的对象得到真正应该调用的函数, 然后通过偏移量找到虚函数地址并调用 \par
+\subsubsection{C++虚函数表的开销}
+1. 空间开销, 每个对象都会保持一个虚函数表造成空间开销 \par
+2. 时间开销, 可能因为函数数简介寻址, 造成CPU分支预测失败造成流水线重刷性能开销 \par
+\subsubsection{epoll水平触发\&epoll边缘触发}
+对于监听的sockfd，最好使用水平触发模式，边缘触发模式会导致高并发情况下，有的客户端会连接不上。如果非要使用边缘触发，网上有的方案是用while来循环accept()。 \par
+LT模式 \par
+fd可读之后，如果服务程序读走一部分就结束此次读取，LT模式下该文件描述符仍然可读\par
+fd可写之后，如果服务程序写了一部分就结束此次写入，LT模式下该文件描述符也仍然可写\par
+ET模式 \par
+fd可读之后，如果服务程序读走一部分就结束此次读取，ET模式下该文件描述符是不可读，需要等到下次有数据到达时才可变为可读，所有我们要保证循环读取数据，以确保把所有数据读出 \par
+fd可写之后，如果服务程序写了一部分就结束此次写入，ET模式下该文件描述符是不可写的，我们要保证写入数据，确保把数据写满 \par
+\subsubsection{传统IO和mmap}
+1. 调用write, 告诉内核需要写入数据的开始地址与长度 \par
+2. 内核将数据拷贝到内核页缓存 \par
+3. 有操作系统调用, 将数据拷贝到磁盘, 完成写入. \par
+Linux通过将一个虚拟内存区域与一个磁盘上的对象关联起来, 以初始化这个虚拟内存区域的内容. \par
+可以减少一次拷贝. 
+
+\subsubsection{write 和 fwrite}
+如果文件的大小是8k。
+若用write，且只分配了2k的缓存，则要将此文件读入需要做4次系统调用。（内核空间和用户空间切换4次）
+若用fwrite，则系统自动分配缓存，则读入此文件只要一次系统调用。
+也就是用write要读4次磁盘，而用fwrite则只要读1次磁盘。所以fwrite的效率比write要高4倍。
+
+\section{项目解析}
+\subsubsection{华为软件精英挑战赛2020}
+2020年华为软挑是对金融风控的查询, 简单来说实现了一个对于循环转账3-7个账号循环转账的监测. 对于算法时间的优化. \par
+刚开始使用string字符串, 结果因为string字符串基于堆, 生成和释放比较消耗时间, 我们使用了全局静态变量, 用来简化字符串的生成. 以空间换时间. 后来经过测试没有自己写的char数组转int快, 后来换成自己写的转换函数了 \par
+使用mmap进行内存映射, 减少IO读取时间(普通的read会拷贝一次到内核缓冲区). 再将整个缓冲区用fwrite写入文件，因为fwrite带有缓冲区, 比write而言, write使用的是系统缓冲区, 可能会增加IO次数.\par
+使用dfs然后最开始使用了7层dfs+回溯. 十分耗时, 然后, 我实现了6+1层dfs, 减少了一层dfs. 减少一层是通过开始节点的入度判定的, 遍历6层之后, 如果下一个节点是头结点的. 那么结束循环保存答案\par
+后来进一步优化, 使用 5+2(反向) dfs 减少时间. 先反向遍历两层, 然后再正向遍历5层, 当遍历到第5层的时候, 如果是两次反向遍历可以达到head节点, 的话, 我们就输出答案. \par
+进一步优化, 使用反向遍历3进行剪枝, 如果访问超过了3层, 但是反向遍历3层不是头结点, 那么进行剪枝 \par
+均匀使用四个区间, 开启四个线程进行运算 \par
+\subsubsection{华为软件精英挑战赛2021}
+华为软挑是实现云计算背景下的服务器资源分配和调度问题.  核心构成就是策略的使用, 使金额最小 \par
+给定一些服务器与虚拟机，每日会有一定量的创建与删除虚拟机请求，我们需要合理安排服务器的购买和虚拟机请求的分配，从而达到购买服务器的成本和能耗成本的总和最低。一台服务器的抽象化为两个CPU分区, 和 两个内存分区.  虚拟机也抽象化为可以单部署 和双部署, 双部署就是, 对于一台服务器而言 要均衡的放在两个CPU分区, 和两个内存分区. \par
+团队是qq群中组建的, 一个浙大的研究生, 两个杭电的研究生. 因为杭电和浙大还是距离挺远的, 我们采用了线上开会的形式.  代码采用了github的方式进行同步. 简单讲一下我们的校验手段, 比赛开始之后一段时间, github上就有了可视化平台, 我们利用可视化平台可以比较详细的看出, 我们购买的服务器的种类, 和购买的个数.  还有整个系统的波动曲线, 就是购买个数之类的. 每日能耗曲线之类的. \par
+这个问题我们探讨出有两个点可以进行集中优化. \par
+
+A. 即购买策略\par
+a. 将当天需要购买的虚拟机按照, CPU数量和内存数量的和进行排序, 降序排序\par
+b. 然后寻找一个服务器开着的, 然后尝试将虚拟机放入服务器, 选择服务器的使用率最高的那个, 进行存放.\par
+c. 如果没有成功放置进入C环节, 选择一台关机了的服务器, 进行存放.\par
+d. 还没成功选择, 选择一台服务器 刚开始我们使用的是, 恰恰能放入虚拟机的服务器. 后期我们进行了更新, 选择,能放入这台服务器和前面已经存放的服务器的大小, 就是留有一定的余量. 可以减少购买服务器的资金.\par 
+B. 迁移的策略\par
+a. 我们每天可以进行一次服务器迁移, 这样将利用率低的服务器从低到高进行排序, 然后将利用率低的服务器迁移到利用率高的服务器.\par
+b. 后期我们增加了一个简单的策略. 将一台服务器中只有一个和两个的挑选出来, 放入其他的服务器中, 这样可以带来省电的效果.\par
+
+前期我们首先三个人每个人按照自己的想法制作了一个基线版本, 为什么要写一个基线版本呢? 这样我们对整个问题都有一个比较深刻的认识, 后期, 我们更具我们建模出来的可以比较提升系统性能的地方, 进行了改进.
+对于 购买策略, 和迁移策略进行改进. 我个人对于购买策略和系统参数进行了调试. 购买策略的排序和余量设定, 给我的系统带来了大约2000w的资金节省.调试参数, 就是在题目要求的时间边缘进行反复测试直到达到一个最优值, 前期 我们设定的参数是低于30\% 的利用率我们会进行迁移, 这样迁移的机器数量比较少, 并不能达到我们的预期, 后期我进行慢慢测试终于选定了50\%这个参数, 选了更大的参数大部分服务器都要进行迁移, 反而效果并不是特别好. \par
+迁移策略由另外两个同学进行改进. 迁移策略我印象比较深刻的地方是, 因为排行榜上前几名的系统迁移基本上拉满了, 我们还有很多的余量. 所以他们连个进行了这个开发.
+他们使用了类似于快速排序点的方法进行迁移. 按照服务器日常能耗的价格进行排序, 然后设定两个指针, 一个指针指向价格比较低的地方, 一个指针指向价格高的地方,然后尝试将价格高的服务器迁移到价格低的服务器上, 如果成功, 然后右指针--, 如果失败左指针++. 直到两个指针相遇. 但是因为比较容易超时, 我们放弃了这个方案. \par
+对于迁移, 我们自定义了服务器性价比. 使用服务器的CPU利用率 * 内存利用率, 如果其中有一个特别低的话, 就说明这台服务器没有达到比较大的利用率, 我们设定一个参数, 当CPU利用率 *  内存利用率小于50\% 我们会对这个服务器中的虚拟机进行迁移. \par
+\subsubsection{数学建模2020}
+1. 数学建模，问题是对于飞机6个油箱的输油拟合，我们受用了向量拟合算法，判断重心之间的偏差，然后控制邮箱的输油，使用python有一个好处可以将数据读取和数据处理和数据展示写在一堆中，队友对于文章的撰写，也很厉害，队友使用visio绘制了形象生动的模型展示图。是一个团队的比赛，然后我觉得最重要的是心态平和，在最后一天晚上，凌晨两点的时候我才完成了数学建模最后一问的撰写。当时队友都说，要不先不写最后一题了，我觉得我写的出来，而且不超过2点，结果，我们就完成了数学建模的所有题目。\par
+2. 还有经过数学建模，个人觉得，只要有合适的学习阶梯，基本上任何东西都能掌握，数学建模是对于算法有一些基本的要求，对于模拟退火算法，初看觉得很难，但是简单调研一番后，模拟退火算法是真的简单。然后这期间也简单学了在数学建模培训赛题中使用模拟退火解决了经典的旅行商问题之类。\par
+
+数学建模 
+我们三个人做的是2020年的华为杯数学建模, 我们的题目是飞行器质心平衡供油策略优化. 我使用了python作为我们的编程与可视化语言. 因为, python 可以一套走完, 既可以完成数据从excel文档中的读取, 也可以使用python来进行图表的绘制. \par
+
+
+两个问题的建模让我比较深刻\par
+问题一是给出 飞行器的俯仰角, 来计算整个飞机的质心变化曲线. 一个飞机有六个油箱, 只有四个油箱可以进行出油, 每一时刻是有一个油箱可以对发动机进行供油. 虽然题目中给出了 邮箱以长方体来进行建模但是由于油气是液体, 随着飞机的俯仰角会进行不规则体的变化, 我们分成四类情况进行讨论, 以长方形的方式来进行简化建模.  也就是简单来说, 三棱柱, 四棱柱, 和五棱柱的情况.  分别求解出每一个邮箱的质心, 然后我们使用组合体质心求解公式对问题一进行了解答. \par
+问题二, 给出了飞机的质心偏移数据, 我们要求解六个油箱的供油策略. \par
+我们使用了理想执行偏移补偿算法. 就是下一个飞机的理想质心. 的偏移. 我们来进行六个油箱供油的遍历, 得到最能补偿偏移的向量使用这种方式决定油箱的供油选择. \par
+数学建模让我个人成长了许多, 以前觉得模拟退火算法是比较难的算法, 因为随着这个算法,一般会听到. 量子计算机, 这个是超过个人认知的东西, 但是经过个人的调研, 发现模拟退火算法可以说是, 智能算法中最简单的一种算法. 随着设定温度的下降整个系统达到稳定, 可以得到较优解. 也学习了蒙特卡洛算法, 以概率统计来进行结果的计算. 也学习了lingo等进行整数规划问题的求解.\par
+感悟最多的是, 整个队伍还是比较难构建的. 比赛心态很重要, 虽然在最后一天比赛凌晨2点我才求解出问题四的解, 那个时候我的队友都有点要放弃的样子, 我还是对队友说给我1个小时就一定能写好. 个人觉得数学建模对于文档的撰写也很重要, 文档的图形与建模也是一项技术活儿.\par
+\subsubsection{之江天枢深度学习可视化项目}
+对于使用vue框架对于深度学习模型的高维向量分类效果进行了可视化. 数据分类效果的查看主要基于两种算法, 第一种是PCA(主成分分析, 就是将数据维度以权重的方式保留最高的), 另一种是TSNE(T分布和随机近邻嵌入)算法,  使用 三种方式对数据进行可视化, 分为是 2位平面可视化数据点集, 三维空间可视化数据点集, 和 4维到8位的平行坐标可视化. 二维和4-8位采用的是d3.js对数据的可视化. 三维采用了echarts.js 进行数据可视化. 实现了动态数据变化. 动画效果是我做的两点之一, 因为D3.js 对于动画的支持比较靠后面, 因为D3.js 是支持定制化显示的.但是对于动画的实现需要对D3.js 比较深刻的理解. 我做到了. 比如一个顶点从一个旧坐标到新坐标, 是采用连续的动画, 而不是顶点的直接跳跃. 数据类目 以不同的三色进行表示, 清晰直观. 比如对于手写数字的可视化, 有10个颜色, 在后期模型训练好的时候, 在TSNE算法可以清晰的找到10个集合. 可以通过鼠标点击 折现点, 如果某个分类集合中混入了别的颜色可以轻易找到, 进而看到原始的数据. 可以展示图片 文字 和 音频.  增加了播放按钮, 随着模型的训练, 高维向量在后期, 几乎不会发生改变. 这样对于训练模型的研究者可以提前关闭模型的训练, 如果一个模型训练了很久 高维数据还是分类不出来, 那么研究者可以简单判断模型构建出现了问题. 
+原本三维,个人是实现了, 图形学算法中的三维映射到二维的算法. 自己构建了MVP矩阵, 分别是模型矩阵, 视图矩阵, 和投影矩阵. 然后鼠标通过trackball来进行整个模型的旋转与缩放. 但是因为d3.js 只能操作svg, svg是一个比较古老的绘图方式, 性能并不高, Canvas 并不能通过d3.js 进行操作. 无奈之下, 使用了echarts.js现成的可视化方案. 
+
+第二个模块是媒体数据可视化模块, 使用element-ui进行制作, 可以显示图片, 音频, 文本等信息. 
+
+期间爬了很多坑, 比如echats 传入的数据第一维度必须是标题, 不能直接是数据啥的. 文档也没说, 看了原码才知道, 对于echats的源码进行了简单的debug. 有比较强的前端开发能力. 对于 VUE的  MVC 模型 也比较熟悉, 数据驱动显示. 在我的项目中得到了淋漓尽致的利用. 
+
+项目中使用了less对于布局的简单使用，使用async进行异步获取数据，使用封装了axios的模块进行对于数据进行get获取。前端在第一次请求的时候获取了session\_id,然后之后都会携带有cookie对于身份的判断识别。
+
+音频通过blob下载(里面好像使用了跨域, CustomAudio.vue就是实现这个的, 对于二进制文件内容的下载), 并且实现了音频组件的样式定时, 通过elementui连接audio中的事件,  通过更换UI设计师的icon使整个音频播放组件更加的美观.
+
+数据的实时同步的实现, 通过前端实现了一个定时器, 然后每个正在展示的页面会定时发送数据请求, 然后更新数据的显示.
+\section{自我介绍}
+面试官好, 我是杭州电子科技大学, 计算机科学与技术专业的学生, 来自浙江温州,
+研究生主要研究的方向是六面体网格生成. 发表了一篇中文核心的论文.
+研究生期间参加过多种项目， 典型的是参加过之江实验室的天枢深度学习可视化的项目, 作为前端开发人员。
+同时也积极参与多种竞赛. 参加过华为软件精英挑战赛和数学建模比赛. 数学建模是国二. 华为软件精英挑战赛今年拿过杭夏赛区的前64强. \par
+我的兴趣爱好是跑步，参加过西湖毅行.
+
 	\section{附录: 相关样例}
 	第一个公式
 	\begin{equation}

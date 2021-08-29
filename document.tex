@@ -175,6 +175,14 @@ class对象反射 ---> 实例化 ---> 生成对象 ---> 属性填充(依赖注�
 	
 \section{java基础}
 %\subsection{二级标题}
+\subsubsection{HTTP请求资源的方式}
+GET: 获取资源
+
+POST: 创建资源
+
+PUT: 创建(更新资源)
+
+DELETE: 删除资源
 \subsubsection{如何防止SQL注入}
 使用预编译的方法来, 比如PrepareStatement类下面的setString方法来对参数进行处理, 简单来说
 \subsubsection{如何实现10000个qq判断是否在线的情况}
@@ -932,6 +940,14 @@ GC采用有向图的方式记录和管理堆中的所有对象. 通过这种方�
 
 \section{Redis}
 %\subsection{二级标题}
+\subsubsection{如何解决并发数据一致性问题?}
+1. 使用分布式锁
+
+2. 使用mysql悲观锁 for update, 行锁, 加上排它锁, 这样后来的事物会阻塞查询, 这样就比变了数据不一致.
+
+3. 使用mysql乐观锁, 基于CAS 当我心中预想的金额或者版本等于我想要的版本的时候更新整个账户金额
+
+Update t\_account set money=\#{new\_money} where id=\#{id} and money=\#{old\_money};
 \subsubsection{Redis的数据结构及使用场景}
 字符串(string), 用来缓存简单的数据结构, 简单的字符串, 可以实现Session共享\par
 列表(list), Redis的列表通过命令的组合, 即可以当做栈, 也可以当做队列来使用\par
@@ -1170,6 +1186,60 @@ Redis将所有数据放在内存中, 内存的相应市场大约100ns, 对于小
 
 \section{计算机网络}
 %\subsection{二级标题}
+\subsubsection{TCP如何保证可靠性}
+1. 校验和: 通过添加16btye的校验和
+
+2. 确认信号ACK与序列号
+数据发送后, 对方回发送一个ack表示数据已经收到了 比如服务端发送了1-1000的数据, ack应答1001 表示前1000个数据已经送达了.
+
+3. 超时重传: 报文发出后在一定时间内未收到接收方的应答, 发送方就会进行重发.
+
+4. 连接管理机制: 三次握手和四次挥手
+
+5. 流量控制: 接收端处理数据的速度是有限的，如果发送方发送数据的速度过快，导致接收端的缓冲区满，而发送方继续发送，就会造成丢包，继而引起丢包重传等一系列连锁反应。
+因此TCP支持根据接收端的处理能力，来决定发送端的发送速度，这个机制叫做流量控制。
+在TCP报文段首部中有一个16位窗口长度，当接收端接收到发送方的数据后，在应答报文ACK中就将自身缓冲区的剩余大小，放入16窗口大小中。这个大小随数据传输情况而变，窗口越大，网络吞吐量越高，而一旦接收方发现自身的缓冲区快满了，就将窗口设置为更小的值通知发送方。如果缓冲区满，就将窗口置为0，发送方收到后就不再发送数据，但是需要定期发送一个窗口探测数据段，使接收端把窗口大小告诉发送端。
+
+6. 拥塞控制
+然而如果网络非常拥堵，此时再发送数据就会加重网络负担，那么发送的数据段很可能超过了最大生存时间也没有到达接收方，就会产生丢包问题。
+为此TCP引入慢启动机制，先发出少量数据，就像探路一样，先摸清当前的网络拥堵状态后，再决定按照多大的速度传送数据。
+此处引入一个拥塞窗口：
+发送开始时定义拥塞窗口大小为1；每次收到一个ACK应答，拥塞窗口加1；而在每次发送数据时，发送窗口取拥塞窗口与接送段接收窗口最小者。
+慢启动：在启动初期以指数增长方式增长；设置一个慢启动的阈值，当以指数增长达到阈值时就停止指数增长，按照线性增长方式增加；线性增长达到网络拥塞时立即“乘法减小”，拥塞窗口置回1，进行新一轮的“慢启动”，同时新一轮的阈值变为原来的一半。慢启动, 拥塞避免, 快重传, 快恢复. \par
+
+\subsubsection{TCP报文头部内容}
+1. 源端口
+
+2. 目的端口
+
+3. 校验和
+
+4. ACK标志位
+
+5. FIN 标志位
+
+6. 校验和
+
+7. 序号seq和确认号ack
+
+
+\subsubsection{TCP三次握手和四次挥手示意图}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/tcpconnectdis.png}
+	\caption{tcpconnectdis}
+	\label{fig:tcpconnectdis}
+\end{figure}
+\subsubsection{Time\_wait状态}
+1. 一个TCP连接中, 主动关闭连接的一方发现的状态; 收到FIN命令, 进入TIME\_WAIT状态, 并返回ACK命令
+
+2. 保持两个MSL时间, 即4分钟; (MSL为2分钟)
+
+如果在高并发场景下, 出现了大量的tcpTimewait状态. 如何解决? 因为tcp头中有16bit表示端口号. 如果65536个端口号因为timewait状态被占用, 系统就无法给出可用的服务.
+
+缩减time\_wait时间, 设置为1msl.
+
+服务端中可以设置为不必等待2MSL时间结束, 即可使用被占用的端口
 \subsubsection{SYN-RCVD状态}
 简单来说, 就是三次建立连接的时候, 对方没有把最后一次ack发送回来的时候的状态. 可能是别人攻击服务器产生的. \par
 
@@ -1444,8 +1514,28 @@ MVCC用于提交读和可重复读这两种隔离级别. 使用undolog实现
 2. 字段进行了隐私数据类型转化 \par
 3. 走索引没有全表扫描效率高
 \section{操作系统}
+\subsubsection{线程和进程的区别}
+1. 一个线程从属于一个进程; 一个进程可以包含多个线程
+
+2. 进程是系统资源调度的最小单位; 线程CPU调度的最小单位
+
+3. 进程系统开销显著大于线程系统开销; 线程所需要的系统资源更少
+
+4. 进程在执行时候拥有独立的内存尿胆原, 多个线程共享进程的内存, 如代码段, 数据段, 扩展端; 但每个线程拥有自己的栈段和寄存器组
+
+5. 进程切换开销
+
+a. 切换页表全局目录(比较费时, 对于大的进程之间的切换.)
+
+b. 切换内核态堆栈
+
+c. 切换硬件上下文
+
+6. 线程切换开销
+
+因为线程是进程的子集, 如果同一个进程之间的线程切换, 上下文会比进程切换要小.
 \subsubsection{协程与线程进行比较}
-协程, 是一种用户态的轻量级线程, 写成的调用完全由用户控制. 协程调度切换时, 将寄存器上下文和栈保存到其他地方, 在切回来的时候, 恢复先前保存的寄存器上下文和栈, 直接操作栈则基本没有内核切换开销, 可以不加锁访问全局变量. \par
+协程, 是一种用户态的轻量级线程, 写成的调用完全由用户控制. 协程调度切换时, 将寄存器上下文和栈保存到其他地方, 在切回来的时候, 恢复先前保存的寄存器上下文和栈, 直接操作栈则\textbf{基本没有内核切换开销}, 可以不加锁访问全局变量. \par
 (1) 一个线程可以有多个协程, 一个进程也可以单独拥有多个协程. \par
 (2) 线程进程都是同步机制, 而协程则是异步 \par
 \subsubsection{进程之间的通信方式有哪些?}
@@ -1706,6 +1796,13 @@ public class TestPC2
 \subsubsection{Serializable}
 序列化接口, 只有实现这个接口才能序列化, 默认计算一个serialVersionUID, 可以进行自定义.
 \section{C++}
+
+\subsubsection{socket 如何实现可靠连接}
+1. 心跳包机制, 保持连接
+
+2. 可以在正式数据发送前发送监测包, 刻骨短收到检测包后立即发挥一个响应. 服务端收到响应, 认为客户端还活着, 把正式数据发送
+
+
 \subsubsection{set, multiset, map, multiset}
 底层数据结构 使用红黑树, map/multimap使用pair作为基础元素. set/multiset value和key相同 \par
 底层红黑树multi/nonulti 使用 insert\_unique 和 insert\_equal之间的差别 \par
@@ -1916,6 +2013,59 @@ b. 后期我们增加了一个简单的策略. 将一台服务器中只有一个
 音频通过blob下载(里面好像使用了跨域, CustomAudio.vue就是实现这个的, 对于二进制文件内容的下载), 并且实现了音频组件的样式定时, 通过elementui连接audio中的事件,  通过更换UI设计师的icon使整个音频播放组件更加的美观.
 
 数据的实时同步的实现, 通过前端实现了一个定时器, 然后每个正在展示的页面会定时发送数据请求, 然后更新数据的显示.
+\subsubsection{快乐慕商城电商后台项目介绍}
+(\textbf{一期架构}) 通过nginx反向代理, 使用tomcat作为服务端处理程序, 然后将session 存储到 guawa cache 中. 然后将数据存储的数据库中, 没有使用中间件处理, 单机架构, 导致系统的吞吐性能比较低. 在重置密码的时候需要带上一个有效的token来进行密码的重置
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/happymmallOne.png}
+	\caption{happymmallOne}
+	\label{fig:happymmallOne}
+\end{figure}
+
+(\textbf{二期架构})
+
+使用横向扩展, 将session存储到redis中. 使用maven进行环境隔离, 分为 local dev 和prod 环境, lombok进行代码整洁性优化. 使用nginx进行负载均衡, 简单来说就是将请求分发到不同的tomcat中, 以权重的方式. redis使用一致性hash算法进行缓存分片部署.封装了异常处理防止服务端关键信息泄露. 分布式锁进行了优化防止死锁.
+
+
+
+
+一致性hash算法介绍:
+简单来说生成多个虚拟节点, 以 0 ~ $2^31-1$ 的范围进行部署, 然后看顺时针映射到哪一个redis容器中.
+
+
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/happymmallTwo.png}
+	\caption{happymmallTwo}
+	\label{fig:happymmallTwo}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/redislockdistribution.png}
+	\caption{redislockdistribution}
+	\label{fig:redislockdistribution}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/happymmallexception.png}
+	\caption{happymmallexception}
+	\label{fig:happymmallexception}
+\end{figure}
+
+\section{游戏开发}
+\subsubsection{渲染管线}
+图形渲染管线蛀牙包括两个功能: 
+1. 将物体3D坐标转变为屏幕空间2D坐标
+2. 屏幕每个像素点进行着色
+
+顶点数据的输入, 顶点着色器, 曲面细分过程, 几何着色器, 图元组装, 裁剪提出, 光栅化, 片段着色器以及混合测试. 
+
 \section{自我}
 \subsubsection{自我介绍}
 面试官好, 我是杭州电子科技大学, 计算机科学与技术专业的学生, 来自浙江温州,

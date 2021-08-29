@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.7.20)  26 AUG 2021 15:49
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.7.20)  27 AUG 2021 14:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -771,11 +771,11 @@ LaTeX Font Info:    Font shape `TU/SimSun(0)/m/sl' in size <10.53937> not avail
 able
 (Font)              Font shape `TU/SimSun(0)/m/it' tried instead on input line 
 54.
- [2] [3] [4] [5] [6])
+ [2] [3] [4] [5] [6] [7])
 \tf@toc=\write3
 \openout3 = `document.toc'.
 
- [7] [8] [9]
+ [8] [9] [10]
 Overfull \hbox (11.8953pt too wide) in paragraph at lines 76--77
 []\TU/lmr/m/n/10.53937 Spring \TU/SimSun(0)/m/n/10.53937 中 的 \TU/lmr/m/n/10.539
 37 org.springframework.beans \TU/SimSun(0)/m/n/10.53937 包 和 \TU/lmr/m/n/10.5393
@@ -784,7 +784,7 @@ Overfull \hbox (11.8953pt too wide) in paragraph at lines 76--77
 
 File: figures/bean_live.jpg Graphic file (type bmp)
 <figures/bean_live.jpg>
-[10]
+[11]
 Overfull \hbox (8.42018pt too wide) in paragraph at lines 112--112
 []\TU/lmr/m/n/10.53937 (10) \TU/SimSun(0)/m/n/10.53937 如 果 \TU/lmr/m/n/10.53937
  bean \TU/SimSun(0)/m/n/10.53937 实 现 了 \TU/lmr/m/n/10.53937 DisposableBean \TU/
@@ -792,10 +792,10 @@ SimSun(0)/m/n/10.53937 接 口，| \TU/lmr/m/n/10.53937 Spring \TU/SimSun(0)/m/n
 3937 将 调 用 它 的 \TU/lmr/m/n/10.53937 destory()
  []
 
-[11]
+[12]
 File: figures/SpringModelAndView.png Graphic file (type bmp)
 <figures/SpringModelAndView.png>
- [12] [13]
+ [13] [14]
 
 Package fontspec Info: Could not resolve font "FangSong/BI" (it probably
 (fontspec)             doesn't exist).
@@ -827,7 +827,7 @@ m/n/10.53937 文 件 $[][][][][] [] [] [] [][][][] [] [][][][] [] [][][] [] [][]
 ][][][][][][] []
  []
 
-[14]
+[15]
 File: figures/redission.png Graphic file (type bmp)
 <figures/redission.png>
 
@@ -843,20 +843,20 @@ Overfull \hbox (121.73248pt too wide) in paragraph at lines 213--213
 n/10.53937 SELECT * FROM INFORMATION_SCHEMA.INNODB_LOCK_WAITS 
  []
 
-[15]
+[16]
 Overfull \hbox (6.16397pt too wide) in paragraph at lines 219--220
 []\TU/lmr/m/n/10.53937 java.util \TU/SimSun(0)/m/n/10.53937 包 下 面 的 所 有 的 集 合 类
  都 是 快 速 失 败 的\TU/lmr/m/n/10.53937 , \TU/SimSun(0)/m/n/10.53937 而 \TU/lmr/m/n/1
 0.53937 java.util.concurrent
  []
 
-[16] [17] [18] [19] [20]
+[17] [18] [19] [20] [21]
 File: figures/red_black.jpg Graphic file (type bmp)
 <figures/red_black.jpg>
- [21] [22] [23] [24] [25] [26]
+ [22] [23] [24] [25] [26] [27]
 File: figures/JMM.png Graphic file (type bmp)
 <figures/JMM.png>
- [27] [28] [29]
+ [28] [29] [30]
 Overfull \hbox (15.45003pt too wide) in paragraph at lines 528--529
 [][][][][] 
  []
@@ -876,7 +876,7 @@ Overfull \hbox (22.80266pt too wide) in paragraph at lines 531--532
 [][] 
  []
 
-[30]
+[31]
 Overfull \hbox (15.45003pt too wide) in paragraph at lines 555--556
 [][][][][] 
  []
@@ -891,15 +891,15 @@ Overfull \hbox (3.8316pt too wide) in paragraph at lines 557--558
 [][] 
  []
 
-[31]
+[32]
 Overfull \hbox (22.80266pt too wide) in paragraph at lines 558--559
 [][] 
  []
 
-[32] [33] [34]
+[33] [34] [35]
 File: figures/javaThreadState.png Graphic file (type bmp)
 <figures/javaThreadState.png>
- [35] [36]
+ [36] [37]
 Overfull \hbox (92.68085pt too wide) in paragraph at lines 684--684
 []\TU/lmr/m/n/10.53937 2. \TU/SimSun(0)/m/n/10.53937 对 于 已 经 发 生 了 \TU/lmr/m/n/
 10.53937 oom \TU/SimSun(0)/m/n/10.53937 异 常 的\TU/lmr/m/n/10.53937 , \TU/SimSun(
@@ -911,27 +911,27 @@ File: figures/sign_remove.png Graphic file (type bmp)
 <figures/sign_remove.png>
 File: figures/jvm_copy.jpg Graphic file (type bmp)
 <figures/jvm_copy.jpg>
-[37] [38] [39]
+[38] [39] [40]
 File: figures/jvm.jpg Graphic file (type bmp)
 <figures/jvm.jpg>
 File: figures/jvmRunTime.jpg Graphic file (type bmp)
 <figures/jvmRunTime.jpg>
- [40] [41]
+ [41] [42]
 File: figures/Serial.png Graphic file (type bmp)
 <figures/Serial.png>
 File: figures/ParNew.png Graphic file (type bmp)
 <figures/ParNew.png>
 File: figures/parallelscavenge.png Graphic file (type bmp)
 <figures/parallelscavenge.png>
- [42]
+ [43]
 File: figures/cms.png Graphic file (type bmp)
 <figures/cms.png>
- [43] [44]
+ [44] [45]
 File: figures/jvm_handler.jpg Graphic file (type bmp)
 <figures/jvm_handler.jpg>
 File: figures/jvm_point.jpg Graphic file (type bmp)
 <figures/jvm_point.jpg>
- [45] [46] [47]
+ [46] [47] [48]
 File: figures/redis_file_event.jpg Graphic file (type bmp)
 <figures/redis_file_event.jpg>
 
@@ -939,39 +939,39 @@ Overfull \hbox (86.38875pt too wide) in paragraph at lines 928--956
  [][] 
  []
 
-[48]
+[49]
 File: figures/ziplist.png Graphic file (type bmp)
 <figures/ziplist.png>
- [49] [50]
+ [50] [51]
 File: figures/jump_table.jpg Graphic file (type bmp)
 <figures/jump_table.jpg>
- [51] [52]
+ [52] [53]
 File: figures/redis_sharding.png Graphic file (type bmp)
 <figures/redis_sharding.png>
- [53] [54]
+ [54] [55]
 File: figures/tcpsynrcvd.png Graphic file (type bmp)
 <figures/tcpsynrcvd.png>
- [55]
+ [56]
 File: figures/liuliangkongzhi.png Graphic file (type bmp)
 <figures/liuliangkongzhi.png>
- [56]
 File: figures/https.png Graphic file (type bmp)
 <figures/https.png>
 File: figures/TCP_IP_OSI.png Graphic file (type bmp)
 <figures/TCP_IP_OSI.png>
- [57] [58]
+ [57] [58] [59]
 File: figures/tcp.png Graphic file (type bmp)
 <figures/tcp.png>
- [59] [60] [61] [62]
-[63]
-Overfull \hbox (1.30035pt too wide) in paragraph at lines 1342--1342
+ [60] [61] [62] [63]
+[64] [65]
+Overfull \hbox (1.30035pt too wide) in paragraph at lines 1380--1380
 []\TU/lmr/m/n/10.53937 (3) \TU/SimSun(0)/m/n/10.53937 排 它 锁 \TU/lmr/m/n/10.5393
 7 (X): SELECT * from tableName where ... FOR UPDATE(\TU/SimSun(0)/m/n/10.53937 
 独
  []
 
-[64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78]
-[79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90] (./document.aux)
+[66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79] [80]
+[81] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92] [93]
+(./document.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.41063pt have occurred.
@@ -981,12 +981,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19838 strings out of 492922
- 443261 string characters out of 6124629
+ 19858 strings out of 492922
+ 444589 string characters out of 6124629
  772201 words of memory out of 5000000
- 23664 multiletter control sequences out of 15000+600000
+ 23684 multiletter control sequences out of 15000+600000
  537728 words of font info for 78 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  54i,8n,68p,666b,933s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on document.pdf (90 pages).
+Output written on document.pdf (93 pages).

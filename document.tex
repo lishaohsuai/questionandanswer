@@ -433,8 +433,15 @@ c. 判断是否需要扩容(0.75*16默认值), 需要扩容就扩容, 不需要�
 
 \subsubsection{Array 和 ArrayList 的区别}
 \begin{enumerate}
-	\item Array 大小固定, ArrayList 大小是动态变化的.
+	\item Array 大小固定(int a[]={1,2,3}), ArrayList 大小是动态变化的.
 \end{enumerate}
+transient: 将不需要序列化的属性前添加关键字transient，序列化对象的时候，这个属性就不会被序列化。
+
+默认初始化大小是10个容量.
+
+$$int newCapacity = oldCapacity + (oldCapacity >> 1);$$
+
+新的大小是旧的大小的1.5倍. 扩容会调用Arrays.copyOf操作, 然后申请新的大小.
 \subsubsection{Java各种锁: 悲观锁, 泪管所, 自旋锁, 偏向锁, 轻量/重量锁, 读写锁, 可重入锁}
 悲观锁和乐观锁指的是并发情况下的两种不同策略, 是一种宏观的描述.
 \par
@@ -1186,6 +1193,21 @@ Redis将所有数据放在内存中, 内存的相应市场大约100ns, 对于小
 
 \section{计算机网络}
 %\subsection{二级标题}
+\subsubsection{arp协议}
+根据IP地址查询相应的以太网MAC地址
+
+\subsubsection{DNS过程}
+1. 先从DNS缓存中, 本地缓存或者路由器缓存中查找ip地址. DNS根服务器, .com服务器, .server.com 服务器 三级查找
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/dns.jpg}
+	\caption{dns}
+	\label{fig:dns}
+\end{figure}
+
+
+
 \subsubsection{TCP如何保证可靠性}
 1. 校验和: 通过添加16btye的校验和
 
@@ -1416,6 +1438,8 @@ HTTPS加密过程:
 \end{enumerate}
 \section{mysql}
 %\subsection{二级标题}
+\subsubsection{回表}
+当你建立了一个索引非主键索引, 那么叶子节点存储的是主键索引所在的地方, 然后会去主键索引中查找真实数据, 这种查询了两个索引就叫回表.
 \subsubsection{mybatis\#和\$区别以及原理} 
 \#{ }可以防止Sql 注入，它会将所有传入的参数作为一个字符串来处理。
 
@@ -1514,6 +1538,12 @@ MVCC用于提交读和可重复读这两种隔离级别. 使用undolog实现
 2. 字段进行了隐私数据类型转化 \par
 3. 走索引没有全表扫描效率高
 \section{操作系统}
+\subsubsection{匿名管道和命名管道的区别}
+匿名管道由pipe函数创建并打开, 只能由父子进程进行半双工传递
+
+命名管道由mkfifo函数创建，打开用open
+
+
 \subsubsection{线程和进程的区别}
 1. 一个线程从属于一个进程; 一个进程可以包含多个线程
 

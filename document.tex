@@ -1,4 +1,6 @@
 \documentclass[UTF8]{ctexart}
+
+
 \usepackage{mathtools,booktabs}
 \usepackage{graphicx}
 %添加路径,图片的搜索路径
@@ -6,6 +8,8 @@
 \usepackage{listings} 
 \usepackage{xcolor}
 \usepackage{url}
+%\usepackage[unicode,breaklinks,colorlinks,linkcolor=black,citecolor=black,urlcolor=black]{hyperref}
+\usepackage[unicode]{hyperref}
 \lstset{
 	language=c,  %代码语言使用的是matlab
 	frame=shadowbox, %把代码用带有阴影的框圈起来
@@ -23,20 +27,20 @@
 
 
 \begin{document}
-	
-	\title{八股文背诵合集}
-	\author{The Sea and Sheng}
-	\maketitle
-	
-	\tableofcontents
-	\newpage
+
+\title{八股文背诵合集}
+\author{The Sea and Sheng}
+\maketitle
+
+\tableofcontents
+\newpage
 \section{计算机体系结构}
 \subsubsection{CPU内存模型}
 多个cpu每个cpu有自己的cache缓存, 他们通过mesi协议(缓存一致性协议)和主存进行通信
 
 \textbf{mesi协议}
 
-mesi协议保证了每个缓存中使用的共享变量的副本是一致的. 他的核心思想是: 当CPU写数据时候, 如果发现操作的变量是共享变量, 即在其他CPU中可存在该变量的副本, 会发出信号通知其他CPU将该变量的缓存行设置为无效状态, 当其他CPU需要读取这个变量时候, 发现自己缓存中缓存该变量的行是无效的, 那么它就会从内存重新读取. 
+mesi协议保证了每个缓存中使用的共享变量的副本是一致的. 他的核心思想是: 当CPU写数据时候, 如果发现操作的变量是共享变量, 即在其他CPU中可存在该变量的副本, 会发出信号通知其他CPU将该变量的缓存行设置为无效状态, 当其他CPU需要读取这个变量时候, 发现自己缓存中缓存该变量的行是无效的, 那么它就会从内存重新读取.
 
 \begin{figure}
 	\centering
@@ -46,7 +50,7 @@ mesi协议保证了每个缓存中使用的共享变量的副本是一致的. �
 \end{figure}
 
 \subsubsection{linux 用户态和内核态}
-由于对硬件的操作涉及到驱动的调用. 这通常是不一样的. 整个操作系统为了屏蔽驱动不同的影响, 提供了一组系统调用的接口, 可以让我们利用整个机器的硬件资源, 而不用去完整理解设备的驱动逻辑. 
+由于对硬件的操作涉及到驱动的调用. 这通常是不一样的. 整个操作系统为了屏蔽驱动不同的影响, 提供了一组系统调用的接口, 可以让我们利用整个机器的硬件资源, 而不用去完整理解设备的驱动逻辑.
 
 比如我们要申请内存. 不同的内存的驱动可能是不同的, 有些内存条支持2666MHZ的频率, 但是通过系统调用可以屏蔽不同的驱动的操作方式, malloc 会调用brk()或者mmap()系统调用来分配内存.
 
@@ -58,15 +62,37 @@ mesi协议保证了每个缓存中使用的共享变量的副本是一致的. �
 
 3. 外设中断: 当外设完成用户的请求时候, 会向CPU发送中断信号.
 
+\subsubsection{nginx高性能原因}
+epoll 多路复用
 
-	\section{Spring}
-	%\subsection{二级标题}
-	\subsubsection{Spring 框架能带来哪些好处}
+master worker 进程模型, 平滑重启, master 重启, 然后将新的worker句柄给新的worker
 
-	\begin{enumerate}
-		\item Dependency Injection(DI) 依赖注入 是的构造器和JavaBean properties文件中的依赖关系一目了然.
-		\item IoC容器更加趋向于轻量级.
-	\end{enumerate}
+协程机制 依附于线程的内存模型, 切换开销小, 与阻塞及归还执行权, 代码同步, 无需加锁
+
+\subsubsection{bio select epoll}
+bio 如果输出端满会阻塞
+
+select  遍历, 查询效率低
+
+epoll 模型, 变 更触发回调直接
+
+\section{Spring}
+%\subsection{二级标题}
+\subsubsection{jar 和 war 包之间的区别}
+jar 包集成了Tomcat
+
+war 没有集成Tomcat
+\subsubsection{SpringBoot 和 SpringMVC 有什么区别}
+SpringBoot 简化了项目的开发配置流程, 一定程度上消除了xml配置, 是一套快速配置开发的脚手架.
+
+springMvc主要解决WEB开发的问题，是基于Servlet 的一个MVC框架，通过XML配置，统一开发前端视图和后端逻辑；
+
+\subsubsection{Spring 框架能带来哪些好处}
+
+\begin{enumerate}
+	\item Dependency Injection(DI) 依赖注入 是的构造器和JavaBean properties文件中的依赖关系一目了然.
+	\item IoC容器更加趋向于轻量级.
+\end{enumerate}
 \subsubsection{如何实现AOP, 项目那些地方用到了AOP}
 利用JDK动态代理或Cglib动态代理, 利用动态代理技术, 可以针对某个类生成代理对象, 当调用代理对象的某个方法时, 可以任意控制该方法的执行, 比如可以先打印执行时间, 再执行该方法, 并且该方法执行完成后, 再次打印执行时间. \par
 权限管理是使用AOP技术实现的. 凡是需要对某些方法做统一处理的都可以用AOP来实现, 利用AOP可以做到业务的无侵入 \par
@@ -83,7 +109,7 @@ mesi协议保证了每个缓存中使用的共享变量的副本是一致的. �
 10. Spring事物的传播机制是Spring事物自己实现的, 也是Spring事物中最复杂的. \par
 11. Spring事物的传播机制是基于数据库连接来做的, 一个数据库连接一个事物, 如果传播机制配置为需要新开一个事物, 那么实际上就是先建立一个数据库连接, 在此新数据库连接上执行sql.
 \subsubsection{Spring什么时候@Transactional失效}
-如果某个纺纱是private的, 那么@Transactional也会失效, 因为底层calib是基于父子类来实现的, 子类是不能重载父类的private方法的, 所以无法很好的利用代理, 也会导致@Transactional失效 \par
+如果某个纺纱是private的, 那么@Transactional也会失效, 因为底层cglib是基于父子类来实现的, 子类是不能重载父类的private方法的, 所以无法很好的利用代理, 也会导致@Transactional失效 \par
 \subsubsection{介绍一下Spring, 读过源码介绍一下大致流程}
 1. Spring是一个快速开发框架, Spring帮助程序员来管理对象 \par
 2. Spring的源码实现的是非常优秀的, 设计模式的应用, 并发安全的实现, 面向接口的设计等 \par
@@ -96,19 +122,19 @@ c. 利用beanDefinition创建Bean就是Bean的创建生命周期, 这期间包�
 
 \subsubsection{Autowired}
 使用byType和byName去寻找需要进行注入的对象
-	\subsubsection{什么是控制反转(IOC)}
-	\begin{enumerate}
-		\item 
-		控制反转简单来说, 以前程序开发的时候, 是由程序员通过new来生成对象. 在使用控制反转的情况下, 对象的实例化由Spring框架中的IoC容器来控制对象的创建; 
-		\item 由容器来管理这些对象的生命周期.
-		\item Spring中的org.springframework.beans包和org.springframework.conext包构成了Spring框架Ioc的基础. 主要使用文件 applicationContext.xml 来进行配置.
-	\end{enumerate}
+\subsubsection{什么是控制反转(IOC)}
+\begin{enumerate}
+	\item
+	      控制反转简单来说, 以前程序开发的时候, 是由程序员通过new来生成对象. 在使用控制反转的情况下, 对象的实例化由Spring框架中的IoC容器来控制对象的创建;
+	\item 由容器来管理这些对象的生命周期.
+	\item Spring中的org.springframework.beans包和org.springframework.conext包构成了Spring框架Ioc的基础. 主要使用文件 applicationContext.xml 来进行配置.
+\end{enumerate}
 
-	\subsubsection{什么是依赖注入?}
-	\begin{enumerate}
-		\item Spring 通过反射来实现依赖注入
-		\item 当我们需要某个功能比如Connection, 至于Connection怎么构造, 何时构造我们不需要知道. 在系统运行时, Spring会在适当的时候制造一个Connection, 我们需要一个Connection, 这个Connection是由Sping注入到A中. 
-	\end{enumerate}
+\subsubsection{什么是依赖注入?}
+\begin{enumerate}
+	\item Spring 通过反射来实现依赖注入
+	\item 当我们需要某个功能比如Connection, 至于Connection怎么构造, 何时构造我们不需要知道. 在系统运行时, Spring会在适当的时候制造一个Connection, 我们需要一个Connection, 这个Connection是由Sping注入到A中.
+\end{enumerate}
 \subsubsection{Spring 对对象进行创建流程}
 class对象反射 ---> 实例化 ---> 生成对象 ---> 属性填充(依赖注入)  ---> 初始化(afterPropertiesSet) ---> AOP ---> 代理对象(cglib) ---> bean
 \subsubsection{什么是AOP}
@@ -124,7 +150,7 @@ class对象反射 ---> 实例化 ---> 生成对象 ---> 属性填充(依赖注�
 	\includegraphics[width=0.7\linewidth]{figures/bean_live.jpg}
 	\caption{beanlive}
 	\label{fig:bean_live}
-	
+
 \end{figure}
 如上图所示，Bean 的生命周期还是比较复杂的，下面来对上图每一个步骤做文字描述: \par
 (1) Spring启动，查找并加载需要被Spring管理的bean，进行Bean的实例化 \par
@@ -139,7 +165,7 @@ class对象反射 ---> 实例化 ---> 生成对象 ---> 属性填充(依赖注�
 (9) 此时，Bean已经准备就绪，可以被应用程序使用了。他们将一直驻留在应用上下文中，直到应用上下文被销毁。\par
 (10) 如果bean实现了DisposableBean接口，Spring将调用它的destory()接口方法，同样，如果bean使用了destory-method 声明销毁方法，该方法也会被调用。\par
 \subsubsection{简单阐述SpringMVC的流程}
-	SpringMVC是一个基于Java的实现了MVC设计模式的请求驱动类型的轻量级Web框架, 通过把Model, View, Controller分离, 将web层进行职责解耦, 把复杂的web应用分成逻辑清晰的几部分, 简化开发.
+SpringMVC是一个基于Java的实现了MVC设计模式的请求驱动类型的轻量级Web框架, 通过把Model, View, Controller分离, 将web层进行职责解耦, 把复杂的web应用分成逻辑清晰的几部分, 简化开发.
 \par
 (1) 用户发送请求到前端控制器DispatcherServlet;
 \par
@@ -170,11 +196,158 @@ class对象反射 ---> 实例化 ---> 生成对象 ---> 属性填充(依赖注�
 	\caption{SpringModelAndView}
 	\label{fig:SpringModelAndView}
 \end{figure}
-	\subsubsection{第三个三级标题}
-	
-	
+\subsubsection{第三个三级标题}
+
+
 \section{java基础}
 %\subsection{二级标题}
+\subsubsection{双亲委派机制}
+Bootstrap classLoader:主要负责加载核心的类库(java.lang.*等)，构造ExtClassLoader和APPClassLoader。
+
+ExtClassLoader：主要负责加载jre/lib/ext目录下的一些扩展的jar。
+
+AppClassLoader：主要负责加载应用程序的主函数类
+
+好处
+
+如果有人想替换系统级别的类：String.java。篡改它的实现，在这种机制下这些系统的类已经被Bootstrap classLoader加载过了（为什么？因为当一个类需要加载的时候，最先去尝试加载的就是BootstrapClassLoader），所以其他类加载器并没有机会再去加载，从一定程度上防止了危险代码的植入。
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1\linewidth]{figures/shuangqin.png}
+	\caption{shuangqin}
+	\label{fig:shuangqin}
+\end{figure}
+
+
+\subsubsection{AQS 浅析}
+简单而言就是一个并发包组件, ReentrantLock 在其之上构建的.
+
+AQS 全称: AbstractQueuedSynchronizer 抽象队列同步器
+
+里面state=0 表示没有线程占用这个资源, 还有一个对加锁线程的记录. 当没有获得资源的线程就会进入等待队列,直到获取资源的线程自己释放了资源. 队列中第二个线程就会被唤醒.
+
+\subsubsection{java加密算法浅析}
+
+MD5是不可逆加密，不可以用来加密文本，DES和RC4是对称加密，RSA是不对称加密，都可以用于文本加密
+\subsubsection{java 使用流的方式去除某些变量}
+$$
+	List<String> ss = list.stream().filter(element->null!=element).collect(Collectors.toList());
+$$
+\subsubsection{java中的变量如果直接赋值为null下面直接使用的话, 会报空指针异常}
+
+
+\subsubsection{java接口中默认成员变量的修饰符}
+
+public static final int 静态最终变量.
+
+public abstract  抽象方法
+
+\subsubsection{快速排序}
+参照图解
+\url{https://blog.csdn.net/pengzonglu7292/article/details/84938910}
+
+简单的来说就是双指针交汇运动.
+
+
+
+
+\subsubsection{UML图标}
+
+\url{https://blog.csdn.net/u011125703/article/details/50935322}
+
+泛华, 依赖, 关联, 聚合, 实现 和 组合
+
+空心菱形是聚合
+
+实心菱形是组合
+
+一条直线是关联
+
+
+\subsubsection{session与token的区别?}
+简单来说session是以sessionid - 和 session 存储的. sessionid存储在cookie中. 每次请求会带上.
+token 简单来说就是一串能表示用户身份的随机字符串. 其实功能和sessionid差不多.
+\subsubsection{注解以及相关问题}
+注解的使用其实是一个接口继承了annotation接口, 使用@interface 来定义一个注解
+
+一般通过反射来读取注解
+
+有类注解, 属性注解 和 方法注解.
+
+@Retention(value = RetentionPolicy.RUNTIME) 是运行时可见的注解
+
+可以定义@Target(value= {ElementType.TYPE,ElementType.METHOD,ElementType.FIELD})  是定义注解的组成
+
+getAnnotation(MyAnnotationDefinition.class); 获取类注解
+
+clazz.getDeclaredMethods(); 获取方法注解
+
+Field nameField =  clazz.getDeclaredField("name"); 获取属性注解
+
+
+\subsubsection{juc arraylist \& int}
+static AtomicInteger atomicInteger = new AtomicInteger(0);
+
+atomicInteger.getAndIncrement();
+
+基于CAS
+
+CopyOnWriteArrayList c = new CopyOnWriteArrayList();
+
+c.add(2);
+
+CopyOnWriteArrayList这是一个ArrayList的线程安全的变体，其原理大概可以通俗的理解为:初始化的时候只有一个容器，很长一段时间，这个容器数据、数量等没有发生变化的时候，大家(多个线程)，都是读取(假设这段时间里只发生读取的操作)同一个容器中的数据，所以这样大家读到的数据都是唯一、一致、安全的，但是后来有人往里面增加了一个数据，这个时候CopyOnWriteArrayList 底层实现添加的原理是先copy出一个容器(可以简称副本)，再往新的容器里添加这个新的数据，最后把新的容器的引用地址赋值给了之前那个旧的的容器地址，但是在添加这个数据的期间，其他线程如果要去读取数据，仍然是读取到旧的容器里的数据。
+
+使用可重入锁进行数组的锁定
+
+\begin{lstlisting}
+public boolean add(E e) {
+	final ReentrantLock lock = this.lock;
+	lock.lock();
+	try {
+		Object[] elements = getArray();
+		int len = elements.length;
+		Object[] newElements = Arrays.copyOf(elements, len + 1);
+		newElements[len] = e;
+		setArray(newElements);
+		return true;
+	} finally {
+		lock.unlock();
+	}
+}
+\end{lstlisting}
+\subsubsection{本地方法栈溢出的情况}
+创建了过多的线程, 线程独立, 请求虚拟机栈和本地方法栈 -- Stack Overflow
+
+\subsubsection{堆内存溢出}
+oom out of memory
+
+申请的动态数据占据了过多的内存
+
+
+\subsubsection{HTTP请求头中有什么参数}
+请求报文
+
+
+1. 请求方法 GET? POST
+
+2. HTTP版本 1.1 2 3??
+
+3. accept 期望接收的语言 zh en ??
+
+4. user-agent: 访问者是通过什么工具来请求的
+
+5. cache-control 是否强制刷新
+
+
+相应报文
+
+1. 状态码 200
+
+2. 响应体 一般是json 数据
+
+3. content-type: 响应体里面的数据类型  image之类的
 \subsubsection{HTTP请求资源的方式}
 GET: 获取资源
 
@@ -188,11 +361,15 @@ DELETE: 删除资源
 \subsubsection{如何实现10000个qq判断是否在线的情况}
 java 中有BitSet这个类, 然后使用这个类来实现判断是否在线的情况 \par
 \subsubsection{hashmap死锁产生情况}
-1.7 版本的死锁是在 rehash方法中的transfer方法产生的, 因为在扩容的过程中, 主要关于两个指正, e指正指向当前节点, next是e的下一个指针, 因为采用头插法会前后顺序调换, 导致产生换的现象. \par
+1.7 版本的死锁是在 rehash方法中的transfer方法产生的, 因为在扩容的过程中, 主要关于两个指针, e指针指向当前节点, next是e的下一个指针, 因为采用头插法会前后顺序调换, 导致产生换的现象. \par
 \subsubsection{谈谈对ConcurrentHashMap的扩容机制}
 1.7版本: \par
 1. 1.7版本的ConcurrentHashmap是基于Segment分段实现的\par
 *. Segment 依赖 ReentrantLock实现 \par
+*. 通过 hash 值和 段数组长度-1 进行位运算确认当前 key 属于哪个Segment，即确认其在 segments 数组的位置。\par
+*. 再次通过 hash 值和 table 数组（即 ConcurrentHashMap 底层存储数据的数组）长度 - 1进行位运算确认其所在桶。\par
+
+
 2. 每个Segment(数组)相对于一个小型的Hashmap \par
 3. 每个Segment内部会进行扩容, 和hashMap的扩容逻辑类似 \par
 4. 先生成新的数组, 然后转移元素到新数组中 \par
@@ -204,6 +381,22 @@ java 中有BitSet这个类, 然后使用这个类来实现判断是否在线的�
 4. concurrentHashMap是支持多个线程同时扩容的 \par
 5. 扩容之前也先生成一个新的数组 \par
 6. 在转移元素时, 先将原数组分组, 将每组分给不同的额线程来进行元素转移, 每个线程负责一组或多组的元素转移工作. \par
+
+从JDK1.7版本的ReentrantLock+Segment+采用链表存储，到JDK1.8版本中synchronized+CAS+HashEntry+红黑树/链表
+
+
+concurrentHashMap 当初始化的时候出现了并发情况, 晚来的会使用线程礼让, 让第一个初始化的初始化完毕. 根据sizeCtl参数.
+
+使用cas来保证对null节点放置元素.
+
+使用8版本中synchronized对同一个数组的元素操作的时候.
+
+我们看到 (fh = f.hash) == MOVED 有这样一个判断，MOVED 是一个成员静态变量，值为-1，当数组在扩容的时候会把数组的头节点的hash值变为-1，所以当线程进来不管是查询还是修改还是添加只要看到当前主节点的hash值为-1时就会进入这里面的方法，我们看到它里面是
+
+\url{https://blog.csdn.net/wwj17647590781/article/details/118151008?spm=1001.2014.3001.5501}
+
+\subsubsection{hashTable}
+HashTable，它是线程安全的，它在所有涉及到多线程操作的都加上了synchronized关键字来锁住整个table，这就意味着所有的线程都在竞争一把锁，在多线程的环境下，它是安全的，但是无疑是效率低下的。
 \subsubsection{造成死锁的原因}
 1. 若干线程形成头尾相接的循环等待资源关系 \par
 \textbf{解决方案:} \par
@@ -262,7 +455,7 @@ Spring本身并没有针对bean做线程安全处理, 所以 \par
 原子性: synchronized保证语句内操作是原子的 \par
 可见性: synchronized保证可见性(通过在执行unlock之前, 必须先报此变量同步回主内存实现) \par
 有序性: synchronized保证有序性(通过"一个变量在同一时刻只允许一条线程对其进行lock操作") \par
-可见性补充: 	其实真正解决这个问题的是JMM关于Synchronized的两条规定： 
+可见性补充: 	其实真正解决这个问题的是JMM关于Synchronized的两条规定：
 \par
 1、线程解锁前，必须把共享变量的最新值刷新到主内存中; \par
 2、线程加锁时，讲清空工作内存中共享变量的值，从而使用共享变量是需要从主内存中重新读取最新的值（加锁与解锁需要统一把锁） \par
@@ -274,6 +467,13 @@ ThreadPoolExecutor的创建参数: \par
 (4) keepAliveTime: 默认0, 当线程没有任务处理后空闲线程保持多长时间, 不推荐使用, 一般会中止超过corePoolSize数量的线程资源, 空闲线程时间超过keepAliveTime, 线程将会被回收 \par
 (5) threadFacory: 构造Thread方法, 使用默认的default实现. \par
 (6) defaultHandler: 当maximumPoolSize达到后丢弃处理的方法实现, java默认是丢出异常. \par
+
+\subsubsection{你觉得核心线程数和最大线程数之间应该如何设置呢}
+1. 对于CPU密集型任务，由于CPU密集型任务的性质，导致CPU的使用率很高，如果线程池中的核心线程数量过多，会增加上下文切换的次数，带来额外的开销。因此，一般情况下线程池的核心线程数量等于CPU核心数+1。
+
+2. 对于I/O密集型任务，由于I/O密集型任务CPU使用率并不和很高，可以让CPU在等待I/O操作的时去处理别的任务，充分利用CPU。因此，一般情况下线程的核心线程数等于2*CPU核心数。
+
+
 \subsubsection{sychronized和ReentrantLock的区别}
 1. sychronized是一个关键字, ReentrantLock是一个类 \par
 2. synchronized会自动的加锁和释放锁, ReentrantLock是一个类 \par
@@ -281,7 +481,7 @@ ThreadPoolExecutor的创建参数: \par
 4. sychronized是非公平锁, ReentrantLock可以选择公平锁或非公平锁 \par
 5. sychronized锁的是对象, 锁信息保存在对象头中, ReentrantLock锁的是线程 \par
 6. sychronized底层有一个锁升级的过程 \par
-\subsubsection{线程池中使用的BlockQueue} 
+\subsubsection{线程池中使用的BlockQueue}
 (1) 直接提交队列: 简单来说使用SynchronousQueue队列，提交的任务不会被保存，总是会马上提交执行。如果用于执行任务的线程数量小于maximumPoolSize，则尝试创建新的进程，如果达到maximumPoolSize设置的最大值，则根据你设置的handler执行拒绝策略。因此这种方式你提交的任务不会被缓存起来，而是会被马上执行，在这种情况下，你需要对你程序的并发量有个准确的评估，才能设置合适的maximumPoolSize数量，否则很容易就会执行拒绝策略；\par
 (2) 有界的任务队列可以使用ArrayBlockingQueue实现，若有新的任务需要执行时，线程池会创建新的线程，直到创建的线程数量达到corePoolSize时，则会将新的任务加入到等待队列中。若等待队列已满，即超过ArrayBlockingQueue初始化的容量，则继续创建线程，直到线程数量达到maximumPoolSize设置的最大线程数量，若大于maximumPoolSize，则执行拒绝策略。在这种情况下，线程数量的上限与有界任务队列的状态有直接关系，如果有界队列初始容量较大或者没有达到超负荷的状态，线程数将一直维持在corePoolSize以下，反之当任务队列已满时，则会以maximumPoolSize为最大线程数上限。\par
 (3) 使用无界任务队列，LinkedBlockingQueue 实现线程池的任务队列可以无限制的添加新的任务，而线程池创建的最大线程数量就是你corePoolSize设置的数量，也就是说在这种情况下maximumPoolSize这个参数是无效的，哪怕你的任务队列中缓存了很多未执行的任务，当线程池的线程数达到corePoolSize后，就不会再增加了；若后续有新的任务加入，则直接进入队列等待，当使用这种任务队列模式时，一定要注意你任务提交与处理之间的协调与控制，不然会出现队列中的任务由于无法及时处理导致一直增长，直到最后资源耗尽的问题。 \par
@@ -293,6 +493,34 @@ ThreadPoolExecutor的创建参数: \par
 以上两种可能会堆积大量的请求, 从而引起OOM异常 \par
 (3) CachedThreadPool 采用maxmumPoolSize为无限大, 容易创建大量线程, 从而耗尽系统资源. \par
 
+submit  基于  Future 来包装返回值对象, 使用callable来进行调用有返回值
+
+execute 基于 runnable 来实现线程池, 没有返回值
+\begin{lstlisting}
+    final ExecutorService service = Executors.newFixedThreadPool(5);
+	Future<String> f = service.submit(new Callable<String>() {
+		@Override
+		public String call() throws Exception {
+			Thread.sleep(3000);
+			System.out.println("calld方法执行了");
+			return "call方法返回值";
+		}
+	});
+	System.out.println(f.get());
+	service.execute(new Runnable() {
+		@Override
+		public void run() {
+			try {
+				Thread.sleep(1500);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			System.out.println("fdasfdsa");
+			return ;
+		}
+	});
+	service.shutdown();
+\end{lstlisting}
 \subsubsection{线程池的拒绝策略}
 (1) abortPolicy 默认: 直接抛出异常 \par
 (2) CallerRunsPolicy:  直接调用主线程来执行任务. \par
@@ -303,25 +531,25 @@ ThreadPoolExecutor的创建参数: \par
 	\centering
 	\caption{实现}
 	\begin{tabular}{|l|r|}
-		
+
 		\hline
-		类型&大小(注释/包装类)\\
+		类型    & 大小(注释/包装类) \\
 		\hline
-		byte&8(Byte)\\
+		byte    & 8(Byte)           \\
 		\hline
-		short&16(Short)\\
+		short   & 16(Short)         \\
 		\hline
-		int&32(Integer)\\
+		int     & 32(Integer)       \\
 		\hline
-		long&64(Long)\\
+		long    & 64(Long)          \\
 		\hline
-		float&32(Float)\\
+		float   & 32(Float)         \\
 		\hline
-		double&64(Double)\\
+		double  & 64(Double)        \\
 		\hline
-		char&16(Character)\\
+		char    & 16(Character)     \\
 		\hline
-		boolean&8(Boolean)\\
+		boolean & 8(Boolean)        \\
 		\hline
 	\end{tabular}
 \end{table}
@@ -375,7 +603,7 @@ String是不可变字符串对象(final的char数组), StringBuilder和StringBuf
 \par
 2. 继承
 \par
-继承是从已有的类中派生出行的类, 减少代码冗余. 
+继承是从已有的类中派生出行的类, 减少代码冗余.
 \par
 3. 多态
 \par
@@ -384,14 +612,14 @@ String是不可变字符串对象(final的char数组), StringBuilder和StringBuf
 一般使用instance of 来判断对象的子类关系. 增加向下转型的健壮度. \par
 \subsubsection{内部类}
 (1) 静态内部类访问外部变量必须是静态的. \par
-(2) 
+(2)
 \subsubsection{红黑树}
 一般考察红黑树: 只考察概念.
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{figures/red_black.jpg}
 	\caption{redblack}
-	\label{fig:jvm_copy}
+	\label{fig:red_black}
 \end{figure}
 \begin{enumerate}
 	\item 节点是红色或黑色
@@ -399,7 +627,7 @@ String是不可变字符串对象(final的char数组), StringBuilder和StringBuf
 	\item 所有叶子都是黑色(叶子是NIL节点).
 	\item 每个红色节点必须有两个黑色节点
 	\item 从任一节点到其每个叶子的所有简单路径都包含相同数目的黑色节点.
-	
+
 \end{enumerate}
 
 \subsubsection{hashmap的数据结构}
@@ -419,7 +647,9 @@ String是不可变字符串对象(final的char数组), StringBuilder和StringBuf
 a. 如果是红黑树Node, 则将key和value 封装为一个红黑树节点并添加到红黑树中 \par
 b. 如果是链表节点, 使用尾插法插入到链表的最后位置去, 插入完后会判断当街链表的个数看是否需要转为红黑树(超过8个)元素. \par
 c. 判断是否需要扩容(0.75*16默认值), 需要扩容就扩容, 不需要就结束PUT方法 \par
-\subsubsection{介绍一下ThreadLocal} 
+
+JDK8则因为巧妙的设计，性能有了大大的提升：由于数组的容量是以2的幂次方扩容的，那么一个Entity在扩容时，新的位置要么在原位置，要么在原长度+原位置的位置。
+\subsubsection{介绍一下ThreadLocal}
 1. ThreadLocal 是java中所提供的的线程本地存储机制, 可以利用该机制将数据缓存在某个线程内部, 该线程可以在任意时刻, 任意方法中获取缓存的数据 \par
 2. ThreadLocal 底层是通过ThreadLocalMap来实现的, 每个Thread对象中都存在一个ThreadLocalMap, Map的key为ThreadLoacl对象, Map的value为需要缓存的值 \par
 3. 如果在线程池中使用ThreadLocal会造成内存泄露, 因为当ThreadLocal对象使用完后, 应该要报设置的key, value 也就是Entry对象进行回收, 但线程池中的线程不会回收, 而线程对象是通过强引用指向ThreadLocalMap, ThreadLocalMap也是通过强引用指向Entry对象, 线程不被回收, Entry对象也就不会被回收, 从而出现内存泄露, 解决方法是, 在使用了ThreadLocal对象之后, 手动调用ThreadLocal的remove方法, 手动清除Entry对象. \par
@@ -428,7 +658,7 @@ c. 判断是否需要扩容(0.75*16默认值), 需要扩容就扩容, 不需要�
 	\item java的内存分为两类, 一类是堆内存, 一类是栈内存
 	\item 栈内存是指程序进入一个方法时, 会为这个方法单独分配一块私属存储空间, 用于存储这个方法内部的局部变量. 当这个方法结束时, 分配给这个方法的栈会释放, 这个栈中的变量也随之释放.
 	\item 使用new创建的对象存放在堆里, 不会随方法的结束二小时. 方法中的局部变量使用final修饰后, 放在堆中, 而不是栈中.
-	
+
 \end{enumerate}
 
 \subsubsection{Array 和 ArrayList 的区别}
@@ -448,7 +678,7 @@ $$int newCapacity = oldCapacity + (oldCapacity >> 1);$$
 
 \begin{enumerate}
 	\item 悲观锁和乐观锁指的是并发情况下的两种不同策略, 是一种宏观的描述.
-	
+
 \end{enumerate}
 \subsubsection{Collection 和 Collections 的区别}
 \begin{enumerate}
@@ -503,7 +733,7 @@ public interface InterfaceJDK8 {
 	\item 如果两个对象的hashCode相同, 并不表示两个对象相同(只能表示hash碰撞相同), equals方法相同.
 \end{enumerate}
 \subsubsection{反射}
-简单来说, 在运行状态中, 对于任意一个类, 都能够知道这个类的所有属性和方法, 对于任意一个对象, 都能够调用他的任意方法和属性, 并且能够改变他的属性. 
+简单来说, 在运行状态中, 对于任意一个类, 都能够知道这个类的所有属性和方法, 对于任意一个对象, 都能够调用他的任意方法和属性, 并且能够改变他的属性.
 \subsubsection{简述Java内存模型(JMM)}
 简单来说就是, java中存在一个主内存, java中所有变量都存在主内存中, 对所有线程进行共享, 而每个线程又存在自己工作内存, 工作内存存储的是主存中某些变量的拷贝, 线程对所有变量的操作并非发生在主存区, 而是发生在工作内存中, 线程之间是不能直接相互访问, 变量在程序中的传递主要依赖主存完成.  \par
 \begin{figure}
@@ -520,7 +750,7 @@ public interface InterfaceJDK8 {
 虽然有好几个, 但基本上描述模糊的就不写了\par
 (1) 锁的happen-before, 就是同一个锁的unlock操作happen-before此锁的lock操作. \par
 (2) 传递性: A hb b, b hb c; A happen-before C; \par
-(3) 对象的构造函数在finalize方法之前. 
+(3) 对象的构造函数在finalize方法之前.
 \subsubsection{wait/notify, await/singal}
 Condition 的 await，signal, singalAll 与 Object 的 wait, notify, notifyAll 都可以实现的需求，两者在使用上也是非常类似，都需要先获取某个锁之后才能调用，而不同的是 Object wait,notify 对应的是 synchronized 方式的锁，Condition await，singal 则对应的是 ReentrantLock （实现 Lock 接口的锁对象）对应的锁 \par
 下方是Condition的示例
@@ -690,16 +920,16 @@ public class App {
 	\label{fig:javaThreadState}
 \end{figure}
 \subsubsection{进程的状态有哪些?}
-就绪状态: 已获除CPU以外所需的资源, 等待分配处理机资源 
+就绪状态: 已获除CPU以外所需的资源, 等待分配处理机资源
 
 运行状态: 占用处理机资源运行
 
-阻塞状态: 进程等待某种条件,在满足之前无法执行 
+阻塞状态: 进程等待某种条件,在满足之前无法执行
 
 
 new 行启动进程获除CPU以外的资源被准许(admitted)进入就绪状态ready, 就绪进程获得系统分配CPU资源后背调度器调度(scheduler dispatch)进入运行太running, 运行态进程在执行完任务后退出(exit)进程终止terminated.
 
-运行太进程当时间片用完时候会先中断(interrupt) 进入到就绪状态, 等待下次时间片轮转分配CPU资源. 运行太进程当遇到等待用户输入或时间等待(IO or event wait) 会进入阻塞态waiting, 阻塞态进程IO输入完毕或时间完成(IO or event completion) 会进入到就绪太等待系统分配CPU资源. 
+运行太进程当时间片用完时候会先中断(interrupt) 进入到就绪状态, 等待下次时间片轮转分配CPU资源. 运行太进程当遇到等待用户输入或时间等待(IO or event wait) 会进入阻塞态waiting, 阻塞态进程IO输入完毕或时间完成(IO or event completion) 会进入到就绪太等待系统分配CPU资源.
 
 \begin{figure}
 	\centering
@@ -737,6 +967,20 @@ new 行启动进程获除CPU以外的资源被准许(admitted)进入就绪状态
 
 \section{JVM}
 %\subsection{二级标题}
+\subsubsection{新生代复制算法的使用}
+平均分成A/B块太浪费内存，采用Eden/S0/S1三个区更合理，一个较大的Eden空间和两个较小的Survivor空间，空间比例为Eden:S0:S1==8:1:1，有效内存（即可分配新生对象的内存）是总内存的9/10。
+
+算法过程：
+
+1. Eden+S0可分配新生对象；
+
+2. 对Eden+S0进行垃圾收集，存活对象复制到S1。清理Eden+S0。一次新生代GC结束。
+
+3. Eden+S1可分配新生对象；
+
+4. 对Eden+S1进行垃圾收集，存活对象复制到S0。清理Eden+S1。二次新生代GC结束。
+
+5. goto 1。
 \subsubsection{说一下JVM中, 哪些是共享区, 哪些可以作为gc root}
 共享区: 方发区和堆 \par
 每个线程独有: 栈, 本地方法栈, 程序技术器 \par
@@ -748,22 +992,22 @@ new 行启动进程获除CPU以外的资源被准许(admitted)进入就绪状态
 \subsubsection{GC的三种收集方法: 标记清除, 标记整理, 复制算法的原理与特点, 分别用在什么地方, 如果让你优化收集方法, 有什么思路}
 \begin{enumerate}
 	\item 标记清除: 先标记, 标记完毕之后再清除, 缺点: 效率不高会产生碎片.
-	\begin{figure}
-		\centering
-		\includegraphics[width=0.7\linewidth]{figures/sign_remove.png}
-		\caption{signremove}
-		\label{fig:sign_remove}
-	\end{figure}
+	      \begin{figure}
+		      \centering
+		      \includegraphics[width=0.7\linewidth]{figures/sign_remove.png}
+		      \caption{signremove}
+		      \label{fig:sign_remove}
+	      \end{figure}
 	\item 标记整理: 标记完毕之后, 让所有存活的对象向一端移动
 	\item 复制算法: 分别8:1的Eden去和survivor区
-	\begin{figure}
-		\centering
-		\includegraphics[width=0.7\linewidth]{figures/jvm_copy.jpg}
-		\caption{jvmcopy}
-		\label{fig:jvm_copy}
-	\end{figure}
+	      \begin{figure}
+		      \centering
+		      \includegraphics[width=0.7\linewidth]{figures/jvm_copy.jpg}
+		      \caption{jvmcopy}
+		      \label{fig:jvm_copy}
+	      \end{figure}
 	\item 分代收集算法-重点 \par
-	一般将Java分成新生代和老年代, 新生代使用复制算法, 老年代使用标记整理算法.
+	      一般将Java分成新生代和老年代, 新生代使用复制算法, 老年代使用标记整理算法.
 \end{enumerate}
 \subsubsection{JVM的主要组成部分及其作用?}
 JVM包含两个子系统和两个组件, 两个子系统为Class loader(类加载), Execution engin(执行引擎); 两个组件为 Runtime data area(运行时数据区), native Interface(本地接口)
@@ -775,7 +1019,7 @@ JVM包含两个子系统和两个组件, 两个子系统为Class loader(类加�
 	\item Runtime data area(运行时数据区): 这就是我们常说的jvm的内存
 \end{enumerate}
 \par
-\textbf{作用:} 首先通过编译器吧java代码转换成字节码, 类加载器(ClassLoader) 再把字节码加载到内存中, 将其放在运行时数据区(Runtime data area)的方发区内, 而字节码文件知识jvm的一套指令集规范, 并不能直接交给底层操作系统去执行, 因此需要特定的命令解析器执行引擎(Execution Engine), 将字节码翻译成底层系统指令, 在交由CPU去执行, 而这个过程中需要调用其他语言的本地库接口(Native Interface) 来实现整个程序的功能. 
+\textbf{作用:} 首先通过编译器吧java代码转换成字节码, 类加载器(ClassLoader) 再把字节码加载到内存中, 将其放在运行时数据区(Runtime data area)的方发区内, 而字节码文件知识jvm的一套指令集规范, 并不能直接交给底层操作系统去执行, 因此需要特定的命令解析器执行引擎(Execution Engine), 将字节码翻译成底层系统指令, 在交由CPU去执行, 而这个过程中需要调用其他语言的本地库接口(Native Interface) 来实现整个程序的功能.
 \par
 Java程序运行机制步骤
 \begin{enumerate}
@@ -833,6 +1077,8 @@ TIPS:
 	\item 静态变量放在方法区.
 	\item 静态的对象还是放在堆.
 \end{enumerate}
+
+
 \subsubsection{常见的垃圾收集器?}
 (1) Serial收集器, 单线程收集器, 会stop the word. \par
 \begin{figure}
@@ -861,7 +1107,7 @@ TIPS:
 (5) Parallel old 收集器(老年代) \par
 标记整理算法, 多线程 \par
 (6) CMS收集器 \par
-简单来说, 在垃圾回收线程几乎能做到与用户线程同时工作, 使用标记清除算法. 
+简单来说, 在垃圾回收线程几乎能做到与用户线程同时工作, 使用标记清除算法.
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{figures/cms.png}
@@ -869,7 +1115,7 @@ TIPS:
 	\label{fig:cms}
 \end{figure}
 (7) G1 收集器 \par
-使用复制 + 标记 - 整理算法 收集新生代和老年代垃圾. 
+使用复制 + 标记 - 整理算法 收集新生代和老年代垃圾.
 \subsubsection{内存分配与回收策略. }
 1. MinorGC 和 Full GC 有什么不同? \par
 MINORGC: 新生代垃圾回收, 回收速度一般较快 \par
@@ -926,7 +1172,7 @@ GC采用有向图的方式记录和管理堆中的所有对象. 通过这种方�
 \textbf{引用计数法}
 为每个对象创建一个引用技术, 有对象引用时计数器+1, 引用被释放是技术-1, 当计数器为0时就可以被回收. 优缺点, 不能解决循环引用的问题.
 \subsubsection{在java中, 对象什么时候可以被垃圾回收?}
-当对象变的不可触及的时候, 这个对象就可以被回收了, 垃圾回收不会发生在永久代, 如果永久代满了或者是超过了临界值, 会触发完全垃圾回收(full gc), 会导致Stop-the-world. 
+当对象变的不可触及的时候, 这个对象就可以被回收了, 垃圾回收不会发生在永久代, 如果永久代满了或者是超过了临界值, 会触发完全垃圾回收(full gc), 会导致Stop-the-world.
 \subsubsection{如何判断对象已经死亡?}
 (1) 引用计数法, 标记为零. 缺点难以解决互相引用问题 \par
 (2) 可达性分析, 当一个对象到GC Root对象没有任何路径可达. \par
@@ -943,10 +1189,94 @@ GC采用有向图的方式记录和管理堆中的所有对象. 通过这种方�
 \textbf{区别:} \par
 软弱引用都是发生在垃圾回收动作之后, 虚引用发生在垃圾回收动作之前.
 
+\section{RocketMq}
 
+NameServer：主要负责对于源数据的管理，包括了对于Topic和路由信息的管理。
+
+每个 Broker 在启动的时候会到 NameServer 注册，
+Producer 在发送消息前会根据 Topic 到 NameServer 获取到 Broker 的路由信息，Consumer 也会定时获取 Topic 的路由信息。
+
+
+\subsubsection{信息流}
+生产阶段，Producer 新建消息，然后通过网络将消息投递给 MQ Broker
+存储阶段，消息将会存储在 Broker 端磁盘中
+消息阶段， Consumer 将会从 Broker 拉取消息
+
+生产阶段
+
+生产者（Producer） 通过网络发送消息给 Broker，当 Broker 收到之后，将会返回确认响应信息给 Producer。所以生产者只要接收到返回的确认响应，就代表消息在生产阶段未丢失。
+
+消费者有两种消费模式, 一种是DefaultMQPushConsumer和DefaultMQPullConsumer模式, 一是推送消息, 一个是拉取消息.
+
+push: consumer向broker发出请求, 保持了一种长连接, broker会每5s检测一次是否有消息, 如果有消息, 则将消息推送给consumer. 使用DefaultMQPushConsumer实现消息消费, broker会主动记录消息消费的偏移量
+
+pull: 是消费方主动去broker拉取诗句, 一般会在本地使用定时任务实现, 使用它获得消息状态方便, 负载均衡心梗可控, 但消息的及时性差, 而且需要手动记录消息消费的偏移量, 所以在工作中多数情况推荐使用Push模式.
+
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/rocketmqlife.jpg}
+	\caption{rocketmqlife}
+	\label{fig:rocketmqlife}
+\end{figure}
+
+
+Broker 存储阶段
+
+将会优先保存到内存中，然后立刻返回确认响应给生产者。随后 Broker 定期批量的将一组消息从内存异步刷入磁盘。
+
+\subsubsection{消息队列如何保证消息可靠传输}
+
+1. 保证消息不重复. 生产者不能重复生产消息
+
+2. 消息不能少, 消息不丢失, 生产者发送的消息, 消费者一定要能消费到, 对于这个问题
+
+a. 生产者发送消息时, 要确认broker确实收到并持久化了这条消息. ack机制.
+b. broker要等待消费者真正确认消费到了消息时才删除掉消息, 通过消费端的ack机制.
+
+消息实现的时候, 需要一定的幂等性操作. 如果有两条重复的消息发送过来了, 在数据库层面需要做好操作比如插入订单号, 如果已经有了就把这个订单号丢弃.
+
+\subsubsection{消息队列有哪些作用}
+
+1. 解耦: 两个系统的直接通讯方式, 两个系统不需要相互依赖
+
+2. 异步: 系统A给消费队列发送完消息之后, 就可以继续做其他事情了
+
+3. 流量削峰: 如果使用消息队列的方式来调用某个系统, 那么消息将在队列中排队, 由消费者自己控制消费速度.
+
+\subsubsection{RocketMQ架构设计}
+nameserver: 独立, 不进行通信, 维护路由信息, 存储了发送者是谁, 消费者是谁, broker是谁
+
+
+broker: 和每一个nameserver建立一个长连接.
+
+-- topic:
+
+---- queue: 和消费者负载均衡
+
+producer: 拉取topic所属的broker,
+
+CommitLog: 消息内容, 不区分topic
+
+ConsumeQueue: 基于topic的索引文件
+
+IndexFile: 通过key或时间区间.
+\subsubsection{RocketMQ事物型消息}
+依赖TransactionListener接口
+
+executeLocalTransaction 方法会在发送消息后调用, 用于执行本地事物, 如果本地事物执行成功, rocketmq再提交消息.
+
+简单来说, 两阶段提交, 消息先提交到RMS\_SYS\_TRANS\_HALF\_TOPIC的topic中, 而不是投递到真正的topic中. 当commit成功之后, 将消息投递到真实的topic中, 然后把先提交的地方删除, 如果是rollback只把第一次提交到的地方删除.
 
 \section{Redis}
 %\subsection{二级标题}
+\subsubsection{布隆过滤器}
+
+原理: 简单的说就是, 有一个长的二进制数组, 然后, 通过多个hash函数映射到上面, 如果某个key没有映射到已经被映射的数组bit位上我们就认为这个数不存在. 如果已经映射了, 我们就认为这个数存在. 但是这有一定的概率失败. 如果hash函数都映射到已经映射的位置上, 所以有一定的误判率.
+
+可以简单使用google的布隆过滤器, 简单的说就是在某些场景下, hashmap的性能消耗过多. 不适合做. 可以简单解决缓存穿透的问题. 即, 不存在的对象进行数据库访问我们可以用布隆过滤器进行拦截.
+
 \subsubsection{如何解决并发数据一致性问题?}
 1. 使用分布式锁
 
@@ -963,7 +1293,35 @@ Update t\_account set money=\#{new\_money} where id=\#{id} and money=\#{old\_mon
 有序集合(sorted set). 设置顺序, 实现排行榜的功能\par
 \subsubsection{Redis集群策略}
 一主多从, 整个集群所能存储的数据收到某台机器的内存容量, 所以不可能支持特大数据量, 一般加上哨兵模式来使用 \par
+
+优点：
+
+哨兵模式是基于主从模式的，所有主从的优点，哨兵模式都具有。
+当某个master服务下线时，自动将该master下的某个从服务升级为master服务替代已下线的master服务继续处理请求sentinal与redis1和redis2建立长连接，与主机连接是心跳机制，
+
+主从可以自动切换，系统更健壮，可用性更高。
+
+缺点：
+
+Redis较难支持在线扩容，在集群容量达到上限时在线扩容会变得很复杂。
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/redis_sentinel.png}
+	\caption{redissentinel}
+	\label{fig:redissentinel}
+\end{figure}
+
 Cluster模式: 槽分配. 支持多主多从
+为了保证高可用，redis-cluster集群引入了主从模式，一个主节点对应一个或者多个从节点，当主节点宕机的时候，就会启用从节点。当其它主节点ping一个主节点A时，如果半数以上的主节点与A通信超时，那么认为主节点A宕机了。如果主节点A和它的从节点A1都宕机了，那么该集群就无法再提供服务了。
+
+当竞选从节点收到过半主节点同意，便会成为新的主节点。此时会以最新的Epoch通过PONG消息广播，让Redis Cluster的其他节点尽快的更新集群信息。当原主节点恢复加入后会降级为从节点。
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/redis_cluster.png}
+	\caption{rediscluster}
+	\label{fig:rediscluster}
+\end{figure}
 
 \subsubsection{什么是Redis?}
 \begin{enumerate}
@@ -976,7 +1334,7 @@ Cluster模式: 槽分配. 支持多主多从
 \par
 (1) I/O多路复用
 \par
-简单来说, 可以使用I/O多路复用来坚定多个socket连接, 然后将感兴趣的时间注册到内核中并监听每个事件是否发生. 
+简单来说, 可以使用I/O多路复用来坚定多个socket连接, 然后将感兴趣的时间注册到内核中并监听每个事件是否发生.
 \par
 (2) 基于事件驱动
 \par
@@ -996,31 +1354,31 @@ Cluster模式: 槽分配. 支持多主多从
 	\centering
 	\caption{实现}
 	\begin{tabular}{|l|r|}
-		
+
 		\hline
-		类型&编码\\
+		类型   & 编码                                                                \\
 		\hline
-		STRING&INT(整形, 在String中存储整形会是的)\\
+		STRING & INT(整形, 在String中存储整形会是的)                                 \\
 		\hline
-		STRING&EMBSTR(简单动态字符串, 对于短小的string(44位字符)会使用这种结构)\\
+		STRING & EMBSTR(简单动态字符串, 对于短小的string(44位字符)会使用这种结构)    \\
 		\hline
-		STRING&RAW(简单动态字符串, 对于稍微长一点的string会使用(44位字符)这种结构)\\
+		STRING & RAW(简单动态字符串, 对于稍微长一点的string会使用(44位字符)这种结构) \\
 		\hline
-		LIST&QUICKLIST(快表)\\
+		LIST   & QUICKLIST(快表)                                                     \\
 		\hline
-		LIST&LINKEDLIST(快表)\\
+		LIST   & LINKEDLIST(快表)                                                    \\
 		\hline
-		SET&INTSET(整数集合)\\
+		SET    & INTSET(整数集合)                                                    \\
 		\hline
-		SET&HT(哈希表)\\
+		SET    & HT(哈希表)                                                          \\
 		\hline
-		ZSET&ZIPLIST(压缩列表)\\
+		ZSET   & ZIPLIST(压缩列表)                                                   \\
 		\hline
-		ZSET&SKIPLIST(跳表)\\
+		ZSET   & SKIPLIST(跳表)                                                      \\
 		\hline
-		HASH&ZIPLIST(压缩列表)\\
+		HASH   & ZIPLIST(压缩列表)                                                   \\
 		\hline
-		HASH&HT(哈希表)\\
+		HASH   & HT(哈希表)                                                          \\
 		\hline
 	\end{tabular}
 \end{table}
@@ -1034,7 +1392,7 @@ Cluster模式: 槽分配. 支持多主多从
 \end{enumerate}
 \subsubsection{redis字典的底层实现hashTable相关问题}
 \begin{enumerate}
-	\item 解决冲突: 链地址法, 即使用数组+链表的方式实现. 
+	\item 解决冲突: 链地址法, 即使用数组+链表的方式实现.
 	\item 扩容: 有两个指针h[0] 和 h[1], h[1] 用来备份, 当h[0], 满了使用渐进值hash, 插入都插入h[1], 查找两个表都进行查找.
 \end{enumerate}
 \subsubsection{压缩链表原理ziplist}
@@ -1057,7 +1415,7 @@ skiplist与平衡树, 哈希表的比较
 \subsubsection{AOF和RDB两种持久化方式区别}
 \begin{enumerate}
 	\item AOF存储命令, RDB存储数据.
-	\item AOF文件因为存储命令, 所以在redis启动的时候加载aof会比加载rdb要慢. 
+	\item AOF文件因为存储命令, 所以在redis启动的时候加载aof会比加载rdb要慢.
 	\item Redis 4.0 之后 启动了混合模式, AOF不需要是全量日志, 只要保存前一次RDB存储开始到这段时间增量AOF日志即可.
 \end{enumerate}
 \subsubsection{Redis中过期策略和缓存淘汰机制}
@@ -1068,7 +1426,7 @@ skiplist与平衡树, 哈希表的比较
 \subsubsection{为什么要使用Redis}
 \begin{enumerate}
 	\item 高性能: 内存的读取比硬盘乃至固态硬盘的读取速度都要快得多
-	\item 高并发: 直接操作缓存能够承受的请求是远远大于直接访问数据库的, 所以我们可以考虑把数据库中的部分数据转移到缓存中去, 这样用户的一部分请求会直接请求缓存这里而不用经过数据库. 
+	\item 高并发: 直接操作缓存能够承受的请求是远远大于直接访问数据库的, 所以我们可以考虑把数据库中的部分数据转移到缓存中去, 这样用户的一部分请求会直接请求缓存这里而不用经过数据库.
 	\item 高性能: 使用多路I/O复用木星, 非阻塞IO;
 \end{enumerate}
 \subsubsection{Redis底层实现跳表介绍一下}
@@ -1077,7 +1435,7 @@ skiplist与平衡树, 哈希表的比较
 	\centering
 	\includegraphics[width=0.7\linewidth]{figures/jump_table.jpg}
 	\caption{jumptable}
-	\label{fig:redissharding}
+	\label{fig:jumptable}
 \end{figure}
 \begin{enumerate}
 	\item 表头: 负责维护跳表的节点指针.
@@ -1093,26 +1451,26 @@ skiplist与平衡树, 哈希表的比较
 \end{enumerate}
 \subsubsection{分布式锁如何使用redis实现}
 \begin{enumerate}
-	\item setnx命令原子性实现. 
+	\item setnx命令原子性实现.
 \end{enumerate}
 \subsubsection{Redis的内存淘汰策略有哪些}
 Redis的内存淘汰策略是指在Redis用于缓存的内存不足时, 怎么处理需要新写入且需要申额外空间的数据.
 全局的键空间选择性移除
 \begin{enumerate}
-	
+
 	\item noeviction: 当内存不足以容纳新写入数据时, 新写入操作会报错.
 	\item allkeys-lru: 当内存不足以容纳新写入数据时, 在键空间中, 移除最近最少使用的key.
 	\item allkeys-random: 当内存不足以容纳新写入数据时, 在键空间随机移除某个key.
 \end{enumerate}
 设置过期时间的键空间选择性移除
 \begin{enumerate}
-	
+
 	\item volatile-lru: 当内存不足以容纳新写入数据时, 在设置了过期时间的键空间中, 移除最近最少使用的key.
 	\item volatile-random: 当内存不足以容纳新写入数据时, 在设置了过期时间的键空间中, 随机移除某个key.
-	\item volatile-ttl: 当内存不足以容纳新写入的数据时, 在设置了过期时间的键空间中, 有更早过期时间的key优先移除. 
+	\item volatile-ttl: 当内存不足以容纳新写入的数据时, 在设置了过期时间的键空间中, 有更早过期时间的key优先移除.
 \end{enumerate}
 \subsubsection{Redis事物的概念}
-Redis事物的本质通过MULTI, EXEC, WATCH等一组命令的集合. 
+Redis事物的本质通过MULTI, EXEC, WATCH等一组命令的集合.
 \begin{enumerate}
 
 	\item 事物开始 MULTI
@@ -1128,9 +1486,9 @@ Redis事物的本质通过MULTI, EXEC, WATCH等一组命令的集合.
 	>exec
 	(nil)
 \end{lstlisting}
-\subsubsection{RedisSharding}
+\subsubsection{RedisSharding问题}
 简单来说就是多个client 连接多个redis, 然后通过一致性哈希算法, 来确定访问的key+访问的客户端名字在哪一台redis上.
-采用的算法是MURMUR\_HASH, 
+采用的算法是MURMUR\_HASH,
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{figures/redis_sharding.png}
@@ -1143,7 +1501,7 @@ Redis事物的本质通过MULTI, EXEC, WATCH等一组命令的集合.
 \par
 \textbf{解决方案}
 \begin{enumerate}
-	
+
 	\item 缓存数据的过期时间设置随机, 防止同一时间大量数据过期现象发生.
 
 \end{enumerate}
@@ -1153,9 +1511,9 @@ Redis事物的本质通过MULTI, EXEC, WATCH等一组命令的集合.
 \par
 \textbf{解决方案}
 \begin{enumerate}
-	
+
 	\item 从缓存中取不到的数据, 在数据库中也没有取到, 这时也可以将key-value对写为key-null, 缓存时间设定为30s.
-	
+
 \end{enumerate}
 
 \subsubsection{缓存击穿}
@@ -1163,36 +1521,53 @@ Redis事物的本质通过MULTI, EXEC, WATCH等一组命令的集合.
 \par
 \textbf{解决方案}
 \begin{enumerate}
-	\item 设置热点数据永不过期	
+	\item 设置热点数据永不过期
 \end{enumerate}
 \subsubsection{缓存预热}
 系统上线后, 将相关的缓存数据直接加载到缓存系统. 这样就可以避免在用户请求的时候, 先查询数据库, 然后再讲数据缓存的问题, 用户直接查询事先被预热的缓存数据.
 \par
 \textbf{解决方案}
 \begin{enumerate}
-	\item 定时刷新缓存;	
+	\item 定时刷新缓存;
 \end{enumerate}
 \subsubsection{Redis6.0 为什么要引入多线程呢?}
-Redis将所有数据放在内存中, 内存的相应市场大约100ns, 对于小数据包, Redis服务器可以处理8w到10wQPS, 这也是Redis处理的极限了, 对于80\%的公司来说, 单线程的redis已经足够使用了. 
+Redis将所有数据放在内存中, 内存的相应市场大约100ns, 对于小数据包, Redis服务器可以处理8w到10wQPS, 这也是Redis处理的极限了, 对于80\%的公司来说, 单线程的redis已经足够使用了.
 \par
 但随着越来越复杂的业务场景, 需要更大的QPS.
 \begin{enumerate}
 	\item 可以充分利用服务器CPU资源, 目前主线程只能利用一个核
-	\item 多线程任务可以分摊Redis同步IO读写负荷.	
+	\item 多线程任务可以分摊Redis同步IO读写负荷.
 \end{enumerate}
 \subsubsection{Redis主从复制模式}
 \begin{enumerate}
 	\item 完全同步:刚开始, 主服务器发送RDB文件给从服务器, 实现主从同步.
-	\item 部分同步:当连接由于网络原因断开的时候, 将中间断开的执行的写命令发送给从服务器. 实现同步.	
+	\item 部分同步:当连接由于网络原因断开的时候, 将中间断开的执行的写命令发送给从服务器. 实现同步.
 \end{enumerate}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/redismasterslave.png}
+	\caption{redismasterslave}
+	\label{fig:redismasterslave}
+\end{figure}
+
+简单来说, 从服务器发送SYNC信号给主服务器, 主服务将RDB快照发送给从服务器, 从服务器更新快照内容. 主服务器将缓存写命令发送给从服务器.
+
 \subsubsection{Redis中持久化机制}
 \begin{enumerate}
-	\item 
+	\item
 \end{enumerate}
 
 
 \section{计算机网络}
 %\subsection{二级标题}
+\subsubsection{查看端口信息}
+netstat -a // 显示所有的端口信息
+\subsubsection{SYN攻击}
+简单的说是三次握手环节, 攻击者发送SYN请求, 然后就消失了, 导致服务器上大量的资源尝试去进行SYN响应.
+
+解决办法, 降低SYN timeout时间，使得主机尽快释放半连接的占用
+
 \subsubsection{arp协议}
 根据IP地址查询相应的以太网MAC地址
 
@@ -1246,6 +1621,8 @@ Redis将所有数据放在内存中, 内存的相应市场大约100ns, 对于小
 
 
 \subsubsection{TCP三次握手和四次挥手示意图}
+\url{https://www.cnblogs.com/eat-too-much/p/14764778.html}
+\url{https://www.cnblogs.com/eat-too-much/p/14765125.html}
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{figures/tcpconnectdis.png}
@@ -1275,7 +1652,7 @@ net.ipv4.tcp\_syncookies = 1
 	\label{fig:tcpsynrcvd}
 \end{figure}
 \subsubsection{TCP四个计时器}
-1、重传计时器 
+1、重传计时器
 
 一段时间没有接收到应答,则开始重新传输数据, 约60s
 
@@ -1283,18 +1660,18 @@ net.ipv4.tcp\_syncookies = 1
 
 时间等待计时器是在连接终止期间使用的 。当TCP关闭一个连接时，它并不认为这个连接马上就真正地关闭了。在时间等待期间中，连接还处于一种中间过渡状态。这就可以使重复的FIN报文段（如果有的话）可以到达目的站因而可将其丢弃。这个计时器的值 通常设置为一个报文段的寿命期待值的两倍 。
 
-3. 保活计时器 
+3. 保活计时器
 
-保活计时器 通常设置为2小时 。若服务器过了2小时还没有收到客户的信息，它就发送探测报文段。若发送了10个探测报文段（每一个相隔75秒）还没有响应，就假定客户出了故障，因而就终止该连接。 
+保活计时器 通常设置为2小时 。若服务器过了2小时还没有收到客户的信息，它就发送探测报文段。若发送了10个探测报文段（每一个相隔75秒）还没有响应，就假定客户出了故障，因而就终止该连接。
 
 4、坚持计时器
 
-当发送TCP收到一个窗口大小为零的确认时，就启动坚持计时器 。 当坚持计时器期限到时，发送TCP就发送一个特殊的报文段， 叫做 探测报文段 。这个报文段只有一个字节的数据。它有一个序号，但它的序号永远不需要确认；甚至在计算对其他部分的数据的确认时该序号也被忽略。探测报文段提醒对端：确认已丢失，必须重传。 
+当发送TCP收到一个窗口大小为零的确认时，就启动坚持计时器 。 当坚持计时器期限到时，发送TCP就发送一个特殊的报文段， 叫做 探测报文段 。这个报文段只有一个字节的数据。它有一个序号，但它的序号永远不需要确认；甚至在计算对其他部分的数据的确认时该序号也被忽略。探测报文段提醒对端：确认已丢失，必须重传。
 \subsubsection{TCP流量控制}
 简单来说, 接收端通过返回一个win参数告诉发送端还能发送多少. 如果不能发送了的话, 开启坚持定时器, 去发送试探帧, 如果又可以发送了的话,继续发送. \par
 新一代算法采用google的BBR算法.
 
-TCP BBR \textbf{不再使用丢包作为拥塞的信号}，也不使用 “加性增，乘性减” 来维护发送窗口大小，而是分别估计极大带宽和极小延迟，把它们的乘积作为发送窗口大小。 
+TCP BBR \textbf{不再使用丢包作为拥塞的信号}，也不使用 “加性增，乘性减” 来维护发送窗口大小，而是分别估计极大带宽和极小延迟，把它们的乘积作为发送窗口大小。
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{figures/liuliangkongzhi.png}
@@ -1332,6 +1709,12 @@ TCP BBR \textbf{不再使用丢包作为拥塞的信号}，也不使用 “加�
 	\includegraphics[width=0.7\linewidth]{figures/TCP_IP_OSI.png}
 	\caption{TCP\_IP\_OSI}
 	\label{fig:TCP_IP_OSI}
+\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/osi.jpg}
+	\caption{osi}
+	\label{fig:osi}
 \end{figure}
 \subsubsection{TCP和UDP区别?}
 \par
@@ -1376,7 +1759,7 @@ session 的运行依赖 session id, 而 session id 是存在 cookie 中的, 也�
 cookie存在大小限制, 单个不超过4k, 浏览器中Cookie个数也有限制.
 Session没有大小限制, 是和服务器内存有关的.
 \subsubsection{HTTP1.1 和 HTTP1.0的比较}
-HTTP1.1 默认长链接, 长连接只需要建立一次TCP连接, 进行多次HTTP通信. 
+HTTP1.1 默认长链接, 长连接只需要建立一次TCP连接, 进行多次HTTP通信.
 
 纯文本协议
 
@@ -1391,34 +1774,52 @@ HTTP1.0 默认短连接, 每进行一次HTTP通信就要新建一个TCP连接.
 
 服务器推送:服务器除了最初请求的响应外，服务器还可以额外向客户端推送资源，而无需客户端明确的需求。
 
-也会遇到队头阻塞, TCP层面上. 
+这种方式如何防止接受混乱呢?
 
-1.1 
+在HTTP2.0上，客户端和服务器可以把HTTP 消息分解为互不依赖的帧，然后乱序发送，最后再在另一端把它们重新组合起来。注意，同一链接上有多个不同方向的数据流在传输。客户端可以一边乱序发送stream，也可以一边接收者服务器的响应，而服务器那端同理。(简单来说就是, 根据请求头来组件一个整个数据)
+
+也会遇到队头阻塞, TCP层面上.
+
+1.1
 
 对头阻塞: 如果4丢了, 那么收到的5-8都没用.
+有非管道化和管道化，两种方式。
+
+非管道化，完全串行执行，请求->响应->请求->响应...，后一个请求必须在前一个响应之后发送。
+
+管道化，请求可以并行发出，但是响应必须串行返回。后一个响应必须在前一个响应之后。原因是，没有序号标明顺序，只能串行接收。
+
+管道化请求的致命弱点:
+
+1. 会造成队头阻塞，前一个响应未及时返回，后面的响应被阻塞
+2. 请求必须是幂等请求，不能修改资源。因为，意外中断时候，客户端需要把未收到响应的请求重发，非幂等请求，会造成资源破坏。
+
+由于这个原因，目前大部分浏览器和Web服务器，都关闭了管道化，采用非管道化模式。
+
+无论是非管道化还是管道化，都会造成队头阻塞(请求阻塞)。
 
 \subsubsection{HTTP3.0}
 
-QUIC协议: 
+QUIC协议:
 
 前项纠错机制: 称为向前纠错(Foward Error Connec，FEC)，每个数据包除了它本身的内容之外还包括了其他数据包的数据，因此少量的丢包可以通过其他包的冗余数据直接组装而无需重传。
 
-基于UDP的协议. 
+基于UDP的协议.
 
 自定义连接机制:
 
-TCP基于四元数,IP, 目标IP, 目标port, 自己的port. 一旦一个元素发生变化,就会重新建立连接. 
+TCP基于四元数,IP, 目标IP, 目标port, 自己的port. 一旦一个元素发生变化,就会重新建立连接.
 但是, QUIC使用一个64位随机数来确定这个连接. 三次握手的时间减少. 也减少二路TLS的时间.
 
 
 
 
 \subsubsection{HTTPS加密}
-使用SSL连接. HTTPS采用混合加密算法, 使用非对称加密和对称加密, 非对称加密用于传输对称秘钥来保证传输过程的安全性, 之后使用对称秘钥加密进行通信来保证通信过程的效率. 
+使用SSL连接. HTTPS采用混合加密算法, 使用非对称加密和对称加密, 非对称加密用于传输对称秘钥来保证传输过程的安全性, 之后使用对称秘钥加密进行通信来保证通信过程的效率.
 \par
 HTTPS加密过程:
 \begin{enumerate}
-	\item 客户使用HTTPS的URL访问web服务器, 要求与Web服务器建立SSL链接.	
+	\item 客户使用HTTPS的URL访问web服务器, 要求与Web服务器建立SSL链接.
 	\item Web服务器收到客户端请求后, 会将网站的证书信息(证书中包含公钥)传送一份给客户端.
 	\item 客户端的浏览器与web服务器开始写上SSL链接的安全登记, 也就是信息加密登记.
 	\item 客户端的浏览器更具双方同意的安全登记, 建立会话秘钥, 然后利用网站的公钥将会话秘钥加密, 并传送给网站
@@ -1438,26 +1839,65 @@ HTTPS加密过程:
 \end{enumerate}
 \section{mysql}
 %\subsection{二级标题}
+\subsubsection{索引的使用原则}
+对于区分度高的索引建议使用索引.
+
+索引可以提高查询速度
+
+索引降低了数据更新操作的速度
+
+\subsubsection{主键自增}
+
+如果输入了一个值 比如100, 那么下一个从100快开始自增.
+
+\subsubsection{主键自增的好处}
+数据库自动编号，速度快，而且是增量增长，按顺序存放，对于检索非常有利；(因为是聚簇索引, 不会造成已经构建好的mysql页进行分裂.) 效率大大提高
+\subsubsection{行锁 共享锁}
+行锁
+
+select * from XXX  for update;
+
+共享锁
+
+select * from XXX lock in share mode;
+
 \subsubsection{回表}
 当你建立了一个索引非主键索引, 那么叶子节点存储的是主键索引所在的地方, 然后会去主键索引中查找真实数据, 这种查询了两个索引就叫回表.
-\subsubsection{mybatis\#和\$区别以及原理} 
+\subsubsection{mybatis\#和\$区别以及原理}
 \#{ }可以防止Sql 注入，它会将所有传入的参数作为一个字符串来处理。
 
 \$ {} 则将传入的参数拼接到Sql上去执行，一般用于表名和字段名参数，\$ 所对应的参数应该由服务器端提供，前端可以用参数进行选择，避免 Sql 注入的风险
 \subsubsection{redo log 和 undo log, bin log }
 如果修改直接修改到日志中的话, 性能开销比较大, mysql 会将要写的数据先写到redolog中,然后再讲redolog存储到磁盘中, 使用场景系统崩溃恢复 \par
-bin log: 归档日志, 通过追加方式记录, 使用场景: 主从复制和数据恢复 \par
+但只有 redo log 也不行，因为 redo log 是 InnoDB特有的，且日志上的记录落盘后会被覆盖掉。因此需要 binlog和 redo log二者同时记录，才能保证当数据库发生宕机重启时，数据不会丢失。因为Checkpoint之前的页都已经刷新回磁盘。数据库只需对Checkpoint后的重做日志进行恢复，这样就大大缩短了恢复的时间。
+
+bin log: 归档日志, 通过追加方式记录, 使用场景: 主从复制和数据恢复, 简单理解就是二进制sql数据 \par
 undo log: 回滚日志, MVCC多版本并发. 快照读是MVCC的一种体现方式.
+比如一条 INSERT 语句，对应一条DELETE 的 undo log.update语句还是update只不过数据是之前的数据，这就是undo log中记录的日志内容。有两个数据, 事物id 和 回滚指针. 如果失败会产生回魂
+
+
+梳理下事务执行的各个阶段：
+
+（1）写undo日志到log buffer；
+
+（2）执行事务，并写redo日志到log buffer；
+
+（3）如果innodb\_flush\_log\_at\_trx\_commit=1，则将redo日志写到log file，并刷新落盘。
+
+（4）提交事务。
+
+
+
 \subsubsection{隔离级别}
 \par
 读已提交(read committed): 简单来说select * from account, 读出来的数据都是已经提交的数据.
 \par 可以出现不可重复读(一个事物两次读到的事物不一样)和幻读(插入一条记录)
-\par 
-读未提交(read uncommitted) : 简单来说 select * from account, 读出来的数据是另一个事物还没有提交的数据, 
+\par
+读未提交(read uncommitted) : 简单来说 select * from account, 读出来的数据是另一个事物还没有提交的数据,
 \par 可以出现脏读(无论是脏写还是脏读，都是因为一个事务去更新或者查询了另外一个还没提交的事务更新过的数据。因为另外一个事务还没提交，所以它随时可能会回滚，那么必然导致你更新的数据就没了，或者你之前查询到的数据就没了，这就是脏写和脏读两种场景。): 简单的说, 就是A事物在还没commit数据的情况下, b事物使用了A事物的数据, 但是A事物出现了回滚操作, 导致B事物读出来的数据是脏数据. 可以出现不可重复度, 可以出现幻读. (感觉是最不靠谱的一个级别)
-\par 
-可重复读(RR: Repeatable read) : 简单来说, 就是A事物插入了一条新数据, B事物没看到, 因为可重复读, 但是B是可以操作这条新数据的. 
-\par 
+\par
+可重复读(RR: Repeatable read) : 简单来说, 就是A事物插入了一条新数据, B事物没看到, 因为可重复读, 但是B是可以操作这条新数据的.
+\par
 串行化(serializable): 只能一个一个处理, 没什么问题, 但是效率太低一般不考虑.
 \par 提示: 不可重复读对应的是修改即Update，幻读对应的是插入即Insert.
 \par TIPS:
@@ -1538,6 +1978,67 @@ MVCC用于提交读和可重复读这两种隔离级别. 使用undolog实现
 2. 字段进行了隐私数据类型转化 \par
 3. 走索引没有全表扫描效率高
 \section{操作系统}
+
+\subsubsection{共享内存}
+共享内存可以说是最有用的进程间通信方式，也是最快的IPC形式。两个不同进程A、B共享内存的意思是，同一块物理内存被映射到进程A、B各自的进程地址空间。进程A可以即时看到进程B对共享内存中数据的更新，反之亦然。由于多个进程共享同一块内存区域，必然需要某种同步机制，互斥锁和信号量都可以。
+
+采用共享内存通信的一个显而易见的好处是效率高，因为进程可以直接读写内存，而不需要任何数据的拷贝。对于像管道和消息队列等通信方式，则需要在内核和用户空间进行四次的数据拷贝，而共享内存则只拷贝两次数据：一次从输入文件到共享内存区，另一次从共享内存区到输出文件。实际上，进程之间在共享内存时，并不总是读写少量数据后就解除映射，有新的通信时，再重新建立共享内存区域。而是保持共享区域，直到通信完毕为止，这样，数据内容一直保存在共享内存中，并没有写回文件。共享内存中的内容往往是在解除映射时才写回文件的。因此，采用共享内存的通信方式效率是非常高的。
+
+\subsubsection{虚拟内存}
+对虚拟内存的定义是基于对地址空间的重定义的，即把地址空间定义为「连续的虚拟内存地址」，以借此「欺骗」程序，使它们以为自己正在使用一大块的「连续」地址。
+
+也就是说虚拟内存能提供一大块连续的地址空间，对程序来说它是连续的，完整的，实际上虚拟内存是映射在多个物理内存碎片上，还有部分映射到了外部磁盘存储器上。虚拟内存有以下两个优点：
+
+1.虚拟内存地址空间是连续的，没有碎片
+
+2.虚拟内存的最大空间就是cup的最大寻址空间，不受内存大小的限制，能提供比内存更大的地址空间
+
+当每个进程创建的时候，内核会为每个进程分配虚拟内存，这个时候数据和代码还在磁盘上，当运行到对应的程序时，进程去寻找页表，如果发现页表中地址没有存放在物理内存上，而是在磁盘上，于是发生缺页异常，于是将磁盘上的数据拷贝到物理内存中并更新页表，下次再访问该虚拟地址时就能命中了。
+
+找到进程对应的页表中的条目
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/virtualMemory.png}
+	\caption{virtualMemory}
+	\label{fig:virtualMemory}
+\end{figure}
+
+
+\subsubsection{上下文信息}
+进程上下文包括三个，用户及上下文，寄存器上下文和系统级上下文
+
+用户级上下文：指令，数据，共享内存、用户栈
+
+寄存器上下文：程序计数器，通用寄存器，控制寄存器，状态字寄存器，栈指针（用来指向用户栈或者内存栈）
+
+系统级上下文：pcb(进程控制块)，主存管理信息（页表\&段表）、核心栈
+
+PCB:
+
+表示进程的状态. 进程的优先级. pid 进程号
+
+\subsubsection{内存访问}
+TLB: 快表, 防止多级转换
+
+MMU: 内存管理单元 将虚拟地址转为真实地址
+
+虚拟地址: 页号+页内偏移; 可能产生多级页表: 一级页号+二级页号+业内偏移
+
+
+
+物理地址: 硬盘上的地址
+
+
+首先CPU先使用虚拟地址通过MMU转为真实地址, 查找TLB快表上是否有存储真实地址的值, 如果存在, 那么直接去拿到真实地址的值, 如果不存在那么: 虚拟地址第一级页号找到二级页表地址. 然后通过二级页好找到二级页表内的地址, 二级页表内存储了真实的物理页号, 找到物理页号+虚拟地址的偏移找到真实地址
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/mmu.jpg}
+	\caption{mmu}
+	\label{fig:mmu}
+\end{figure}
+
 \subsubsection{匿名管道和命名管道的区别}
 匿名管道由pipe函数创建并打开, 只能由父子进程进行半双工传递
 
@@ -1585,11 +2086,17 @@ c. 切换硬件上下文
 1. select模型, 使用的是数组来存储Socket连接文件描述符, 容量是固定的, 需要通过轮询来判断是否发生了IO事件\par
 2. poll模型, 使用的是链表来存储Socket连接文件描述符, 容量是不固定的, 同样需要通过轮询来判断是否发生了IO事件 \par
 3. epoll模型, epoll和poll是完全不同的, epoll是一种事件通知模型, 大发生了IO事件时, 应用程序才进行IO操作, 不需要像poll模型那样主动去轮询 \par
+
+select监控的句柄列表在用户态，每次调用都需要从用户态将句柄列表拷贝到内核态，但是epoll中句柄就是建立在内核中的，这样就减少了内核和用户态的拷贝，高效的原因之一。
+
+还会再建立一个list链表，用于存储准备就绪的事件.
+
+当epoll\_wait调用时，仅仅观察这个list链表里有没有数据即可。有数据就返回，没有数据就sleep，等到timeout时间到后即使链表没数据也返回。所以，epoll\_wait非常高效。
 \section{设计模式}
 \subsubsection{多线程下单例设计模式}
 (1) 饿汉式不会出现安全问题, 懒汉式会出现(同时创建的时候会有问题, 两个线程). \par
 (2) 懒汉式安全隐患解决 \par
-(3) 饿汉式, 在静态属性中就获取了对象, 懒汉式是去得到对象的时候获取, 导致了懒汉式可能有问题. 
+(3) 饿汉式, 在静态属性中就获取了对象, 懒汉式是去得到对象的时候获取, 导致了懒汉式可能有问题.
 \begin{lstlisting}
 package com.lf.shejimoshi;
 
@@ -1827,6 +2334,142 @@ public class TestPC2
 序列化接口, 只有实现这个接口才能序列化, 默认计算一个serialVersionUID, 可以进行自定义.
 \section{C++}
 
+\subsubsection{map 和 unordered\_map 不同点}
+
+map 内部实现了一颗红黑树, 红黑树有自动排序的功能.
+
+unordered\_map 内部实现了一个哈希表, 如果遇到冲突, 同位置上的元素节点小于8个的时候， 这些数据会是一个链表式的方式互相连起来。 当同位置上的元素节点大于8个的时候， 会自动转化为成一个map(红黑树)。
+
+\subsubsection{C++ 不能重载的运算符}
+$$. :: .* ?: sizeof$$
+
+大多数运算符都是可以重载的,但是有5个运算符C++语言规定是不可以重载的.
+
+1. .(点运算符),通常用于去对象的成员,但是->(箭头运算符),是可以重载的
+
+2.::(域运算符),即类名+域运算符,取成员,不可以重载
+
+3..*(点星运算符,)不可以重载,成员指针运算符".*,即成员是指针类型
+
+4.?:(条件运算符),不可以重载
+
+5.sizeof,不可以重载
+\subsubsection{C++ 如果一个类中没有任何属性,占用空间为1, 这是规定}
+
+不是规定哦, 为了确保两个不同对象的地址不同, 必须如此, 类的实例化是在内存中分配一块地址, 同样空类也会日次, 所以编译器会给空类隐含的添加一个字节, 这样空类是细化后就有独一无二的地址了. 所以, 空类的sizeof为1, 而不是0.
+
+\subsubsection{返回引用}
+
+优点:
+
+1. 防止返回对象的时候调用拷贝构造函数和析构函数导致不必要的开销, 降低赋值运算符等的效率
+
+2. 允许进行连续赋值
+
+\subsubsection{类和结构体的区别}
+
+默认继承访问权限区别, 类默认是private, struct 默认是 public.
+
+简单来说, 抽象思维来判定是否要使用struct 或者是class, struct 是数据结构, class 是对象.
+
+class 可以用来定义模板参数, struct 不可以
+
+\subsubsection{类的大小}
+
+\begin{lstlisting}
+class A{};
+class B{
+	virtual void f(){};
+};
+class C: public B{};
+class D: public virtual A{ // 虚继承 防止 菱形继承造成奇异
+};
+
+int main() {
+	cout << sizeof(A) << endl;//1
+	cout << sizeof(B) << endl;//8
+	cout << sizeof(C) << endl;//8  虚函数表的地址 因为是64位系统所以sizeof是8
+	cout << sizeof(D) << endl;//8  因为包含指向虚基类的指针
+}
+\end{lstlisting}
+
+
+\subsubsection{C++ 内存对齐}
+简单来说就是, 默认是4字节对齐. 对于一个结构体而言, 里面的顺序会对对齐字节产生影响. 参考链接
+\url{https://zhuanlan.zhihu.com/p/30007037}
+
+\subsubsection{C++11}
+auto 类型推到
+$$
+	auto a = 10;
+$$
+
+众所周知C++11新增了右值引用，这里涉及到很多概念：
+
+左值：可以取地址并且有名字的东西就是左值。
+
+右值：不能取地址的没有名字的东西就是右值。
+
+纯右值：运算表达式产生的临时变量、不和对象关联的原始字面量、非引用返回的临时变量、lambda表达式等都是纯右值。
+
+返回值优化：当函数需要返回一个对象实例时候，就会创建一个临时对象并通过复制构造函数将目标对象复制到临时对象，这里有复制构造函数和析构函数会被多余的调用到，有代价，而通过返回值优化，C++标准允许省略调用这些复制构造函数。
+
+\textbf{std::function \& std::bind \& lambda表达式}
+
+\textbf{std::thread 线程相关 智能指针}
+
+
+\textbf{委托构造函数}
+
+\textbf{继承构造函数 using Base::Base}
+
+\textbf{nullptr}
+
+\textbf{final \& override}
+
+\textbf{default and delete}
+
+\textbf{explicit} 只能显示构造不能隐式转换.
+
+\textbf{修饰类成员函数，表示在该函数内不可以修改该类的成员变量。 const } 比如  void func() const;
+
+\textbf{constexpr } 运行期间就会被运算出来就是常量, 否则是普通函数.
+
+\textbf{minmax\_element：返回容器内最大元素和最小元素位置}
+
+\url{https://zhuanlan.zhihu.com/p/139515439}
+
+\subsubsection{C++14特性}
+
+auto 返回值推导
+
+支持变量模板
+
+[[deprecated]] 警告标记
+
+\subsubsection{C++17特性}
+
+C++17正式将file\_system纳入标准中，提供了关于文件的大多数功能，基本上应有尽有
+
+\subsubsection{C++20特性}
+
+auto res = foo <=> bar;
+
+import 和 export
+
+\subsubsection{模板类的函数定义}
+\begin{lstlisting}
+template <typename T>
+void vector<T>::clear() {
+	
+}
+\end{lstlisting}
+\subsubsection{尾递归的实现}
+简单来说, 如果直接返回结果的话会造成多次调用, 但是把返回的结果放在参数中, 编译器会进行一定的优化, 将其转为非递归的形式. 然后我们就可以减少爆栈的风险.
+
+尾递归由于直接返回值，不需要保存临时变量，所以性能不会产生线性增加。并且编译器会将尾递归形式优化成非递归形式。
+
+
 \subsubsection{socket 如何实现可靠连接}
 1. 心跳包机制, 保持连接
 
@@ -1842,12 +2485,16 @@ public class TestPC2
 有内置宏 \_\_cplusplus 是C++编译的
 \subsubsection{在C++程序中调用被C编译器编译后的函数, 为什么要加extern"C"}
 extern "C" 是修饰的变量和函数是按照C语言方式编译和链接的, 因为C编译器和C++编译器对一个函数的编译后的函数名是不同的, 这样为了实现混合查找函数名在类库中的实现,解决名字匹配问题. \par
+
+\subsubsection{C++, const规则}
+const只对它左边的东西起作用 ，  唯一的例外就是const本身就是最左边的修饰符，那么它才会对右边的东西起作用。 根据这个规则来判断就很容易了
 \subsubsection{C++, const 和 \#define 之间的区别}
-const和\#define 都能定义常量, 但是\#define只做单纯的替换, 但是const能进行代码安全检查. 
+const和\#define 都能定义常量, 但是\#define只做单纯的替换, 但是const能进行代码安全检查.
 \subsubsection{指针和引用之间的区别}
 1. 指针可以指向空值 但是引用不能指向空值. \par
 2. 指针可以不初始化, 引用必须初始化. \par
 3. 指针可以随时更改指向的目标, 而引用初始化后就不可以再指向任何其他对象 \par
+4. 指针可以进行地址偏移, 引用不可以 \par
 \subsubsection{inline的优劣}
 简单来说, 减少了函数调用, 但是增大了生成可执行程序的体积 \par
 \subsubsection{C++11有什么你使用到的新特性}
@@ -1877,16 +2524,41 @@ malloc/free是C/C++标准可以函数, new/delete是C++运算法. 他们都可�
 \subsubsection{main函数执行之前会执行什么？执行之后还能执行代码吗？}
 1. 全局对象的构造函数会在main函数之前执行 \par
 2. 可以，可以用atexit注册一个函数(函数参数是一个函数指针)，它会在main 之后执行; \par
-\subsubsection{经常要操作的内存分为那几个类别？} 
-(1) 栈区：由编译器自动分配和释放，存放函数的参数值、局部变量的值等；
+\subsubsection{经常要操作的内存分为那几个类别？}
+(1) 栈区：由编译器自动分配和释放，存放函数的参数值、局部变量的值等； 向下增长它的生长方式是向下的，是向着内存地址减小的方向增长。
 
-(2) 堆：一般由程序员分配和释放，存放动态分配的变量；
+(2) 堆：一般由程序员分配和释放，存放动态分配的变量；向上增长也就是向着内存地址增加的方向；
 
-(3) 全局区(静态区)：全局变量和(全局或局部)静态变量存放在这一块，初始化的和未初始化的分开放；
+(3) 全局区(静态区)：全局变量和(全局或局部)静态变量存放在这一块，初始化的和未初始化的分开放(.data 存放初始化后的数据  .bss 存放未初始化的数据)；
 
-(4) 文字常量区：常量字符串就放在这里，程序结束自动释放；
+(4) 常量区：常量字符串就放在这里，程序结束自动释放(.text 分区)；
 
 (5) 程序代码区：参访函数体的二进制代码。
+
+
+//===============================另一本书书写
+
+1. 栈: 在函数调用时存储参数, 返回地址和局部变量
+
+2. 内存映射区: 文件到内存的映射和程序运行是申请的较大数据
+
+3. 堆: 存储程序运行是申请的较小数据, 动态分配和销毁
+
+4. BSS段: 存储未被初始化的全局变量和静态变量, 长度固定
+
+5. 数据段: 存储已被初始化的全局变量和静态变量, 长度固定
+
+6. 代码段: 存储程序的二进制代码, 长度固定
+
+\subsubsection{链接器}
+linux 中 g++ -o 将多个.o文件链接成一个可执行文件.
+
+简单的来说, 我们针对一个.cc文件进行编译, 当做函数申明是存在的, 链接就是将这些函数找到. 链接也分为动态库链接.so, 和静态库链接 .a. 静态库链接直接打包的可执行文件中. 动态链接是, 不打包到文件中. 我们每次要用到动态库里面函数. 操作系统会帮我们找到动态库在哪里.
+
+\subsubsection{符号表的作用}
+编译器会生成一个叫做“符号表”的数据结构来维护变量名和内存地址直接的对应关系。它会搜集变量名，比如我们定义了一个全局的 int a; 那么编译器会为程序预留4个字节（32位平台）的空间，比如起始地址23456788（长度为4），并把变量名“a”和地址88888888保存进符号表，这样程序中对a进行相关操作时，它就会根据符号表找到变量的真正的物理位置（23456788），进行相关操作。 在机器执行程序的时候，会把变量名替换为内存地址（和长度），而不存在任何名称。
+
+
 \subsubsection{函数指针与指针函数}
 指针函数: 是函数, 但是返回指针(有两个括号) \par
 函数指针: 是指针, 指向函数, 有四个括号 \par
@@ -1957,9 +2629,185 @@ reinterpret\_cast<>(): 低层次的类型转换, 可以将指针转为int类型�
 因为可能导致对同一块堆空间多次delete \par
 \subsubsection{const int*}
 const int * a1 = \&b; // 相当于 *a1 是固定的, a1是可变的 \par
-int *const a2 = \&b; // 相当于 a2 是固定的, *a2是可变的 
+int *const a2 = \&b; // 相当于 a2 是固定的, *a2是可变的
 
 int const *a3 = \&b; // 等价于第一个 a1
+\subsubsection{C++智能指针}
+为什么要使用智能指针?
+
+因为当传递过来一个指针对象, 我们不知道, 是否要进行资源的释放.
+std::unique\_ptr  - 只有一个能拥有这个资源
+
+Std::shared\_ptr -  很多个人能拥有这个资源但是这个资源的最后持有者会进行资源的释放操作.
+
+Std::weak\_ptr - 简单来说是为了解决shared\_ptr循环引用造成资源泄露的问题.
+\subsubsection{C++与java的不同点}
+C++基于RTTI的机制进行运行时类型识别, 简单的说就是typeid + 四个cast进行类型的判断. 简单来说, typeid如果对于静态变量是静态编译的时候就可以做类型判定, 但是对于动态变量, 要运行是判定, 会造成一定的影响.
+\begin{lstlisting}
+class A{
+	public:
+	virtual void print() {
+		cout << "I'm A\n"; 
+	} 
+};
+class B : public A {
+	public:
+	void print() {
+		cout << "I'm B\n";
+	}
+};
+
+class C : public A {
+	public:
+	void print() {
+		cout << "I'm C\n";
+	}
+};
+
+int main () {
+	A *p = new B();
+	p->print();
+	cout << typeid(p).name() << endl;
+	if(typeid(p) == typeid(B*)) {
+		cout << "p point b\n";
+	}else if(typeid(p) == typeid(C*)) {
+		cout << "p point c\n";
+	}else if(typeid(p) == typeid(A*)) {
+		cout << "p== \n";
+	}
+	//C * pc = dynamic\_cast<C*>(p); 
+	// cat't succ
+	// if(pc){
+		//     pc->print();
+		// }
+	B * pb = dynamic\_cast<B*>(p);
+	if(pb){
+		pb->print();
+	}
+	const int a = 10;
+	cout << typeid(\&a).name() << endl; //const int *
+	cout << typeid(a).name() << endl; //const int *
+	return 0;
+\}
+\end{lstlisting}
+
+java 也有RTTI, 使用 instanceof , 或许加上反射(反射是大部分操作)
+\begin{lstlisting}
+class Base {}
+class Derived extends Base {}
+
+public class demo {
+	public static void main(String[] args) {
+		Derived derived = new Derived();
+		System.out.println(derived instanceof Base); // 输出true
+	}
+}
+\end{lstlisting}
+
+\begin{lstlisting}
+class Customer {
+	private Long id;
+	private String name;
+	private int age;
+	
+	public Customer() {}
+	
+	public Customer(String name,int age) {
+		this.name = name;
+		this.age = age;
+	}
+	
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id=id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name=name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age=age;
+	}
+	
+}
+
+class ReflectTester {
+	public Object copy(Object object) throws Exception{
+		// 获取对象类型
+		Class classType=object.getClass();
+		System.out.println("Class:" + classType.getName());
+		
+		// 通过默认构造方法创建一个新的对象
+		Object objectCopy = classType.getConstructor(new Class[]{}).newInstance(new Object[]{});
+		
+		// 获取对象的所有属性
+		Field fields[]=classType.getDeclaredFields();
+		
+		for(int i=0; i<fields.length; i++){
+			Field field=fields[i];
+			String fieldName=field.getName();
+			String firstLetter=fieldName.substring(0,1).toUpperCase();
+			System.out.println("firstLetter "+firstLetter);
+			//获得和属性对应的getXXX()方法的名字
+			String getMethodName="get"+firstLetter+fieldName.substring(1);
+			// 获得和属性对应的setXXX()方法的名字
+			String setMethodName="set"+firstLetter+fieldName.substring(1);
+			
+			// 获得和属性对应的getXXX()方法
+			Method getMethod=classType.getMethod(getMethodName, new Class[]{});
+			// 获得和属性对应的setXXX()方法
+			Method setMethod=classType.getMethod(setMethodName, new Class[]{field.getType()});
+			System.out.println("field.getType() " + field.getType());
+			// 调用原对象的getXXX()方法
+			Object value=getMethod.invoke(object, new Object[]{});
+			System.out.println(fieldName+":"+value);
+			// 调用拷贝对象的setXXX()方法
+			setMethod.invoke(objectCopy, new Object[]{value});
+		}
+		return objectCopy;
+	}
+}
+\end{lstlisting}
+\subsubsection{C++异常和java异常处理的对比}
+C++ 没有 finally, 因为c++中有一个非常重要的原则，就是：在异常发生前成功调用构造函数的类一定能够执行析构函数。
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/exceptioncpp.png}
+	\caption{exception\_cpp}
+	\label{fig:exception_cpp}
+\end{figure}
+但是不能捕获除0异常, 需要通过信号来实现 \url{http://blog.bitfoc.us/p/100}
+
+java 继承于error 和  exception , exception 的异常能够捕获.
+
+throw用在方法内，用来抛出一个异常对象，将这个异常对象传递到调用者处，并结 束当前方法的执行。
+
+使用的格式：
+
+throw new 异常类名(参数)；
+
+
+(throws)运用于方法声明之上，用于表示当前方法不处理异常，而是提醒该方法的调用者来处理异常
+
+使用格式：
+
+修饰符 返回值类型 方法名（参数） throws 异常类名1，异常类名2 ... { }
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/exceptionjava.png}
+	\caption{exception\_java}
+	\label{fig:exception_java}
+\end{figure}
+
+
 \subsubsection{C++虚函数原理}
 1. 简单来说, 每一个含有虚函数的类都至少有一个与之对应的虚函数表, 其中存放着该类所有的虚函数对应的函数指针 \par
 2. 在运行时, 会根据调用的指针指向的对象得到真正应该调用的函数, 然后通过偏移量找到虚函数地址并调用 \par
@@ -1979,7 +2827,7 @@ fd可写之后，如果服务程序写了一部分就结束此次写入，ET模�
 2. 内核将数据拷贝到内核页缓存 \par
 3. 有操作系统调用, 将数据拷贝到磁盘, 完成写入. \par
 Linux通过将一个虚拟内存区域与一个磁盘上的对象关联起来, 以初始化这个虚拟内存区域的内容. \par
-可以减少一次拷贝. 
+可以减少一次拷贝.
 
 \subsubsection{write 和 fwrite}
 如果文件的大小是8k。
@@ -2006,7 +2854,7 @@ A. 即购买策略\par
 a. 将当天需要购买的虚拟机按照, CPU数量和内存数量的和进行排序, 降序排序\par
 b. 然后寻找一个服务器开着的, 然后尝试将虚拟机放入服务器, 选择服务器的使用率最高的那个, 进行存放.\par
 c. 如果没有成功放置进入C环节, 选择一台关机了的服务器, 进行存放.\par
-d. 还没成功选择, 选择一台服务器 刚开始我们使用的是, 恰恰能放入虚拟机的服务器. 后期我们进行了更新, 选择,能放入这台服务器和前面已经存放的服务器的大小, 就是留有一定的余量. 可以减少购买服务器的资金.\par 
+d. 还没成功选择, 选择一台服务器 刚开始我们使用的是, 恰恰能放入虚拟机的服务器. 后期我们进行了更新, 选择,能放入这台服务器和前面已经存放的服务器的大小, 就是留有一定的余量. 可以减少购买服务器的资金.\par
 B. 迁移的策略\par
 a. 我们每天可以进行一次服务器迁移, 这样将利用率低的服务器从低到高进行排序, 然后将利用率低的服务器迁移到利用率高的服务器.\par
 b. 后期我们增加了一个简单的策略. 将一台服务器中只有一个和两个的挑选出来, 放入其他的服务器中, 这样可以带来省电的效果.\par
@@ -2020,7 +2868,7 @@ b. 后期我们增加了一个简单的策略. 将一台服务器中只有一个
 1. 数学建模，问题是对于飞机6个油箱的输油拟合，我们受用了向量拟合算法，判断重心之间的偏差，然后控制邮箱的输油，使用python有一个好处可以将数据读取和数据处理和数据展示写在一堆中，队友对于文章的撰写，也很厉害，队友使用visio绘制了形象生动的模型展示图。是一个团队的比赛，然后我觉得最重要的是心态平和，在最后一天晚上，凌晨两点的时候我才完成了数学建模最后一问的撰写。当时队友都说，要不先不写最后一题了，我觉得我写的出来，而且不超过2点，结果，我们就完成了数学建模的所有题目。\par
 2. 还有经过数学建模，个人觉得，只要有合适的学习阶梯，基本上任何东西都能掌握，数学建模是对于算法有一些基本的要求，对于模拟退火算法，初看觉得很难，但是简单调研一番后，模拟退火算法是真的简单。然后这期间也简单学了在数学建模培训赛题中使用模拟退火解决了经典的旅行商问题之类。\par
 
-数学建模 
+数学建模
 我们三个人做的是2020年的华为杯数学建模, 我们的题目是飞行器质心平衡供油策略优化. 我使用了python作为我们的编程与可视化语言. 因为, python 可以一套走完, 既可以完成数据从excel文档中的读取, 也可以使用python来进行图表的绘制. \par
 
 
@@ -2031,12 +2879,12 @@ b. 后期我们增加了一个简单的策略. 将一台服务器中只有一个
 数学建模让我个人成长了许多, 以前觉得模拟退火算法是比较难的算法, 因为随着这个算法,一般会听到. 量子计算机, 这个是超过个人认知的东西, 但是经过个人的调研, 发现模拟退火算法可以说是, 智能算法中最简单的一种算法. 随着设定温度的下降整个系统达到稳定, 可以得到较优解. 也学习了蒙特卡洛算法, 以概率统计来进行结果的计算. 也学习了lingo等进行整数规划问题的求解.\par
 感悟最多的是, 整个队伍还是比较难构建的. 比赛心态很重要, 虽然在最后一天比赛凌晨2点我才求解出问题四的解, 那个时候我的队友都有点要放弃的样子, 我还是对队友说给我1个小时就一定能写好. 个人觉得数学建模对于文档的撰写也很重要, 文档的图形与建模也是一项技术活儿.\par
 \subsubsection{之江天枢深度学习可视化项目}
-对于使用vue框架对于深度学习模型的高维向量分类效果进行了可视化. 数据分类效果的查看主要基于两种算法, 第一种是PCA(主成分分析, 就是将数据维度以权重的方式保留最高的), 另一种是TSNE(T分布和随机近邻嵌入)算法,  使用 三种方式对数据进行可视化, 分为是 2位平面可视化数据点集, 三维空间可视化数据点集, 和 4维到8位的平行坐标可视化. 二维和4-8位采用的是d3.js对数据的可视化. 三维采用了echarts.js 进行数据可视化. 实现了动态数据变化. 动画效果是我做的两点之一, 因为D3.js 对于动画的支持比较靠后面, 因为D3.js 是支持定制化显示的.但是对于动画的实现需要对D3.js 比较深刻的理解. 我做到了. 比如一个顶点从一个旧坐标到新坐标, 是采用连续的动画, 而不是顶点的直接跳跃. 数据类目 以不同的三色进行表示, 清晰直观. 比如对于手写数字的可视化, 有10个颜色, 在后期模型训练好的时候, 在TSNE算法可以清晰的找到10个集合. 可以通过鼠标点击 折现点, 如果某个分类集合中混入了别的颜色可以轻易找到, 进而看到原始的数据. 可以展示图片 文字 和 音频.  增加了播放按钮, 随着模型的训练, 高维向量在后期, 几乎不会发生改变. 这样对于训练模型的研究者可以提前关闭模型的训练, 如果一个模型训练了很久 高维数据还是分类不出来, 那么研究者可以简单判断模型构建出现了问题. 
-原本三维,个人是实现了, 图形学算法中的三维映射到二维的算法. 自己构建了MVP矩阵, 分别是模型矩阵, 视图矩阵, 和投影矩阵. 然后鼠标通过trackball来进行整个模型的旋转与缩放. 但是因为d3.js 只能操作svg, svg是一个比较古老的绘图方式, 性能并不高, Canvas 并不能通过d3.js 进行操作. 无奈之下, 使用了echarts.js现成的可视化方案. 
+对于使用vue框架对于深度学习模型的高维向量分类效果进行了可视化. 数据分类效果的查看主要基于两种算法, 第一种是PCA(主成分分析, 就是将数据维度以权重的方式保留最高的), 另一种是TSNE(T分布和随机近邻嵌入)算法,  使用 三种方式对数据进行可视化, 分为是 2位平面可视化数据点集, 三维空间可视化数据点集, 和 4维到8位的平行坐标可视化. 二维和4-8位采用的是d3.js对数据的可视化. 三维采用了echarts.js 进行数据可视化. 实现了动态数据变化. 动画效果是我做的两点之一, 因为D3.js 对于动画的支持比较靠后面, 因为D3.js 是支持定制化显示的.但是对于动画的实现需要对D3.js 比较深刻的理解. 我做到了. 比如一个顶点从一个旧坐标到新坐标, 是采用连续的动画, 而不是顶点的直接跳跃. 数据类目 以不同的三色进行表示, 清晰直观. 比如对于手写数字的可视化, 有10个颜色, 在后期模型训练好的时候, 在TSNE算法可以清晰的找到10个集合. 可以通过鼠标点击 折现点, 如果某个分类集合中混入了别的颜色可以轻易找到, 进而看到原始的数据. 可以展示图片 文字 和 音频.  增加了播放按钮, 随着模型的训练, 高维向量在后期, 几乎不会发生改变. 这样对于训练模型的研究者可以提前关闭模型的训练, 如果一个模型训练了很久 高维数据还是分类不出来, 那么研究者可以简单判断模型构建出现了问题.
+原本三维,个人是实现了, 图形学算法中的三维映射到二维的算法. 自己构建了MVP矩阵, 分别是模型矩阵, 视图矩阵, 和投影矩阵. 然后鼠标通过trackball来进行整个模型的旋转与缩放. 但是因为d3.js 只能操作svg, svg是一个比较古老的绘图方式, 性能并不高, Canvas 并不能通过d3.js 进行操作. 无奈之下, 使用了echarts.js现成的可视化方案.
 
-第二个模块是媒体数据可视化模块, 使用element-ui进行制作, 可以显示图片, 音频, 文本等信息. 
+第二个模块是媒体数据可视化模块, 使用element-ui进行制作, 可以显示图片, 音频, 文本等信息.
 
-期间爬了很多坑, 比如echats 传入的数据第一维度必须是标题, 不能直接是数据啥的. 文档也没说, 看了原码才知道, 对于echats的源码进行了简单的debug. 有比较强的前端开发能力. 对于 VUE的  MVC 模型 也比较熟悉, 数据驱动显示. 在我的项目中得到了淋漓尽致的利用. 
+期间爬了很多坑, 比如echats 传入的数据第一维度必须是标题, 不能直接是数据啥的. 文档也没说, 看了原码才知道, 对于echats的源码进行了简单的debug. 有比较强的前端开发能力. 对于 VUE的  MVC 模型 也比较熟悉, 数据驱动显示. 在我的项目中得到了淋漓尽致的利用.
 
 项目中使用了less对于布局的简单使用，使用async进行异步获取数据，使用封装了axios的模块进行对于数据进行get获取。前端在第一次请求的时候获取了session\_id,然后之后都会携带有cookie对于身份的判断识别。
 
@@ -2045,6 +2893,42 @@ b. 后期我们增加了一个简单的策略. 将一台服务器中只有一个
 数据的实时同步的实现, 通过前端实现了一个定时器, 然后每个正在展示的页面会定时发送数据请求, 然后更新数据的显示.
 \subsubsection{快乐慕商城电商后台项目介绍}
 (\textbf{一期架构}) 通过nginx反向代理, 使用tomcat作为服务端处理程序, 然后将session 存储到 guawa cache 中. 然后将数据存储的数据库中, 没有使用中间件处理, 单机架构, 导致系统的吞吐性能比较低. 在重置密码的时候需要带上一个有效的token来进行密码的重置
+
+分成两个大方向来进行整个项目的构建. 分别是门户接口和后台接口.
+
+门户接口主要分成6个方向, 支付, 用户, 购物车, 产品, 订单和收货地址.
+
+后台接口主要分成5个方向, 产品, 统计, 用户, 品类和订单接口.
+
+用户模块: 实现用户的注册. 登陆. 密码找回. 管理员登录等功能.
+
+商品模块: 商品模块风味前台后来两个部分. 前台主要实现产品搜索. 动态排序类别. 商品详情展示等. 后台主要实现图片上传/ 商品上下架/ 增删改查商品等功能
+
+购物车模块: 实现购物车中增添. 移除商品等功能.
+
+收货地址模块: 实现用户收货地址的增删改查功能.
+
+支付模块: 实现与支付宝的对接. 调通支付宝功能官方Demo.
+
+虽然我们只完成了后端接口, 那我是如何测试的呢?  使用FeHelper 进行JSON美化, 使用 API Test (原名Restlet client) chrome 插件 进行 数据传输测试.
+
+着重介绍user模块, 使用了guawa Cache 来进行token 的管理.使用定时清理cache中的容量.
+当我们使用问题来进行找回密码的时候, 如果问题的答案正确, 后台将会生成一个token, 然后下一个页面 通过携带这个token来进行修改密码, 防止横向越权. Token 存储的是 key + value. 当回答问题正确的时候生成一个随机的UUID然后作为value, key就是token\_字符串+用户名. 然后我们在登陆状态下修改密码的话, 我们需要检验用户名的旧密码, 防止出现横向越权的现象. 横向越权就是攻击者尝试访问与他拥有相同权限的用户的资源. 其中查看用户是否登陆通过httpsession 来查看用户是否已经登陆.  在登陆的时候设定session. 在注册密码的时候, 使用流读取配置文件存存储的MD5 盐值, 其中使用静态代码块, 来进行系统初始化的时候第一次读取盐值. 使用MD5 加盐的方式进行存储.    提升系统的安全性能.
+
+
+
+
+
+还有一个我想介绍的是支付模块
+关于单边账问题, 很简单，就是说我们记了，支付宝没记，或者支付宝记了，我们系统没记。
+1、每一笔交易一定要闭环，即要么支付成功，要么撤销交易，一定不能有交易一直停留在等待用户付款的状态。
+2、轮询+撤销的流程中，如轮询的结果一直为未付款，撤销一定要紧接着最后一次查询，当中不能有时间间隔。
+3、门店收银系统应该具备独立的手动查询功能作为兜底，输入商户订单号（可从用户手机账单中获得）调用支付宝查询接口获得确切的支付状态。
+4、当遇到网络超时和未知异常时，参考 异常处理流程正确处理，对于每一笔交易或退款，一定要得到确切的结果。
+5、撤销接口调用成功后，需要在收银台页面为收银员展示撤销成功的强提示文案，且按实际业务情况引导收银员进行手工订单查询。
+6、在上述基础上，业务流程培训时应强调支付结果必须以商户端为准，用户手机上的支付宝结果或账单只能做参考，不能作为最终识别标准。如果商户未正确处理业务逻辑和业务流程培训，存在潜在的风险，商户自行承担因此而产生的所有损失。
+详见 避免单边账说明。
+
 
 
 \begin{figure}
@@ -2056,6 +2940,8 @@ b. 后期我们增加了一个简单的策略. 将一台服务器中只有一个
 
 (\textbf{二期架构})
 
+软件架构: Spring + SpringMVC + Mybatis + Nginx + Tomcat + Redis + Jedis + Lombok + Jackson + Guava Cache
+
 使用横向扩展, 将session存储到redis中. 使用maven进行环境隔离, 分为 local dev 和prod 环境, lombok进行代码整洁性优化. 使用nginx进行负载均衡, 简单来说就是将请求分发到不同的tomcat中, 以权重的方式. redis使用一致性hash算法进行缓存分片部署.封装了异常处理防止服务端关键信息泄露. 分布式锁进行了优化防止死锁.
 
 
@@ -2065,7 +2951,23 @@ b. 后期我们增加了一个简单的策略. 将一台服务器中只有一个
 简单来说生成多个虚拟节点, 以 0 ~ $2^31-1$ 的范围进行部署, 然后看顺时针映射到哪一个redis容器中.
 
 
+Jackson: 主要通过objectMapper对象来实现json转string操作和string转json操作. 主要用在存储redis中的sessionid所存储的对象. 使用hash方式存储
 
+slf4j+lockback: 进行日志管理 lockback 读取配置文件logback.xml进行解析
+
+md5: 进行密码的加盐处理
+
+Lombok: 用来简化代码的编写. 使用代码更加清晰
+
+<mvc:interceptor> + handlerinterceptor: 使用拦截器来进行. 防止没有需要登陆的操作被使用. 如果是登陆操作使用单独的逻辑 当然也可以使用相关的配置
+
+用户模块, 登陆注册, 忘记密码, 其中忘记密码要重置的时候携带的token也是存放在redis中的
+
+商品模块, 可以查看商品的详细信息, 使用了mybatis 的 pagehelper 分页器插件, 使用拦截器对sql进行limit处理
+
+
+另一个我想介绍的是购物车模块.
+购物车模块在展示购物车中选中的物品的时候, 使用DigDecimal类来进行数值的统计, 防止出现用为java, double有效位数导致的金额错误. 其中 bigDecimal类 我们需要使用String类型的构造函数, 因为使用double类型的构造函数还是会出现精度问题.
 
 \begin{figure}
 	\centering
@@ -2088,13 +2990,99 @@ b. 后期我们增加了一个简单的策略. 将一台服务器中只有一个
 	\label{fig:happymmallexception}
 \end{figure}
 
+\subsubsection{秒杀项目介绍}
+
+mysql + reids + springboot + rockmq + nginx + @Transactional
+
+1. 为什么要讲商品的库存表item\_stock与商品表分开?
+
+库存操作非常耗时、性能，在商品交易过程中库存减，如果合并到item表中，每次会对对应行加行锁。如果分开库存表，虽然每次减库存过程还是会加行锁，但是可以将这张表拆到另一个数据库当中，分库分表，做效果的优化
+
+
+@CrossOrigin(origins = {"*"},allowCredentials = "true")
+
+我们的ajax看到这两个头部就认定对应的域名接收任何来自或不来自于本域的请求, 简单来说,就是请求地址和域名请求都可以
+
+2. tomcat 参数优化
+
+增加线程数数量, 最大工作线程数量增加到了200
+
+keepAliveTimeOut:  设置30秒内没有请求则服务端自动断开keepalive链接
+
+maxKeepAliveRequests: 当客户端发送超过10000个请求则自动断开keepalive链接
+
+一定程度上减少了TCP三次握手的时间损耗.
+
+3. 水平扩展
+
+将前端静态资源直接放在nginx里面的html目录中. 基于token的会话管理, 前端存储到localStorage. 后端存储到redis
+
+
+4. 多级缓存
+
+使用了三级缓存, 第一级使用了guawacache存储了商品的信息, 第二级 redis 第三季 数据库
+使用序列化方式进行存储. 商品列表 可以达到Average time 150ms,对应的Tps:2000/s,对应的redis几乎没有任何压力，
+缓存机制从redis缓存加载到了jvm缓存之后，减少了多段的网络开销，并且完成了对应的内存访问输出结果，性能提升明显，但是数据更新之后缓存失效，还有JVM容量大小的限制；
+
+5. 数据库库存 放入redis
+
+会产生数据不一致的现象.
+
+（1）活动发布同步库存进缓存
+
+（2）下单交易减缓存库存
+
+（3）异步消息扣减数据库内存
+
+RocketMQ主要有 Producer端，负责向Broker发送消息；Consumer端，多个consumer组成一个ConsumerGroup，每个消息会有一个Group里的consumer来消费；Broker由topic和MessageQueue组成，消息隶属于某个topic，一个topic可能由一个或多个topic管理
+
+
+Producer连接NameServer发现broker1，会向topicA为主题的broker1投递消息，采用负载轮询向queue投递；
+
+Consumer抓取负责的topicA，与queue建立长连接，当有消息时，唤醒，拉取对应的message，没有消息就等待，这种方式叫做长轮询
+
+我们的解决方法就是异步消息的发送要在整个事务提交成功后再发送
+
+6. 秒杀令牌
+
+活动开始生成令牌
+
+7. 设置秒杀大闸
+
+就是一次释放的令牌大约是库存的5倍, + 验证码防止黄牛操作
+
+8. 限流
+
+使用令牌桶算法则是一个存放固定容量令牌的桶，按照固定速率往桶里添加令牌。桶中存放的令牌数有最大上限，超出之后就被丢弃或者拒绝。当流量或者网络请求到达时，每个请求都要获取一个令牌，如果能够获取到，则直接处理，并且令牌桶删除一个令牌。如果获取不同，该请求就要被限流，要么直接丢弃，要么在缓冲区等待。
+
+Guava RateLimiter
+
+
+使用 RateLimiter的静态方法创建一个限流器，设置每秒放置的令牌数为5个。返回的RateLimiter对象可以保证1秒内不会给超过5个令牌，并且以固定速率进行放置，达到平滑输出的效果。
+
+9. 数据流
+
+下单->流水库存->真正库存
+
+
+10. 活动的开启与关闭, 通过一个内部的接口实现.
+
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/rockmq.png}
+	\caption{rockmq}
+	\label{fig:rockmq}
+\end{figure}
+
 \section{游戏开发}
 \subsubsection{渲染管线}
-图形渲染管线蛀牙包括两个功能: 
+图形渲染管线蛀牙包括两个功能:
 1. 将物体3D坐标转变为屏幕空间2D坐标
 2. 屏幕每个像素点进行着色
 
-顶点数据的输入, 顶点着色器, 曲面细分过程, 几何着色器, 图元组装, 裁剪提出, 光栅化, 片段着色器以及混合测试. 
+顶点数据的输入, 顶点着色器, 曲面细分过程, 几何着色器, 图元组装, 裁剪提出, 光栅化, 片段着色器以及混合测试.
 
 \section{自我}
 \subsubsection{自我介绍}
@@ -2103,8 +3091,11 @@ b. 后期我们增加了一个简单的策略. 将一台服务器中只有一个
 研究生期间参加过多种项目， 典型的是参加过之江实验室的天枢深度学习可视化的项目, 作为前端开发人员。
 同时也积极参与多种竞赛. 参加过华为软件精英挑战赛和数学建模比赛. 数学建模是国二. 华为软件精英挑战赛今年拿过杭夏赛区的前64强. \par
 我的兴趣爱好是跑步，参加过西湖毅行.
+\subsubsection{自我介绍英文版本}
+Hello everyone. I am liyongjie, a computer science and technology student from HangZhou Dianzi university. I grew up in WenZhou, but now I'm living in Hangzhou. I participated in several games including the Huawei Software elite Challenge, and mathematical modeling. More importantly I learnt how to communicate well with my team members, and how to division of labor Challenge. Then I participtated in several projects, including zhijiang Deep learning visualization. I worked one year and I was a software development. I like running in my free time and I am so happy to be here and looking forward to working with you in the near future.
+
 \subsubsection{优缺点}
-优点是: 坚持且不会轻易放弃, 只要认为能做完可以做完, 我会坚持做完它, 比如数学建模, 我们做的是比较慢, 最后一天12点我们队伍还在做第四问, 队友劝我放弃吧, 先把前三问完成. 我那个时候有思路了, 然后我说等我2个小时, 我一定可以做完, 结果花了30多分钟就做好了, 不过调试花了挺久的时间 
+优点是: 坚持且不会轻易放弃, 只要认为能做完可以做完, 我会坚持做完它, 比如数学建模, 我们做的是比较慢, 最后一天12点我们队伍还在做第四问, 队友劝我放弃吧, 先把前三问完成. 我那个时候有思路了, 然后我说等我2个小时, 我一定可以做完, 结果花了30多分钟就做好了, 不过调试花了挺久的时间
 
 缺点是: 有一定拖延症, 有的时候等到任务紧要的时候会效率比较高.
 
@@ -2112,9 +3103,9 @@ b. 后期我们增加了一个简单的策略. 将一台服务器中只有一个
 狼性文化, 胜则举杯相庆 败则拼死相救; 告诉每一个华为人, 要追逐胜利不惧失败
 
 \subsubsection{遇到的困难以及解决办法?}
-首先遇到问题, 根据问题去查找有没有相关的解决方案. 
+首先遇到问题, 根据问题去查找有没有相关的解决方案.
 
-其次, 如果没有解决方案, 应该有相关知识点. 根据相关知识点去搜相关论文. 
+其次, 如果没有解决方案, 应该有相关知识点. 根据相关知识点去搜相关论文.
 
 如果还没有解决方案, 可以和朋友和老板沟通交流一下. 有的时候在沟通交流的时候就会出现解决方案.
 
@@ -2122,11 +3113,11 @@ b. 后期我们增加了一个简单的策略. 将一台服务器中只有一个
 
 前两年, 好好学习掌握华为的技术, 后面几年争取输出技术.
 
-职业目标是: 能够独立的带领团队开发项目. 
+职业目标是: 能够独立的带领团队开发项目.
 
 \subsubsection{加入不同项目组认为自己的板块是最重要的，没有及时给你配合或者你遇到配合上，进度上的问题如何解决？}
 
-一方面对自己上下游的工作内容要有一定的熟悉, 如果是上游出现了问题, 那只能把问题反馈给上游, 术业有专攻. 
+一方面对自己上下游的工作内容要有一定的熟悉, 如果是上游出现了问题, 那只能把问题反馈给上游, 术业有专攻.
 
 二是, 在别人有空的时候要经常去找对方沟通交流, 如果是要配合的一些小事, 如果能自己干的话就自己干了.
 
@@ -2134,145 +3125,788 @@ b. 后期我们增加了一个简单的策略. 将一台服务器中只有一个
 
 部门的发展方向是什么?
 
+什么时候有通知
+
 
 \subsubsection{为什么读研}
-1. 一方面想要完成自己的小小愿望, 在大学期间拿一个奖项. 本科也参加过电子设计竞赛, 但是这种比赛比较吃实验室的资源. 学计算机的话, 比如数学建模, 只要一台电脑就可以了. 
+1. 一方面想要完成自己的小小愿望, 在大学期间拿一个奖项. 本科也参加过电子设计竞赛, 但是这种比赛比较吃实验室的资源. 学计算机的话, 比如数学建模, 只要一台电脑就可以了.
 
 2. 工资比较低, 感觉不如读研, 然后找个好工作.
 
 
-	\section{附录: 相关样例}
-	第一个公式
-	\begin{equation}
-		F=ma=aa
-	\end{equation}
-	我们可以知道牛顿得出了与物体质量和加速度之间的关系$F=ma$
-	换行公式：
-	\begin{align}
-		y &=ax\notag\\
-		&=bx
-	\end{align}
+\section{设计模式}
+\subsubsection{工厂模式}
+\textbf{简单工厂模式}
+
+简单来说就是使用字符串返回对象
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/simpleFactory.png}
+	\caption{simpleFactory}
+	\label{fig:simpleFactory}
+\end{figure}
+
+\textbf{抽象工厂模式}
+
+简单来说,就是工厂也是抽象化的, 原先只有产品是抽象化的
+
+抽象工厂模式的优点
+分离接口和实现
+客户端使用抽象工厂来创建需要的对象，而客户端根本就不知道具体的实现是谁，客户端只是面向产品的接口编程而已。也就是说，客户端从具体的产品实现中解耦。
+
+使切换产品族变得容易
+因为一个具体的工厂实现代表的是一个产品族，比如上面例子的从Intel系列到AMD系列只需要切换一下具体工厂。
+
+抽象工厂模式的缺点
+不太容易扩展新的产品
+如果需要给整个产品族添加一个新的产品，那么就需要修改抽象工厂，这样就会导致修改所有的工厂实现类。
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/abstractFactory.png}
+	\caption{abstractFactory}
+	\label{fig:abstractFactory}
+\end{figure}
+
+\subsubsection{单例模式}
+特点
+
+1、单例类只能有一个实例。
+2、单例类必须自己创建自己的唯一实例。
+3、单例类必须给所有其他对象提供这一实例。
+
+饿汉式(线程安全，调用效率高，但是不能延时加载)：
+\begin{lstlisting}
+public class ImageLoader{ 
+	private static ImageLoader instance = new ImageLoader; 
+	private ImageLoader(){} 
+	public static ImageLoader getInstance(){  
+		return instance;  
+	} 
+}
+\end{lstlisting}
+
+DCL也就是双重锁判断机制（由于JVM底层模型原因，偶尔会出问题，不建议使用）
+\begin{lstlisting}
+public class SingletonDemo5 {
+	private volatile static SingletonDemo5 SingletonDemo5;
 	
-	\subsubsection{小练习}
-	\begin{equation}
-		v=\frac{x}{y}
-	\end{equation}
-	\begin{equation}
-		y=e^{x}
-	\end{equation}
-	\begin{equation}
-		y=ax^2+bx+c
-	\end{equation}
-	\begin{equation}
-		F=G\frac{Mm}{r^2}
-	\end{equation}
-	\begin{equation}
-		y=4\pi \frac{\sin{x}}{\ln{x^2}}
-	\end{equation}
-	\begin{equation}
-		y=\sum^{n}_{i=1} x^2+1
-	\end{equation}
-	\begin{equation}
-		i=\int_{1}^{2}x^2+\tan{x}\mathrm{d}x
-	\end{equation}
+	private SingletonDemo5() {
+	}
 	
-	\begin{equation}
-		A=\begin{bmatrix}
-			1&1&3\\4&5&6\\5&6&7&\\
-		\end{bmatrix}
-	\end{equation}
-	\subsubsection{三级标题}
-	
-	接下来将开始书写正文
-	\begin{enumerate}
-		\item 第一个问题：
-		\item 第二个问题：
-		\item 第三个问题：
-	\end{enumerate}
-	
-	\subsubsection{第二个三级标题}
-	
-	
-	\subsubsection{第三个三级标题}
-	
-	\section{公式的写作}
-	第一个公式
-	\begin{equation}
-		F=ma
-	\end{equation}
-	我们可以知道牛顿得出了与物体质量和加速度之间的关系$F=ma$
-	
-	换行公式：
-	\begin{align}
-		y &=ax\notag\\
-		&=bx
-	\end{align}
-	
-	\subsubsection{练习}
-	\begin{equation}
-		v=\frac{x}{y}
-	\end{equation}
-	\begin{equation}
-		y=e^{x}
-	\end{equation}
-	\begin{equation}
-		y=ax^2+bx+c
-	\end{equation}
-	\begin{equation}
-		F=G\frac{Mm}{r^2}
-	\end{equation}
-	\begin{equation}
-		y=4\pi \frac{\sin{x}}{\ln{x^2}}
-	\end{equation}
-	\begin{equation}
-		\label{eq:ceshi}
-		y=\sum^{n}_{i=1} x^2+1
-	\end{equation}
-	
-	现在引用(\ref{eq:ceshi})
-	
-	\begin{equation}
-		i=\int_{1}^{2}x^2+\tan{x}\mathrm{d}x
-	\end{equation}
-	
-	\begin{equation}
-		A=\begin{bmatrix}
-			1&1&3\\4&5&6\\5&6&7&\\
-		\end{bmatrix}
-	\end{equation}
-	
-	\begin{equation}
-		A=\begin{cases}
-			&x^2\\&x^2+x\\
-		\end{cases}
-	\end{equation}
-	
-	\subsubsection{表格的插入}
-	
-	\begin{table}[!htbp]
-		\centering
-		\caption{标题}
-		\begin{tabular}{|l|c|r|}
-			
-			\hline
-			指标1&指标2&指标3\\
-			\hline
-			居左&居中&居右\\
-			\hline
-		\end{tabular}
-	\end{table}
+	public static SingletonDemo5 newInstance() {
+		if (SingletonDemo5 == null) {
+			synchronized (SingletonDemo5.class) {
+				if (SingletonDemo5 == null) {
+					SingletonDemo5 = new SingletonDemo5();
+				}
+			}
+		}
+		return SingletonDemo5;
+	}
+}
+\end{lstlisting}
+
+
+\subsubsection{中介模式}
+
+
+
+\subsubsection{代理模式}
+
+分为静态代理和动态代理
+
+现在可以看到，代理模式可以在不修改被代理对象的基础上，通过扩展代理类，进行一些功能的附加与增强。值得注意的是，代理类和被代理类应该共同实现一个接口，或者是共同继承某个类。
+
+上面介绍的是静态代理的内容，为什么叫做静态呢？因为它的类型是事先预定好的，比如上面代码中的 Cinema 这个类。下面要介绍的内容就是动态代理。
+
+\begin{lstlisting}
+abstract class Move{
+	public abstract void play();
+}
+
+class RealMove extends Move{
+	public void play(){
+		System.out.println("您正在观看电影 《肖申克的救赎》");
+	}
+}
+
+class Cinema extends Move {
+	RealMove movie;
+	public Cinema(RealMove movie) {
+		super();
+		this.movie = movie;
+	}
 	
 	
-	\begin{table}[!htbp]
-		\centering
-		\caption{标题}
-		\begin{tabular}{ccc}
-			\toprule
-			数据&1&2\\
-			\midrule
-			甲方&600&700\\
-			乙方&800&900\\
-			\bottomrule
-		\end{tabular}
-	\end{table}
+	@Override
+	public void play() {
+		guanggao(true);
+		movie.play();
+		guanggao(false);
+	}
+	
+	public void guanggao(boolean isStart){
+		if ( isStart ) {
+			System.out.println("电影马上开始了，爆米花、可乐、口香糖9.8折，快来买啊！");
+		} else {
+			System.out.println("电影马上结束了，爆米花、可乐、口香糖9.8折，买回家吃吧！");
+		}
+	}
+}
+
+
+class ProxyTest {
+	public static void main(String[] args) {
+		RealMove realmovie = new RealMove();
+		Move movie = new Cinema(realmovie);
+		movie.play();
+	}
+}
+\end{lstlisting}
+
+\begin{lstlisting}
+interface SellWine {
+	void mainJiu();
+}
+
+class MaotaiJiu implements  SellWine{
+	public void mainJiu(){
+		System.out.println("我卖得是茅台酒");
+	}
+}
+
+/*
+* public static Object newProxyInstance(ClassLoader loader,
+Class<?>[] interfaces,
+InvocationHandler h)
+loader 自然是类加载器
+interfaces 代码要用来代理的接口
+h 一个 InvocationHandler 对象
+InvocationHandler 是一个接口，官方文档解释说，每个代理的实例都有一个与之关联的
+InvocationHandler 实现类，如果代理的方法被调用，
+那么代理便会通知和转发给内部的 InvocationHandler 实现类，由它决定处理。
+InvocationHandler 内部只是一个 invoke() 方法，正是这个方法决定了怎么样处理代理传递过来的方法调用。
+proxy 代理对象
+method 代理对象调用的方法
+args 调用的方法中的参数
+* */
+
+class GuitaiA implements InvocationHandler {
+	private Object pingpai;
+	
+	public GuitaiA(Object pingpai){
+		this.pingpai = pingpai;
+	}
+	
+	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable{
+		System.out.println("销售开始  柜台是： "+this.getClass().getSimpleName());
+		method.invoke(pingpai, args);
+		System.out.println("销售结束");
+		return null;
+	}
+}
+
+class TestProxy{
+	public static void main(String[] args) {
+		MaotaiJiu maotaiJiu = new MaotaiJiu();
+		InvocationHandler jinxiao1 = new GuitaiA(maotaiJiu);
+		SellWine dynamicProxy = (SellWine) Proxy.newProxyInstance(MaotaiJiu.class.getClassLoader(),
+		MaotaiJiu.class.getInterfaces(), jinxiao1);
+		
+		dynamicProxy.mainJiu();
+	}
+}
+\end{lstlisting}
+
+
+代理分为静态代理和动态代理两种。
+
+静态代理，代理类需要自己编写代码写成。
+
+动态代理，代理类通过 Proxy.newInstance() 方法生成。
+
+不管是静态代理还是动态代理，代理与被代理者都要实现两样接口，它们的实质是面向接口编程。
+
+静态代理和动态代理的区别是在于要不要开发者自己定义 Proxy 类。
+
+动态代理通过 Proxy 动态生成 proxy class，但是它也指定了一个 InvocationHandler 的实现类。
+
+代理模式本质上的目的是为了增强现有代码的功能。
+
+Java动态代理只能代理接口，要代理类需要使用第三方的CLIGB等类库。
+
+(动态代理优点)
+传统面向对象思想中，如果想要实现功能复用，要么继承、要么引用，无论哪种方式，对代码都有一定的侵入性，耦合无可避免，侵入性啥意思？简单来说：如果你想要用它增强你程序的功能，你必须改动你的程序代码，那它就具有侵入性。如果只有一点两点需要增强还好说，如果大量的功能点需要被增强，工作量就会很大，代码也不太优雅。想象一下，如果你对外公开了一系列的接口，现在领导说了，接口要加权限控制。在哪加？最笨的当然就是写个程序验证的逻辑，然后每个接口都拿来调用一遍。这也正是面向对象思想的短板，在要为程序新增一些通用功能时，只能通过耦合的方式才能进行。AOP正是为此而生，AOP旨在通过一种无耦合的方式来为程序带来增强。而动态代理，就是AOP实现方式中的一种, 第2点决定了代理类需要把被代理类耦合进来，这意味着什么呢，代理类跟一个固定的被代理类绑定死了，如果你要对一百个类进行代理，即使代理逻辑一样，你也得编写一百个代理类(静态代理).
+
+
+至此，Cglib动态代理的原理我们就基本搞清楚了，代码细节有兴趣可以再研究下。
+最后我们总结一下JDK动态代理和Gglib动态代理的区别：
+
+1.JDK动态代理是实现了被代理对象的接口，Cglib是继承了被代理对象。
+
+2.JDK和Cglib都是在运行期生成字节码，JDK是直接写Class字节码，Cglib使用ASM框架写Class字节码，Cglib代理实现更复杂，生成代理类比JDK效率低。
+
+3.JDK调用代理方法，是通过反射机制调用，Cglib是通过FastClass机制直接调用方法，Cglib执行效率更高。
+
+\section{常用算法题以及思路}
+\subsubsection{\url{https://leetcode-cn.com/problems/longest-increasing-subsequence/submissions/}}
+思路: 两重for循环
+\begin{lstlisting}
+if(n[i] > n[j]) {
+	dp[i] = max(dp[i], dp[j]+1);
+}
+\end{lstlisting}
+
+\section{智力题}
+
+\subsubsection{一根金条，需要付给工人，工人工作七天，需要每天给他一段1/7的金条，如何保证切两刀就完成任务。}
+\url{https://blog.csdn.net/qq_43264029/article/details/107270544}
+
+\subsubsection{浅谈一下1000瓶水有关思路(图解)与用java代码具体解决方案}
+\url{https://blog.csdn.net/sunkun2013/article/details/12035071}
+
+
+\section{系统设计题}
+\subsubsection{分布式ID生成器}
+
+使用UUID
+4个字节表示的Unix timestamp,
+3个字节表示的机器的ID
+2个字节表示的进程ID
+3个字节表示的计数器
+
+SnowFlake 算法，是 Twitter 开源的分布式 id 生成算法。其核心思想就是：使用一个 64 bit 的 long 型的数字作为全局唯一 id。在分布式系统中的应用十分广泛，且ID 引入了时间戳，基本上保持自增的，后面的代码中有详细的注解。
+
+给大家举个例子吧，比如下面那个 64 bit 的 long 型数字：
+
+第一个部分，是 1 个 bit：0，这个是无意义的。
+
+第二个部分是 41 个 bit：表示的是时间戳。
+
+第三个部分是 5 个 bit：表示的是机房 id，10001。
+
+第四个部分是 5 个 bit：表示的是机器 id，1 1001。
+
+第五个部分是 12 个 bit：表示的序号，就是某个机房某台机器上这一毫秒内同时生成的 id 的序号，0000 00000000。
+
+\section{bash}
+
+
+
+\subsubsection{awk 命令}
+\% 是用来格式化字符串的
+\$ 是用来取出变量的
+
+$$
+	ps -ef | grep "synergy" | awk 'print \$2' | xargs kill -9
+$$
+
+\subsubsection{找出那些js文件没有设置好权限}
+
+find + perm + mode
+
+$$
+	find . -name "*.js" -perm 644 -print
+$$
+\section{公务员总览}
+
+\section{数量关系总览}
+
+\subsection{分数}
+$$
+	\frac{1}{2} = 0.5
+$$
+$$
+	\frac{1}{3} = 0.33
+$$
+$$
+	\frac{1}{4} = 0.25
+$$
+$$
+	\frac{1}{5} = 0.2
+$$
+$$
+	\frac{1}{6} = 0.167
+$$
+$$
+	\frac{1}{7} = 0.142
+$$
+$$
+	\frac{1}{8} = 0.125
+$$
+$$
+	\frac{1}{9} = 0.111
+$$
+
+\subsection{倍数}
+$$
+	2^2 = 4;
+	3^2 = 9;
+	4^2 = 16;
+	5^2 = 25;
+	6^2 = 36;
+	7^2 = 49;
+	8^2 = 64;
+	9^2 = 81;
+	11^2 = 121;
+	12^2 = 144;
+	13^2 = 169;
+	14^2 = 196;
+	15^2 = 225;
+	16^2 = 256;
+	17^2 = 289;
+	18^2 = 324;
+	19^2 = 361;
+$$
+
+
+
+\subsection{奇偶特性}
+简单来说就是从奇偶特性推导出答案
+
+1. 奇数 $\pm$ 奇数 = 偶数; 偶数 $\pm$ 偶数 = 偶数;
+
+偶数 $\pm$ 奇数 = 奇数; 奇数 $\pm$ 偶数 = 奇数;
+
+2. 奇数 $\times$ 奇数 = 奇数; 奇数 $\times$ 偶数 = 偶数;
+偶数 $\times$ 奇数 = 偶数; 偶数 $\times$ 偶数 = 偶数;
+
+
+\subsection{倍数特性}
+1. 3, 9 整除判定基本法则
+
+一个数能被3整除, 当且仅当其各位数字之和能被3整除;
+
+一个数能被9整除, 当且仅当其各位数字之后能被9整除;
+
+2. 2, 4, 8, 5, 25, 125 整除判定基本法则
+
+一个数能被2(或者5)整除, 当且仅当末一位数字能被2(或者5)整除;
+
+一个数能被4(或者25)整除, 当且仅当末两位数字能被4(或者25)整除;
+
+一个数能被8(或者125)整除, 当且仅当末三位数字能被8(或者125)整除;
+
+\subsection{方程法}
+
+设未知数时候, 一般采取设小不设大
+
+\subsection{赋值法}
+
+一般对效率, 成本, 进价等赋值时, 昌吉和比例关系赋值简单数, 数字要尽可能地便于计算和化简
+, 如1, 2, 60, 100 等.
+
+\subsection{等距离平均速度公式}
+
+$$
+	\mbox{等距离平均速度} = \frac{2v_1 v_2}{v_1 + v_2}
+$$
+
+\subsection{利润率问题}
+
+$$
+	\mbox{利润率} = \mbox{利润} \div \mbox{进价}
+$$
+
+\subsection{溶质问题}
+$$
+	\mbox{浓度}=\frac{\mbox{溶质质量}}{\mbox{溶液质量}}
+$$
+
+\subsection{排列组合}
+$$
+	A^{3}_{10} = 10 \times 9 \times 8
+$$
+
+$$
+	C^{3}_{10} = \frac{10 \times 9 \times 8}{3 \times 2 \times 1}
+$$
+
+\subsection{几何}
+
+球的表面积 = $4\pi R^2$
+
+球的体积 = $\frac{4}{3} \pi R^3$
+
+\subsection{周期问题}
+每n天的一个周期, 为n天
+
+每隔n天的一个周期是(n+1)天
+
+
+
+
+\subsection{全错误排列}
+
+主体为4辆车, 要求所有车都不得停在原来的车位中, 则一共有多少种不同的停放方式.
+
+记住结论 $D_1 = 0, D_2 = 1, D_3 = 2, D_4 = 9$
+
+
+\subsection{三集合容斥原理}
+
+$A + B + C - A\bigcap B - A \bigcap C - B \bigcap C + A \bigcap B \bigcap C = \mbox{总数} - \mbox{A, B, C, 均不满足的个数} $
+
+$$A + B + C = a + 2b + 3C$$
+
+a,b,c分别表示满足一个条件的数量和满足2个条件的数量和满足三个条件的数量
+
+$$
+	A + B + C - b - 2c = \mbox{总数} - \mbox{A, B, C均不满足的个数}
+$$
+
+
+\subsection{追及问题}
+
+300m环形跑道上从同一点触发 同向而行, 每追上一次则多跑一圈. A 每次追上B后都减速0.5m/s, 当A从6m/s减速到3m/s,
+根据
+$$
+	S_{追} = 300 = (V_A - V_B) \times T
+$$
+
+共同跑的路程是990m
+
+\subsection{代入排除法}
+1. 尾数法加速排除
+
+2. 代入排除不是无脑代入, 需要有所选择. 一般题目问最大, 那我们就考虑从最大的开始代入, 问
+最小就从最小 开始代入.
+\section{判断推理总览}
+\subsection{推理}
+
+1. 如果    要
+
+如果\textbf{去新疆}, 就要\textbf{游吐鲁番和喀纳斯}
+
+=> 去新疆 -> 游吐鲁番和喀纳斯
+
+2. 只有   才 (后推前)
+
+只有\textbf{与小李同游}, 小张才\textbf{会游吐鲁番或天池}
+
+=> 游吐鲁番或天池 -> 与小李同游
+
+3. 否后比否前
+
+
+游吐鲁番或天池 -> 与小李同游 -> 与小李做约定 -> 小李这个夏天一定有时间
+
+否后比否前, 推出 -(游吐鲁番或天池), 根据德摩根定律, -吐鲁番且-天池. 推出小张没有去新疆
+
+4. 德摩根定律
+
+-(A或B) = -A 且 -B
+
+\section{常识总览}
+
+
+\section{资料分析总览}
+
+\subsection{术语}
+同比, 是今天6月对比去年6月.
+
+环比, 是今天6月对比去年5月.
+
+\subsection{特定历史时期}
+
+九五计划 1996 - 2000年
+
+十三五计划 2016 - 2020年
+
+\subsection{结构阅读法}
+
+略读资料, 详读结构.
+
+\subsection{间隔增长率}
+
+2013年相对于2011年增长了
+
+$$
+	r_{间隔增长率} = r_1 + r_2 + r_1 \times r_2
+$$
+
+\subsection{年均增长率}
+
+$$
+	\mbox{基期量} \times (1+\mbox{年均增长率})^n = \mbox{现期量}
+$$
+
+
+\subsection{基期倍数公式}
+
+$$
+	基期倍数 = \frac{A}{1+a} \div \frac{B}{1+b} = \frac{A}{B} \times \frac{1+b}{1+a}
+$$
+
+A B 表示 现期量
+
+a,b 表示对应增长率
+
+\subsection{两期增长比重}
+
+$$
+	\mbox{两期比重增长量} = \frac{A}{B} - \frac{A}{B} \times \frac{1+b}{1+a} =
+	\frac{A}{B} \times \frac{a-b}{1+a}
+$$
+A 表示一个物件, B表示另一个物件
+
+
+\subsection{平均增长量}
+
+$$
+	\mbox{平均数增长量} = \mbox{现期平均数} - \mbox{基期平均数} = \frac{A}{B} - \frac{A}{B} \times \frac{1+b}{1+a} =
+	\frac{A}{B} \times \frac{a-b}{1+a}
+$$
+
+其中A表示现期总量, B表示现期个数.
+
+\subsection{平均增长率}
+
+$$
+	\mbox{平均数增长率} = \frac{\mbox{现期平均数} - \mbox{基期平均数}}{\mbox{基期平均数}} =
+	\frac{\frac{A}{B}-\frac{A}{B} \times \frac{1+b}{1+a}}{\frac{A}{B} \times \frac{1+b}{1+a}} = \frac{a-b}{1+b}
+$$
+
+其中A表示现期总量, B表示现期个数.
+
+\subsection{加速计算}
+1. 截位法, 简单来说就是被除数, 进行保留2-3位进行计算加速.
+
+看选项差距, 选项差距大, 保留2位, 选项差距小保留三位.
+
+2. 估算公式
+
+$$
+	\frac{A}{1\pm r} \doteq A(1 \mp r)
+$$
+
+当 r < $5\%$
+
+
+
+
+\section{言语总览}
+
+\section{申论总览}
+
+\section{公务员补充}
+
+\section{数量关系}
+
+\subsection{例题: 圆桌公式}
+2个大人带4个小孩去坐旋转木马, 问不相邻的概率
+
+$$
+	A^{n-1}_{n-1}
+$$
+
+$$
+	A^{3}_{3} \times A^{4}_{2} \div A^{5}_{5} = 72 \div 120
+$$
+
+\subsection{例题: 周期公式}
+网管小刘负责A,B,C三个机房的巡查工作, A,B,C分别需要每隔2,4,7天巡检一次, 3月1日, 小刘巡检了三个机房, 问他在整个3月有几天不用做机房的巡检工作
+
+TIPS: 每隔N天=每(N+1)天
+
+在3月份身上下的30天中, A需要  $\frac{30}{3} = 10$, B需要 $\frac{30}{5} = 6$, C $\frac{30}{8} = 3$
+
+A 和 B $\frac{30}{15} = 2$
+
+B 和 C $\frac{30}{40} = 0$
+
+A 和 C $\frac{30}{24} = 1$
+
+A 和 B 和 C 0
+10 + 6 + 3 -2 - 1 = 16天, 休息 14天
+
+
+\section{判断推理}
+
+\subsection{例题}
+如果\textbf{去新疆}, 就要\textbf{游吐鲁番和喀纳斯}
+
+=> 去新疆 -> 游吐鲁番和喀纳斯
+
+只有\textbf{与小李同游}, 小张才\textbf{会游吐鲁番或天池}
+
+=> 游吐鲁番或天池 -> 与小李同游
+
+如果\textbf{与小李同游}, 小张一定要\textbf{与小李做约定}
+
+=> 与小李同游 -> 与小李做约定
+
+如果\textbf{小张与小李做约定}, 则\textbf{小李这个夏天一定有时间}
+
+=> 小张与小李做约定 -> 小李这个夏天一定有时间
+
+遗憾的是, 小李没去
+
+总路线
+
+游吐鲁番或天池 -> 与小李同游 -> 与小李做约定 -> 小李这个夏天一定有时间
+
+否后比否前, 推出 -(游吐鲁番或天池), 根据德摩根定律, -吐鲁番且-天池. 推出小张没有去新疆
+
+\section{常识}
+
+
+\section{资料分析}
+
+\section{言语}
+
+\subsection{成语积累}
+方兴未艾: 多形容新生事物正在蓬勃发展.
+
+独善其身: 指不做官, 就搞好自身的修养. 现在也指只顾自己, 缺乏集体精神.
+
+以邻为壑: 指那邻国当做大水坑, 把本国的洪水排泄到那里去, 比如吧困难或灾祸退给别人.
+
+手足无措: 形容举动慌张, 侧重于强调处于非常窘迫的外在状态.
+
+亦庄亦谐: 指讲话或文章既庄重正派, 又幽默活泼.
+
+\section{申论}
+
+
+
+\section{英语}
+
+
+
+\section{附录: 相关样例}
+第一个公式
+\begin{equation}
+	F=ma=aa
+\end{equation}
+我们可以知道牛顿得出了与物体质量和加速度之间的关系$F=ma$
+换行公式：
+\begin{align}
+	y & =ax\notag \\
+	  & =bx
+\end{align}
+
+\subsubsection{小练习}
+\begin{equation}
+	v=\frac{x}{y}
+\end{equation}
+\begin{equation}
+	y=e^{x}
+\end{equation}
+\begin{equation}
+	y=ax^2+bx+c
+\end{equation}
+\begin{equation}
+	F=G\frac{Mm}{r^2}
+\end{equation}
+\begin{equation}
+	y=4\pi \frac{\sin{x}}{\ln{x^2}}
+\end{equation}
+\begin{equation}
+	y=\sum^{n}_{i=1} x^2+1
+\end{equation}
+\begin{equation}
+	i=\int_{1}^{2}x^2+\tan{x}\mathrm{d}x
+\end{equation}
+
+\begin{equation}
+	A=\begin{bmatrix}
+		1 & 1 & 3 \\4&5&6\\5&6&7&\\
+	\end{bmatrix}
+\end{equation}
+\subsubsection{三级标题}
+
+接下来将开始书写正文
+\begin{enumerate}
+	\item 第一个问题：
+	\item 第二个问题：
+	\item 第三个问题：
+\end{enumerate}
+
+\subsubsection{第二个三级标题}
+
+
+\subsubsection{第三个三级标题}
+
+\section{公式的写作}
+第一个公式
+\begin{equation}
+	F=ma
+\end{equation}
+我们可以知道牛顿得出了与物体质量和加速度之间的关系$F=ma$
+
+换行公式：
+\begin{align}
+	y & =ax\notag \\
+	  & =bx
+\end{align}
+
+\subsubsection{练习}
+\begin{equation}
+	v=\frac{x}{y}
+\end{equation}
+\begin{equation}
+	y=e^{x}
+\end{equation}
+\begin{equation}
+	y=ax^2+bx+c
+\end{equation}
+\begin{equation}
+	F=G\frac{Mm}{r^2}
+\end{equation}
+\begin{equation}
+	y=4\pi \frac{\sin{x}}{\ln{x^2}}
+\end{equation}
+\begin{equation}
+	\label{eq:ceshi}
+	y=\sum^{n}_{i=1} x^2+1
+\end{equation}
+
+%现在引用(\ref{eq:ceshi})
+
+\begin{equation}
+	i=\int_{1}^{2}x^2+\tan{x}\mathrm{d}x
+\end{equation}
+
+\begin{equation}
+	A=\begin{bmatrix}
+		1 & 1 & 3 \\4&5&6\\5&6&7&\\
+	\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+	A=\begin{cases}
+		 & x^2 \\&x^2+x\\
+	\end{cases}
+\end{equation}
+
+\subsubsection{表格的插入}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{标题}
+	\begin{tabular}{|l|c|r|}
+
+		\hline
+		指标1 & 指标2 & 指标3 \\
+		\hline
+		居左  & 居中  & 居右  \\
+		\hline
+	\end{tabular}
+\end{table}
+
+
+\begin{table}[!htbp]
+	\centering
+	\caption{标题}
+	\begin{tabular}{ccc}
+		\toprule
+		数据 & 1   & 2   \\
+		\midrule
+		甲方 & 600 & 700 \\
+		乙方 & 800 & 900 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
 \end{document}

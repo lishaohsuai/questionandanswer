@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.10.7)  9 OCT 2021 15:21
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.10.7)  10 OCT 2021 23:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1146,483 +1146,216 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 3397.
 
-./document.tex:3419: Missing $ inserted.
-<inserted text> 
-                $
-l.3419 
-       
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./document.tex:3419: Display math should end with $$.
-<to be read again> 
-                   \par 
-l.3419 
-       
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
 [132]
-./document.tex:3420: Missing $ inserted.
-<inserted text> 
-                $
-l.3420 ^^I\frac{1}{3}
-                      = 0.33
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./document.tex:3420: Extra }, or forgotten $.
-\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
-                                                 
-l.3420 ^^I\frac{1}{3}
-                      = 0.33
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./document.tex:3421: Missing $ inserted.
-<inserted text> 
-                $
-l.3421 
-       
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./document.tex:3422: Missing $ inserted.
-<inserted text> 
-                $
-l.3422 ^^I\frac{1}{4}
-                      = 0.25
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./document.tex:3422: Extra }, or forgotten $.
-\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
-                                                 
-l.3422 ^^I\frac{1}{4}
-                      = 0.25
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./document.tex:3423: Missing $ inserted.
-<inserted text> 
-                $
-l.3423 
-       
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./document.tex:3424: Missing $ inserted.
-<inserted text> 
-                $
-l.3424 ^^I\frac{1}{5}
-                      = 0.2
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./document.tex:3424: Extra }, or forgotten $.
-\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
-                                                 
-l.3424 ^^I\frac{1}{5}
-                      = 0.2
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./document.tex:3425: Missing $ inserted.
-<inserted text> 
-                $
-l.3425 
-       
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./document.tex:3426: Missing $ inserted.
-<inserted text> 
-                $
-l.3426 ^^I\frac{1}{6}
-                      = 0.167
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./document.tex:3426: Extra }, or forgotten $.
-\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
-                                                 
-l.3426 ^^I\frac{1}{6}
-                      = 0.167
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./document.tex:3427: Missing $ inserted.
-<inserted text> 
-                $
-l.3427 
-       
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./document.tex:3428: Missing $ inserted.
-<inserted text> 
-                $
-l.3428 ^^I\frac{1}{7}
-                      = 0.142
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./document.tex:3428: Extra }, or forgotten $.
-\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
-                                                 
-l.3428 ^^I\frac{1}{7}
-                      = 0.142
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./document.tex:3429: Missing $ inserted.
-<inserted text> 
-                $
-l.3429 
-       
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./document.tex:3430: Missing $ inserted.
-<inserted text> 
-                $
-l.3430 ^^I\frac{1}{8}
-                      = 0.125
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./document.tex:3430: Extra }, or forgotten $.
-\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
-                                                 
-l.3430 ^^I\frac{1}{8}
-                      = 0.125
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./document.tex:3431: Missing $ inserted.
-<inserted text> 
-                $
-l.3431 
-       
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./document.tex:3432: Missing $ inserted.
-<inserted text> 
-                $
-l.3432 ^^I\frac{1}{9}
-                      = 0.111
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./document.tex:3432: Extra }, or forgotten $.
-\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
-                                                 
-l.3432 ^^I\frac{1}{9}
-                      = 0.111
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./document.tex:3434: Missing $ inserted.
-<inserted text> 
-                $
-l.3434 
-       
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (401.09872pt too wide) detected at line 3454
+Overfull \hbox (401.09872pt too wide) detected at line 3461
 \OT1/cmr/m/n/10.53937 2[] = 4; 3[] = 9; 4[] = 16; 5[] = 25; 6[] = 36; 7[] = 49; 8[] = 64; 9[] = 81; 11[] = 121; 12[] = 144; 13[] = 169; 14[] = 196; 15[] = 225; 16[] = 256; 17[] = 289; 18[] = 324; 19[] = 361;
  []
 
-[133]
-Missing character: There is no 等 (U+7B49) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 距 (U+8DDD) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 离 (U+79BB) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 平 (U+5E73) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 均 (U+5747) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 速 (U+901F) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 度 (U+5EA6) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 利 (U+5229) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 润 (U+6DA6) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 率 (U+7387) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 利 (U+5229) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 润 (U+6DA6) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 进 (U+8FDB) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 价 (U+4EF7) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 浓 (U+6D53) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 度 (U+5EA6) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 溶 (U+6EB6) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 质 (U+8D28) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 质 (U+8D28) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 量 (U+91CF) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 溶 (U+6EB6) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 液 (U+6DB2) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 质 (U+8D28) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 量 (U+91CF) in font [lmroman10-regular]:mapping=tex-text;!
+[133] [134]
+Overfull \hbox (46.70778pt too wide) in paragraph at lines 3549--3550
+[]$\OML/cmm/m/it/10.53937 A \OT1/cmr/m/n/10.53937 + \OML/cmm/m/it/10.53937 B \OT1/cmr/m/n/10.53937 + \OML/cmm/m/it/10.53937 C \OMS/cmsy/m/n/10.53937 ^^@ \OML/cmm/m/it/10.53937 A [] B \OMS/cmsy/m/n/10.53937 ^^@ \OML/cmm/m/it/10.53937 A [] C \OMS/cmsy/m/n/10.53937 ^^@ \OML/cmm/m/it/10.53937 B [] C \OT1/cmr/m/n/10.53937 + \OML/cmm/m/it/10.53937 A [] B [] C \OT1/cmr/m/n/10.53937 = [] \OMS/cmsy/m/n/10.53937 ^^@ []$ 
+ []
 
-./document.tex:3513: Missing $ inserted.
-<inserted text> 
-                $
-l.3513 
-       
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./document.tex:3513: Display math should end with $$.
-<to be read again> 
-                   \par 
-l.3513 
-       
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-./document.tex:3514: Missing $ inserted.
-<inserted text> 
-                $
-l.3514 C^
-         {3}_{10} = \frac{10 \times 9 \times 8}{3 \times 2 \times 1}
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./document.tex:3516: Missing $ inserted.
-<inserted text> 
-                $
-l.3516 
-       
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-[134]
-Missing character: There is no 总 (U+603B) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 数 (U+6570) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 均 (U+5747) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 不 (U+4E0D) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 满 (U+6EE1) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 足 (U+8DB3) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 的 (U+7684) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 个 (U+4E2A) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 数 (U+6570) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 总 (U+603B) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 数 (U+6570) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 均 (U+5747) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 不 (U+4E0D) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 满 (U+6EE1) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 足 (U+8DB3) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 的 (U+7684) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 个 (U+4E2A) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 数 (U+6570) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 追 (U+8FFD) in font [lmroman7-regular]:mapping=tex-text;!
- [135] [136]
+[135] [136] [137] [138] [139] [140] [141]
 Missing character: There is no 间 (U+95F4) in font [lmroman7-regular]:mapping=tex-text;!
 Missing character: There is no 隔 (U+9694) in font [lmroman7-regular]:mapping=tex-text;!
 Missing character: There is no 增 (U+589E) in font [lmroman7-regular]:mapping=tex-text;!
 Missing character: There is no 长 (U+957F) in font [lmroman7-regular]:mapping=tex-text;!
 Missing character: There is no 率 (U+7387) in font [lmroman7-regular]:mapping=tex-text;!
-Missing character: There is no 基 (U+57FA) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 期 (U+671F) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 量 (U+91CF) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 年 (U+5E74) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 均 (U+5747) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 增 (U+589E) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 长 (U+957F) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 率 (U+7387) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 现 (U+73B0) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 期 (U+671F) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 量 (U+91CF) in font [lmroman10-regular]:mapping=tex-text;!
+ [142]
 Missing character: There is no 基 (U+57FA) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 期 (U+671F) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 倍 (U+500D) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 数 (U+6570) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 两 (U+4E24) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 期 (U+671F) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 比 (U+6BD4) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 重 (U+91CD) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 增 (U+589E) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 长 (U+957F) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 量 (U+91CF) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 平 (U+5E73) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 均 (U+5747) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 数 (U+6570) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 增 (U+589E) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 长 (U+957F) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 量 (U+91CF) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 现 (U+73B0) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 期 (U+671F) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 平 (U+5E73) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 均 (U+5747) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 数 (U+6570) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 基 (U+57FA) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 期 (U+671F) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 平 (U+5E73) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 均 (U+5747) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 数 (U+6570) in font [lmroman10-regular]:mapping=tex-text;!
- [137]
-Missing character: There is no 平 (U+5E73) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 均 (U+5747) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 数 (U+6570) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 增 (U+589E) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 长 (U+957F) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 率 (U+7387) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 现 (U+73B0) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 期 (U+671F) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 平 (U+5E73) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 均 (U+5747) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 数 (U+6570) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 基 (U+57FA) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 期 (U+671F) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 平 (U+5E73) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 均 (U+5747) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 数 (U+6570) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 基 (U+57FA) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 期 (U+671F) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 平 (U+5E73) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 均 (U+5747) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 数 (U+6570) in font [lmroman10-regular]:mapping=tex-text;!
- [138]
-./document.tex:3703: Missing $ inserted.
+ [143] [144] [145]
+./document.tex:4079: Missing $ inserted.
 <inserted text> 
                 $
-l.3703 在3月份身上下的30天中, A需要  \frac{30}{3}
-                                       = 10, B需要 \frac{30}{5} = 6, C \frac{3...
+l.4079 2. 牛顿第二定律(力 = 质量 \times
+                               加速度)
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./document.tex:3703: Extra }, or forgotten $.
+./document.tex:4080: Missing $ inserted.
+<inserted text> 
+                $
+l.4080 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Missing character: There is no 加 (U+52A0) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 速 (U+901F) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 度 (U+5EA6) in font [lmroman10-regular]:mapping=tex-text;!
+[146] [147] [148]
+./document.tex:4212: Missing $ inserted.
+<inserted text> 
+                $
+l.4212 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./document.tex:4212: Display math should end with $$.
+<to be read again> 
+                   \par 
+l.4212 
+       
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./document.tex:4213: Missing $ inserted.
+<inserted text> 
+                $
+l.4213 ^^I[\frac{\partial (\rho w)}{\partial z}
+                                                + \frac{\partial (\rho v)}{\...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./document.tex:4213: Missing $ inserted.
+<inserted text> 
+                $
+l.4213 ^^I[\frac{\partial (\rho w)}{\partial z}
+                                                + \frac{\partial (\rho v)}{\...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./document.tex:4213: Missing $ inserted.
+<inserted text> 
+                $
+l.4213 ^^I[\frac{\partial (\rho w)}{\partial z}
+                                                + \frac{\partial (\rho v)}{\...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./document.tex:4213: Extra }, or forgotten $.
 \frac  #1#2->{\begingroup #1\endgroup \@@over #2}
                                                  
-l.3703 在3月份身上下的30天中, A需要  \frac{30}{3}
-                                       = 10, B需要 \frac{30}{5} = 6, C \frac{3...
+l.4213 ^^I[\frac{\partial (\rho w)}{\partial z}
+                                                + \frac{\partial (\rho v)}{\...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./document.tex:3704: Missing $ inserted.
+./document.tex:4214: Missing $ inserted.
 <inserted text> 
                 $
-l.3704 
+l.4214 
        
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-Missing character: There is no 需 (U+9700) in font [lmroman7-regular]:mapping=tex-text;!
-Missing character: There is no 要 (U+8981) in font [lmroman7-regular]:mapping=tex-text;!
-./document.tex:3705: Missing $ inserted.
+./document.tex:4216: Missing $ inserted.
 <inserted text> 
                 $
-l.3705 A 和 B \frac{30}{15}
-                           = 2
+l.4216 
+       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./document.tex:3705: Extra }, or forgotten $.
+./document.tex:4216: Display math should end with $$.
+<to be read again> 
+                   \par 
+l.4216 
+       
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./document.tex:4220: Missing $ inserted.
+<inserted text> 
+                $
+l.4220 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./document.tex:4220: Display math should end with $$.
+<to be read again> 
+                   \par 
+l.4220 
+       
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./document.tex:4221: Missing $ inserted.
+<inserted text> 
+                $
+l.4221 ^^I\frac{\partial \rho}{\partial t}
+                                            + [\frac{\partial (\rho w)}{\par...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./document.tex:4221: Missing $ inserted.
+<inserted text> 
+                $
+l.4221 ^^I\frac{\partial \rho}{\partial t}
+                                            + [\frac{\partial (\rho w)}{\par...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./document.tex:4221: Missing $ inserted.
+<inserted text> 
+                $
+l.4221 ^^I\frac{\partial \rho}{\partial t}
+                                            + [\frac{\partial (\rho w)}{\par...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./document.tex:4221: Extra }, or forgotten $.
 \frac  #1#2->{\begingroup #1\endgroup \@@over #2}
                                                  
-l.3705 A 和 B \frac{30}{15}
-                           = 2
+l.4221 ^^I\frac{\partial \rho}{\partial t}
+                                            + [\frac{\partial (\rho w)}{\par...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./document.tex:3706: Missing $ inserted.
+./document.tex:4222: Missing $ inserted.
 <inserted text> 
                 $
-l.3706 
+l.4222 
        
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./document.tex:3707: Missing $ inserted.
+./document.tex:4224: Missing $ inserted.
 <inserted text> 
                 $
-l.3707 B 和 C \frac{30}{40}
-                           = 0
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./document.tex:3707: Extra }, or forgotten $.
-\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
-                                                 
-l.3707 B 和 C \frac{30}{40}
-                           = 0
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./document.tex:3708: Missing $ inserted.
-<inserted text> 
-                $
-l.3708 
+l.4224 
        
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./document.tex:3709: Missing $ inserted.
-<inserted text> 
-                $
-l.3709 A 和 C \frac{30}{24}
-                           = 1
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./document.tex:3709: Extra }, or forgotten $.
-\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
-                                                 
-l.3709 A 和 C \frac{30}{24}
-                           = 1
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./document.tex:3710: Missing $ inserted.
-<inserted text> 
-                $
-l.3710 
+./document.tex:4224: Display math should end with $$.
+<to be read again> 
+                   \par 
+l.4224 
        
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
 
-[139]
+[149] [150]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 3780.
+(hyperref)                than one, level fixed on input line 4276.
 
-[140]
+[151]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 3835.
+(hyperref)                than one, level fixed on input line 4331.
 
-[141] [142] (./document.aux)
+[152] [153] (./document.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.41063pt have occurred.
@@ -1637,21 +1370,12 @@ Package rerunfilecheck Warning: File `document.out' has changed.
 
 Package rerunfilecheck Info: Checksums for `document.out':
 (rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  0F9B08F371090AC202D23723DB2689CA;53685.
+(rerunfilecheck)             After:  4A436F4131B9C5F7AB8F57F7FE6A566A;57557.
  )
-(\end occurred inside a group at level 11)
+(\end occurred inside a group at level 2)
 
-### simple group (level 11) entered at line 3709 ({)
-### simple group (level 10) entered at line 3707 ({)
-### simple group (level 9) entered at line 3705 ({)
-### simple group (level 8) entered at line 3703 ({)
-### simple group (level 7) entered at line 3432 ({)
-### simple group (level 6) entered at line 3430 ({)
-### simple group (level 5) entered at line 3428 ({)
-### simple group (level 4) entered at line 3426 ({)
-### simple group (level 3) entered at line 3424 ({)
-### simple group (level 2) entered at line 3422 ({)
-### simple group (level 1) entered at line 3420 ({)
+### simple group (level 2) entered at line 4221 ({)
+### simple group (level 1) entered at line 4213 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
  17552 strings out of 476919
@@ -1662,4 +1386,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  101i,8n,104p,683b,1115s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on document.pdf (142 pages).
+Output written on document.pdf (153 pages).

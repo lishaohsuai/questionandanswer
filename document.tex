@@ -1,6 +1,4 @@
 \documentclass[UTF8]{ctexart}
-
-
 \usepackage{mathtools,booktabs}
 \usepackage{graphicx}
 %添加路径,图片的搜索路径
@@ -481,7 +479,7 @@ ThreadPoolExecutor的创建参数: \par
 4. sychronized是非公平锁, ReentrantLock可以选择公平锁或非公平锁 \par
 5. sychronized锁的是对象, 锁信息保存在对象头中, ReentrantLock锁的是线程 \par
 6. sychronized底层有一个锁升级的过程 \par
-\subsubsection{线程池中使用的BlockQueue}
+\subsubsection{线程池ThreadPoolExecutor中使用的BlockQueue}
 (1) 直接提交队列: 简单来说使用SynchronousQueue队列，提交的任务不会被保存，总是会马上提交执行。如果用于执行任务的线程数量小于maximumPoolSize，则尝试创建新的进程，如果达到maximumPoolSize设置的最大值，则根据你设置的handler执行拒绝策略。因此这种方式你提交的任务不会被缓存起来，而是会被马上执行，在这种情况下，你需要对你程序的并发量有个准确的评估，才能设置合适的maximumPoolSize数量，否则很容易就会执行拒绝策略；\par
 (2) 有界的任务队列可以使用ArrayBlockingQueue实现，若有新的任务需要执行时，线程池会创建新的线程，直到创建的线程数量达到corePoolSize时，则会将新的任务加入到等待队列中。若等待队列已满，即超过ArrayBlockingQueue初始化的容量，则继续创建线程，直到线程数量达到maximumPoolSize设置的最大线程数量，若大于maximumPoolSize，则执行拒绝策略。在这种情况下，线程数量的上限与有界任务队列的状态有直接关系，如果有界队列初始容量较大或者没有达到超负荷的状态，线程数将一直维持在corePoolSize以下，反之当任务队列已满时，则会以maximumPoolSize为最大线程数上限。\par
 (3) 使用无界任务队列，LinkedBlockingQueue 实现线程池的任务队列可以无限制的添加新的任务，而线程池创建的最大线程数量就是你corePoolSize设置的数量，也就是说在这种情况下maximumPoolSize这个参数是无效的，哪怕你的任务队列中缓存了很多未执行的任务，当线程池的线程数达到corePoolSize后，就不会再增加了；若后续有新的任务加入，则直接进入队列等待，当使用这种任务队列模式时，一定要注意你任务提交与处理之间的协调与控制，不然会出现队列中的任务由于无法及时处理导致一直增长，直到最后资源耗尽的问题。 \par
@@ -1315,7 +1313,7 @@ Cluster模式: 槽分配. 支持多主多从
 为了保证高可用，redis-cluster集群引入了主从模式，一个主节点对应一个或者多个从节点，当主节点宕机的时候，就会启用从节点。当其它主节点ping一个主节点A时，如果半数以上的主节点与A通信超时，那么认为主节点A宕机了。如果主节点A和它的从节点A1都宕机了，那么该集群就无法再提供服务了。
 
 当竞选从节点收到过半主节点同意，便会成为新的主节点。此时会以最新的Epoch通过PONG消息广播，让Redis Cluster的其他节点尽快的更新集群信息。当原主节点恢复加入后会降级为从节点。
-
+\url{https://blog.csdn.net/zhibo_lv/article/details/105239297}
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{figures/redis_cluster.png}
@@ -3067,7 +3065,9 @@ Guava RateLimiter
 
 10. 活动的开启与关闭, 通过一个内部的接口实现.
 
+\subsubsection{英文项目介绍}
 
+It’s difficult to construct hexahedral meshes currently, this paper presents an interactive construction method of complex hexahedral mesh model based on volumetric subdivision. The user firstly needs to in-teractively construct the model skeleton, by placing cubes at the nodes of the skeleton structure, and per-forming interactive operations such as rotation, translation, and scaling of the node cubes. Then, through the connection between the nodes and the topological split operation, the initial control mesh can be con-structed. Further, interpolatory Catmull-Clark volumetric subdivision method is used to generate hexahe-dral meshes with different resolutions; finally, the padding operation is used to eliminate the degraded ele-ments at the boundary and improve the quality of the hexahedral mesh elements to obtain the final hexahe-dral mesh. The results of numerical example show that the method can easily and efficiently generate hex-ahedral meshes interactively, and eliminat the intermediate steps of generating volume meshes from surface meshes. It has some practical applications in finite element analysis, isogeometric analysis and geometric modeling in animation.
 
 \begin{figure}
 	\centering
@@ -3132,6 +3132,8 @@ Hello everyone. I am liyongjie, a computer science and technology student from H
 1. 一方面想要完成自己的小小愿望, 在大学期间拿一个奖项. 本科也参加过电子设计竞赛, 但是这种比赛比较吃实验室的资源. 学计算机的话, 比如数学建模, 只要一台电脑就可以了.
 
 2. 工资比较低, 感觉不如读研, 然后找个好工作.
+
+\subsubsection{用英语简单聊}
 
 
 \section{设计模式}
@@ -3439,6 +3441,23 @@ $$
 	\frac{1}{9} = 0.111
 $$
 
+$$
+	\frac{1}{125} = 0.008
+$$
+
+\subsection{圆}
+$tan15 = 0.268$
+\subsection{空瓶换酒}
+M-1个空瓶可以换酒
+\subsection{路程}
+
+$$
+	60km/h = 60 / 3.6 =
+$$
+\subsection{平年, 闰年}
+平年星期 + 2
+
+闰年 星期 + 1
 \subsection{倍数}
 $$
 	2^2 = 4;
@@ -3492,10 +3511,20 @@ $$
 
 设未知数时候, 一般采取设小不设大
 
+加速
+
+
+$$
+	\frac{a}{c} = \frac{b}{d} = \frac{a+b}{c+d} = \frac{a-b}{c-d}
+$$
+
+
 \subsection{赋值法}
 
 一般对效率, 成本, 进价等赋值时, 昌吉和比例关系赋值简单数, 数字要尽可能地便于计算和化简
 , 如1, 2, 60, 100 等.
+
+赋0法, x+y+z 一定, 那么直接设其中一个值为0
 
 \subsection{等距离平均速度公式}
 
@@ -3598,6 +3627,27 @@ $$
 
 -(A或B) = -A 且 -B
 
+
+5. 或 或
+
+否一, 推一
+
+只有拥有强大的科技创新能力, 才能增强综合国力, 才能提高国际竞争力. = 国际竞争力 -> 强大的科技创新能力
+
+我国或者国际竞争力得不到提高, 或者拥有强的科技创新能力. = -国际竞争力 或 有强的科技创新能力 => 国际竞争力 -> 强大的科技创新能力
+
+5. 既是 ... 更是 ...
+
+贫困群众既是脱贫攻坚的扶贫对象更是脱贫致富的主体力量.
+
+贫困群众 -> 脱贫攻坚的扶贫对象 且 脱贫致富的主体力量
+
+6. 所有... 都
+
+前对后
+
+所有脱贫攻坚的扶贫对象都是脱贫致富的主体力量.
+
 \subsection{图形推理}
 
 1. 思路
@@ -3607,6 +3657,8 @@ a. 各图形构成相同, 一般考察位置规律
 b. 各图形构成相似, 一般考察样式规律
 
 c. 各图形构成不同, 一般考察属性, 数量及其他特殊规律
+
+d. 圆相切和相交, 可以考虑一笔画
 
 \subsection{九宫格图推}
 1. 如果平移元素只在九宫格或十六宫格图形的最外圈出现, 有限考虑元素在最外圈按时针方向平移.
@@ -3805,6 +3857,14 @@ b. 顺序: 题干和选项用同样的顺序造句.
 
 4. 除非 ... 否则不 \dots
 
+要么不回答, 除非含糊不清
+
+回答 -> 含糊不清
+
+除非田宇去海洋社区, 否则王栋不去文明社区
+
+王栋去文明社区 -> 田宇去海洋社区
+
 5. ... 是 ... 的必要条件
 
 \subsubsection{推理规则-逆否等价}
@@ -3856,6 +3916,9 @@ a -> b
 1. 支持方: 1是2的原因; 反对方: 1不是而的原因, 三是二的原因
 
 2. 削弱反对方: 1是3的原因, 故而1也是2的原因.
+
+否论点强于否论据
+
 
 \subsubsection{加强}
 
@@ -3929,7 +3992,50 @@ b. 有敏感词的慎选, 绝对
 
 22. 完成了消除绝对贫困的任务
 
+23. 以党的政治建设为中心. 而不是思想工作
+
+24. 三湾改编, 从组织上确立了党对军队的领导
+
+25. 古田会议, 确立了马克思主义建党建军原则, 确立了军队政治工作的方针, 原则和制度.
+
+26. 党的十九大, 把中央军事委员会实行主席负责制写入党章.
+
+27. 爱国统一战线是重要法宝
+
+28. 故意犯罪, 应予以开出, 而非撤职
+
+29. 深海一号是母船, 奋斗者号是潜水器.
+
+
+
+\subsection{常识蒙题}
+\url{https://www.bilibili.com/video/BV1bK411K7AK?p=33}  李铁老师
+
 \section{资料分析总览}
+
+
+\subsection{速算技巧}
+
+分子和分母小
+$$
+	\frac{1+8.6\%}{1+12.5\%} = 1- 4\%
+$$
+
+特殊分数
+
+$$
+	\frac{\mbox{现期量}}{1+\frac{1}{8}} * \frac{1}{8} = \frac{\mbox{现期量}}{9}
+$$
+
+$$
+	\frac{\mbox{现期量}}{1-\frac{1}{8}} * \frac{1}{8} = \frac{\mbox{现期量}}{7}
+$$
+
+\subsection{增长量比较}
+
+Ar1 ?= Br2
+
+
 
 \subsection{术语}
 同比, 是今天6月对比去年6月.
@@ -3961,6 +4067,45 @@ $$
 $$
 
 
+\subsection{基期比重}
+部分/整个
+
+2018年 A , B , a, b
+
+2017年 A/(1+a) , B /(1+b)
+
+2017年比重 A/B*((1+b)/(1+a))
+
+\subsection{平均数}
+
+平均每(分母)
+
+
+\subsection{平均值增长率}
+2017 A a
+
+2017 B b
+
+2018 A(1+a)
+
+2018 B(1+b)
+
+$$
+	r = (\frac{A(1+a)}{B(1+b)} - \frac{A}{B}) \div \frac{A}{B} = \frac{1+a}{1+b} - 1 = \frac{a - b}{1+b}
+$$
+
+\subsection{年均增长量}
+
+$$
+	\mbox{年均增长量} = \frac{\mbox{现期量(2020)-基期量(2011)}}{\mbox{年份差(2020-2011)}}
+$$
+
+
+\subsection{多多少倍数}
+
+n倍 - 1 个
+
+
 \subsection{基期倍数公式}
 
 $$
@@ -3974,10 +4119,13 @@ a,b 表示对应增长率
 \subsection{两期增长比重}
 
 $$
-	\mbox{两期比重增长量} = \frac{A}{B} - \frac{A}{B} \times \frac{1+b}{1+a} =
+	\mbox{两期比重差} = \frac{A}{B} - \frac{A}{B} \times \frac{1+b}{1+a} =
 	\frac{A}{B} \times \frac{a-b}{1+a}
 $$
-A 表示一个物件, B表示另一个物件
+2018  , A, B, a, b
+2017, A/(1+a), B/(1+b)
+
+A 部分, B 整理, 一般选择小的
 
 
 \subsection{平均增长量}
@@ -3988,6 +4136,11 @@ $$
 $$
 
 其中A表示现期总量, B表示现期个数.
+
+\subsection{两期比重差}
+$$
+	\mbox{两期比重差} = \frac{A}{B} \times \frac{a - b}{1+a}
+$$
 
 \subsection{平均增长率}
 
@@ -4084,9 +4237,47 @@ $$
 
 \section{申论总览}
 
+\subsection{规范词梳理}
+
+1. 发展特色产业
+
+2. 提高竞争力
+
+3. 提高抗风险能力
+
+4. 稳定就业
+
+5. 按需设岗
+
+6. 改善办学条件
+
+\subsection{tricks}
+
+不懂题干在说什么摘抄对策就完美了
+
+好的影响(例子) + 坏的影响(例子) + 观点(主题)
+
+举例子
+
+化大为小, 将很抽象的概念用很多的小概念进行概括
+
+题目: 动词 + 主题词
+
 \section{公务员补充}
 
 \section{数量关系}
+\subsection{蒙题大法}
+1. 问最大, 蒙次大
+
+2. 问最小, 蒙次小或最大
+
+3. 3+1蒙题:三项等差/等比数+1项特殊项，蒙接近特殊项的一项
+
+4. 迷惑项蒙题, 看问题, 和差倍比关系
+
+5. 找共性蒙题
+
+6. 常识蒙题
 
 \subsection{例题: 圆桌公式}
 2个大人带4个小孩去坐旋转木马, 问不相邻的概率
@@ -4153,12 +4344,45 @@ n 相遇次数, t 时间
 
 否后比否前, 推出 -(游吐鲁番或天池), 根据德摩根定律, -吐鲁番且-天池. 推出小张没有去新疆
 
+\subsection{正方形}
+
+1. 对面
+
+2. 顺时针画圈
+
 \section{常识}
+
+\subsection{关键语句}
+
+1. 十四五时期推动高质量发展, 必须立足新发展阶段, 贯彻新发展理念, 构建新发展格局.
+
+2. 严格执行市场准入负面清单, 普遍落实"非禁即入"
+
+3. 嫦娥五好返回器携带月球样品, 是2020年12月17号发生的.
+
+4. 组织处理, 是指党组织对违规违纪违法, 失职失责失范的领导干部采取的岗位, 职务, 职级调整措施.
+
+5. 货币(M1)=流通中的现金+银行储蓄(活期), 货币(M2) = M1 + 定期存款
+
+6. 张三, 在高考期间鸣笛, 对罚款行为提起复议时, 可附带要求审查省政府的规定.
+
+7. 张三若对县公安局的罚款处罚不服的, 可以向上一级主管部门即市公安局, 或者本级政府即县政府申请行政复议.
+
+8. 战三若对此罚款不服, 可不经过复议, 直接向人民法院提起诉讼.
+
+9. 张三可以自知道该具体行政行为之日起六十日内提出行政复议申请; 但是法律规定的申请期限超过六十日的除外.
+
+10. 中共二大通过了第一份党章
+
 
 
 \section{资料分析}
 
 \section{言语}
+
+\subsection{tricks}
+
+用词语的感情色彩来判断.
 
 \subsection{成语积累 \& 词语积累}
 方兴未艾: 多形容新生事物正在蓬勃发展.
@@ -4181,6 +4405,28 @@ n 相遇次数, t 时间
 
 羔羊跪乳: 比如乌鸦反哺, 孝敬长辈
 
+言之凿凿: 说明有证据
+
+彩衣娱亲: 比喻孝顺.
+
+墨菲定理: 如果事情有变坏的可能, 不管这个可能性有多小, 它总会发生.
+
+苦心孤诣: 指莎菲苦心地钻研, 到了别人所达不到的至高境界.
+
+青灯黄卷: 形容清苦的攻读生活.
+
+一往而深: 对人或事物倾注了恒盛的感情, 向往而不能克制
+
+久久为功: 持之以恒, 锲而不舍, 驰而不息
+
+斑驳陆离: 形容颜色杂乱的样子
+
+坐而论道: 口头说说, 不见行动, 侧重空谈
+
+老调重弹: 说过多次的理论, 主张重新搬出来, 不能体现出"没有接受教训"的含义, 与文意不符, 排除.
+
+自成一体: 在书法, 绘画等方面具有独创风格, 能自成体系.
+
 \section{申论}
 
 
@@ -4195,7 +4441,7 @@ n 相遇次数, t 时间
 
 1. 质量守恒定律
 
-2. 牛顿第二定律(力 = 质量 \times 加速度)
+2. 牛顿第二定律(力 = 质量 $\times$ 加速度)
 
 3. 能量守恒定律
 
@@ -4334,9 +4580,7 @@ $$
 =>
 
 $$
-
 	\frac{\partial \rho}{\partial t}  + [\frac{\partial (\rho w)}{\partial z} + \frac{\partial (\rho v)}{\partial y} + \frac{\partial (\rho u)}{\partial x} ] = 0
-
 $$
 
 =>
@@ -4417,8 +4661,8 @@ $$
 x方向总的力$F_x$
 
 $$
-	F_x=(-\frac{\partial p}{\parital x} + \frac{\parital \tau_{xx}}{\parital x} + \frac{\partial \tau_{yx}}{\partial y} +
-	\frac{\parital \tau_{zx}}{\partial z})dxdydz + \rho \mathcal{f}_xdxdydz = ma = \rho \frac{Du}{Dt} dxdydz
+	F_x=(-\frac{\partial p}{\partial x} + \frac{\partial \tau_{xx}}{\partial x} + \frac{\partial \tau_{yx}}{\partial y} +
+	\frac{\partial \tau_{zx}}{\partial z})dxdydz + \rho \mathcal{f}_xdxdydz = ma = \rho \frac{Du}{Dt} dxdydz
 $$
 
 =>
@@ -4436,18 +4680,18 @@ $$
 =>
 
 $$
-	\frac{\partial (\rho u)}{\partial t} + \nabla \cdot (\rho u \vec{V}) = (-\frac{\partial p}{\parital x} + \frac{\parital \tau_{xx}}{\parital x} + \frac{\partial \tau_{yx}}{\partial y} +
-	\frac{\parital \tau_{zx}}{\partial z}) + \rho \mathcal{f}_x
+	\frac{\partial (\rho u)}{\partial t} + \nabla \cdot (\rho u \vec{V}) = (-\frac{\partial p}{\partial x} + \frac{\partial \tau_{xx}}{\partial x} + \frac{\partial \tau_{yx}}{\partial y} +
+	\frac{\partial \tau_{zx}}{\partial z}) + \rho \mathcal{f}_x
 $$
 
 $$
-	\frac{\partial (\rho v)}{\partial t} + \nabla \cdot (\rho v \vec{V}) = (-\frac{\partial p}{\parital y} + \frac{\parital \tau_{xy}}{\parital x} + \frac{\partial \tau_{yy}}{\partial y} +
-	\frac{\parital \tau_{zy}}{\partial z}) + \rho \mathcal{f}_y
+	\frac{\partial (\rho v)}{\partial t} + \nabla \cdot (\rho v \vec{V}) = (-\frac{\partial p}{\partial y} + \frac{\partial \tau_{xy}}{\partial x} + \frac{\partial \tau_{yy}}{\partial y} +
+	\frac{\partial \tau_{zy}}{\partial z}) + \rho \mathcal{f}_y
 $$
 
 $$
-	\frac{\partial (\rho w)}{\partial t} + \nabla \cdot (\rho w \vec{V}) = (-\frac{\partial p}{\parital z} + \frac{\parital \tau_{xz}}{\parital x} + \frac{\partial \tau_{yz}}{\partial y} +
-	\frac{\parital \tau_{zz}}{\partial z}) + \rho \mathcal{f}_z
+	\frac{\partial (\rho w)}{\partial t} + \nabla \cdot (\rho w \vec{V}) = (-\frac{\partial p}{\partial z} + \frac{\partial \tau_{xz}}{\partial x} + \frac{\partial \tau_{yz}}{\partial y} +
+	\frac{\partial \tau_{zz}}{\partial z}) + \rho \mathcal{f}_z
 $$
 
 牛顿流体: 流体的切应力与应变的时间变化率, 也就是速度梯度, 是成正比的.
@@ -4486,10 +4730,10 @@ $$
 => 完整的NV守恒方程
 
 $$
-	\frac{\partial (\rho u)}{\partial t} + \frac{\partial (\rho u^2)}{\partial x} + \frac{\partial(\rho uv)}{ \parital y} + \frac{\parital (\rho u w)}{\partial z} =
-	-\frac{\parital p}{\partial x} + \frac{\parital}{\partial t}(\lambda \nabla \cdot \vec{V} + 2\mu \frac{\partial u}{\partial x}) +
+	\frac{\partial (\rho u)}{\partial t} + \frac{\partial (\rho u^2)}{\partial x} + \frac{\partial(\rho uv)}{ \partial y} + \frac{\partial (\rho u w)}{\partial z} =
+	-\frac{\partial p}{\partial x} + \frac{\partial}{\partial t}(\lambda \nabla \cdot \vec{V} + 2\mu \frac{\partial u}{\partial x}) +
 	\frac{\partial }{\partial y}[\mu(\frac{\partial v}{\partial x} + \frac{\partial u}{\partial y})] +
-	\frac{\partial}{\partial z}[\mu(\frac{\partial u}{\partial z} + \frac{\parital w}{\partial x})] + \rho \mathcal{f}_x
+	\frac{\partial}{\partial z}[\mu(\frac{\partial u}{\partial z} + \frac{\partial w}{\partial x})] + \rho \mathcal{f}_x
 $$
 
 $$
@@ -4674,7 +4918,7 @@ c. 能量方程
 $$
 	\begin{gathered}
 		\rho \frac{\mathrm{D}}{\mathrm{D} t}\left(e+\frac{V^{2}}{2}\right)=\rho \dot{q}+\frac{\partial}{\partial x}\left(k \frac{\partial T}{\partial x}\right)+\frac{\partial}{\partial y}\left(k \frac{\partial T}{\partial y}\right)+\frac{\partial}{\partial z}\left(k \frac{\partial T}{\partial z}\right)-\frac{\partial(u p)}{\partial x}- \\
-		\frac{\partial(v p)}{\partial y}-\frac{\partial(w p)}{\partial z}+\frac{\partial\left(u \tau_{x x}\right)}{\partial x}+\frac{\partial\left(u \tau_{y x}\right)}{\partial y}+\frac{\partial\left(u \tau_{z x}\right)}{\partial z}+ \\
+		& \frac{\partial(v p)}{\partial y}-\frac{\partial(w p)}{\partial z}+\frac{\partial\left(u \tau_{x x}\right)}{\partial x}+\frac{\partial\left(u \tau_{y x}\right)}{\partial y}+\frac{\partial\left(u \tau_{z x}\right)}{\partial z}+ \\
 		& \frac{\partial\left(v \tau_{x y}\right)}{\partial x}+\frac{\partial\left(v \tau_{y y}\right)}{\partial y}+\frac{\partial\left(u \tau_{z y}\right)}{\partial z}+\frac{\partial\left(w \tau_{x z}\right)}{\partial x}+\frac{\partial\left(w \tau_{y z}\right)}{\partial y}+ \\
 		& \frac{\partial\left(w \tau_{z}\right)}{\partial z}+\rho f \cdot V
 	\end{gathered}
@@ -4797,6 +5041,230 @@ BX = A
 \subsection{定义适定性}
 
 如果一个偏微分方程的解存在并且是惟一的, 同时, 解连续地依赖于初始条件和边界条件, 那么这个问题就是适定性的
+
+\subsection{偏微分形式和积分形式的求解}
+偏微分方程的离散化, 有限差分法.
+
+积分形式方程的离散化称为, 有限体积法.
+
+\subsection{CFD的求解方法分类}
+1. 有限元
+
+2. 有限差分法
+
+3. 有限体积法
+\subsection{前向差分}
+$$
+	\left(\frac{\partial u}{\partial x}\right)_{i, j}=\frac{u_{i+1, j}-u_{i, j}}{\Delta x}+\mathrm{O}(\Delta x)
+$$
+
+\subsection{后向差分}
+$$
+	\left(\frac{\partial u}{\partial x}\right)_{i, j}=\frac{u_{i, j}-u_{i-1, j}}{\Delta x}+\mathrm{O}(\Delta x)
+$$
+
+\subsection{二阶中心差分}
+$$
+	\left(\frac{\partial u}{\partial x}\right)_{i, j}=\frac{u_{i+1, j}-u_{i-1, j}}{2 \Delta x}+\mathrm{O}(\Delta x)^{2}
+$$
+$$
+	\left(\frac{\partial^{2} u}{\partial x^{2}}\right)_{i, j}=\frac{u_{i+1, j}-2 u_{i, j}+u_{i-1, j}}{(\Delta x)^{2}}+\mathrm{O}(\Delta x)^{2}
+$$
+
+$$
+	\left(\frac{\partial^{2} u}{\partial y^{2}}\right)_{i, j}=\frac{u_{i, j+1}-2 u_{i, j}+u_{i, j-1}}{(\Delta y)^{2}}+\mathbf{O}(\Delta y)^{2}
+$$
+
+混合二阶
+$$
+	\left(\frac{\partial^{2} u}{\partial x \partial y}\right)_{i, j}=\frac{u_{i+1, j+1}-u_{i+1, j-1}-u_{i-1, j+1}+u_{i-1, j-1}}{4 \Delta x \Delta y}+\mathrm{O}\left[(\Delta x)^{2},(\Delta y)^{2}\right]
+$$
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/youxianchafentujie.png}
+	\caption{youxianchafentujie}
+	\label{fig:youxianchafentujie}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/youxianchafentujie2.png}
+	\caption{youxianchafentujie2}
+	\label{fig:youxianchafentujie2}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/youxianchafentujie3.png}
+	\caption{youxianchafentujie3}
+	\label{fig:youxianchafentujie3}
+\end{figure}
+
+
+\subsection{边界处理}
+1. 使用 假设边界的下面的值就等于边界的值来回避这个问题
+
+2. 使用多项式近似的方法来对边界值进行求解
+
+\subsection{显式方法}
+显式方法中每一个差分方程只包含一个未知数, 从而这个未知数可以用直接计算的方式显式地求解.
+
+优点: 方法的建立及编程相对简单
+
+缺点: 更具上面的例子, 对确定的$\Delta  x$,  $\Delta t$ 要尽量小, 否则容易出现不稳定状态, 导致了计算时间耗时较长.
+\subsection{隐式方法}
+对于排列在同一时间层所有网格点上的未知量, 必须将它们联立起来同时求解, 才能求出这些未知量. -- 采用追赶法, 托马斯算法.
+
+优点: 耗时更小, $\Delta t$ 显示的更加稳定
+
+缺点: 方法的建立和编程更复杂.
+
+\subsection{波数}
+下标m的含义, 它就等于给定区间包含的波形的个数.
+
+
+\subsection{稳定解判定}
+$$
+	\left|\frac{\varepsilon_{i}^{n+1}}{\varepsilon_{i}^{n}}\right|=\left|\mathrm{e}^{\alpha \Delta t}\right|=\left|1-\frac{4 \alpha \Delta t}{(\Delta x)^{2}} \sin ^{2} \frac{k_{m} \Delta x}{2}\right| \leqslant 1
+$$
+
+分析方法, 冯诺伊曼稳定性方法.
+
+柯朗-弗里德里奇-列为条件, 这个天剑对于双曲型方程来说是一个重要的稳定性准则. 要保证稳定性, 数值解的依赖区域必须全部包含解析解的依赖区域.
+
+\subsection{网格变换}
+简单的来说就是建立一个联系, 将物理坐标和计算坐标建立联系
+
+$$
+	\frac{\partial}{\partial x}=\left(\frac{\partial}{\partial \xi}\right)\left(\frac{\partial \xi}{\partial x}\right)+\left(\frac{\partial}{\partial \eta}\right)\left(\frac{\partial \eta}{\partial x}\right)
+$$
+
+$$
+	\frac{\partial}{\partial y}=\left(\frac{\partial}{\partial \xi}\right)\left(\frac{\partial \xi}{\partial y}\right)+\left(\frac{\partial}{\partial \eta}\right)\left(\frac{\partial \eta}{\partial y}\right)
+$$
+
+$$
+	\frac{\partial}{\partial t}=\left(\frac{\partial}{\partial \xi}\right)\left(\frac{\partial \xi}{\partial t}\right)+\left(\frac{\partial}{\partial \eta}\right)\left(\frac{\partial \eta}{\partial t}\right)+\left(\frac{\partial}{\partial \tau}\right)\left(\frac{\mathrm{d} \tau}{\mathrm{d} t}\right)
+$$
+
+$$
+	\begin{aligned}
+		\frac{\partial^{2}}{\partial x^{2}}= & \left(\frac{\partial}{\partial \xi}\right)\left(\frac{\partial^{2} \xi}{\partial x^{2}}\right)+\left(\frac{\partial}{\partial \eta}\right)\left(\frac{\partial^{2} \eta}{\partial x^{2}}\right)+\left(\frac{\partial^{2}}{\partial \xi^{2}}\right)\left(\frac{\partial \xi}{\partial x}\right)^{2}+\left(\frac{\partial^{2}}{\partial \eta^{2}}\right)\left(\frac{\partial \eta}{\partial x}\right)^{2}+ \\
+		                                     & 2\left(\frac{\partial^{2}}{\partial \eta \partial \xi}\right)\left(\frac{\partial \eta}{\partial x}\right)\left(\frac{\partial \xi}{\partial x}\right)
+	\end{aligned}
+$$
+
+$$
+	\begin{aligned}
+		\frac{\partial^{2}}{\partial y^{2}}= & \left(\frac{\partial}{\partial \xi}\right)\left(\frac{\partial^{2} \xi}{\partial y^{2}}\right)+\left(\frac{\partial}{\partial \eta}\right)\left(\frac{\partial^{2} \eta}{\partial y^{2}}\right)+\left(\frac{\partial^{2}}{\partial \xi^{2}}\right)\left(\frac{\partial \xi}{\partial y}\right)^{2}+ \\
+		                                     & \left(\frac{\partial^{2}}{\partial \eta^{2}}\right)\left(\frac{\partial \eta}{\partial y}\right)^{2}+2\left(\frac{\partial^{2}}{\partial \eta \partial \xi}\right)\left(\frac{\partial \eta}{\partial y}\right)\left(\frac{\partial \xi}{\partial y}\right)
+	\end{aligned}
+$$
+
+$$
+	\begin{aligned}
+		\frac{\partial^{2}}{\partial x \partial y}=\left(\frac{\partial}{\partial \xi}\right)\left(\frac{\partial^{2} \xi}{\partial x \partial y}\right)+\left(\frac{\partial}{\partial \eta}\right)\left(\frac{\partial^{2} \eta}{\partial x \partial y}\right)+\left(\frac{\partial^{2}}{\partial \xi^{2}}\right)\left(\frac{\partial \xi}{\partial x}\right)\left(\frac{\partial \xi}{\partial y}\right)+ \\
+		\left(\frac{\partial^{2}}{\partial \eta^{2}}\right)\left(\frac{\partial \eta}{\partial x}\right)\left(\frac{\partial \eta}{\partial y}\right)+\left(\frac{\partial^{2}}{\partial \xi \partial \eta}\right)\left[\left(\frac{\partial \eta}{\partial x}\right)\left(\frac{\partial \xi}{\partial y}\right)+\left(\frac{\partial \xi}{\partial x}\right)\left(\frac{\partial \eta}{\partial y}\right)\right]
+	\end{aligned}
+$$
+
+因为比较复杂, 使用逆度量来减少复杂度
+
+$$
+	\frac{\partial}{\partial x}=\frac{1}{J}\left[\left(\frac{\partial}{\partial \xi}\right)\left(\frac{\partial y}{\partial \eta}\right)-\left(\frac{\partial}{\partial \eta}\right)\left(\frac{\partial y}{\partial \xi}\right)\right]
+$$
+
+$$
+	\frac{\partial}{\partial y}=\frac{1}{J}\left[\left(\frac{\partial}{\partial \eta}\right)\left(\frac{\partial x}{\partial \xi}\right)-\left(\frac{\partial}{\partial \xi}\right)\left(\frac{\partial x}{\partial \eta}\right)\right]
+$$
+
+$$
+	\begin{aligned}
+		 & \frac{\partial \xi}{\partial x}=\frac{1}{J} \frac{\partial y}{\partial \eta}  \\
+		 & \frac{\partial \eta}{\partial x}=-\frac{1}{J} \frac{\partial y}{\partial \xi} \\
+		 & \frac{\partial \xi}{\partial y}=-\frac{1}{J} \frac{\partial x}{\partial \eta} \\
+		 & \frac{\partial \eta}{\partial y}=\frac{1}{J} \frac{\partial x}{\partial \xi}
+	\end{aligned}
+$$
+
+\subsection{自适应网格}
+1. 当网格数量固定时, 可以提高计算精度
+
+2. 给定精度时, 可以用较少的网格点来达到这一精度.
+
+笛卡尔积网格, 网格靠近物体的边界直接向物体拟合.
+
+
+\subsection{显示有限差分方法}
+1. 拉克斯-温德罗夫Lax-Wendroff方法
+
+2. 麦考马克(MacCormack)方法
+
+最容易理解和编程的方法之一.
+
+应用于非定常纳维-斯托克斯方程的求解.
+
+3. 松弛法
+
+如果截断误差的主项是偶数阶导数, 数值解将主要表现出耗散行为; 如果主项是奇数阶导数, 数值解将主要表现出色散行为.
+
+人工粘性加入可以得到一个稳定的解.
+
+
+
+$$
+	\begin{aligned}
+		 & \overline{S_{i, j}^{t+\Delta t}}=C_{x} \frac{\left|\overline{p_{i+1, j}^{t+\Delta t}}-2 \overline{p_{i, j}^{t+\Delta t}}+\overline{p_{i-1, j}^{t+\Delta t}}\right|}{\overline{p_{i+1, j}^{t+\Delta t}}+2 \overline{p_{i, j}^{t+\Delta t}}+\overline{p_{i-1, j}^{t+\Delta t}}}\left(\overline{U_{i+1, j}^{t+\Delta t}}-2 \overline{U_{i, j}^{t+\Delta}}+\overline{U_{i-1, j}^{t+\Delta t}}\right)+ \\
+		 & C_{y} \frac{\left|\bar{p}_{i, j+1}^{t+\Delta t}-2 \bar{p}_{i, j}^{t+\Delta t}+\overline{p_{i, j-1}^{t+\Delta t}}\right|}{p_{i, j+1}^{t+\Delta t}+2 \overline{p_{i, j}^{t+\Delta x}}+\overline{p_{i, j-1}^{t+\Delta t}}}\left(\overline{U_{i, j+1}^{t+\Delta t}}-2 \overline{U_{i, j}^{t+\Delta t}}+\overline{U_{i, j-1}^{t+\Delta t}}\right)
+	\end{aligned}
+$$
+\subsection{交替方向隐式(ADI)方法}
+
+
+简单的说, 将不能使用, 托马斯方法的矩阵变成可以使用托马斯方法??
+
+\subsection{压力修正法}
+不可压纳维-斯托克斯方程
+
+$$
+	\begin{array}{|lc|}
+		\hline \text { 连续性方程 } & \nabla \cdot V=0                                                                                  \\
+		x \text { 方向动量方程 }    & \rho \frac{\mathrm{D} u}{\mathrm{D} t}=-\frac{\partial p}{\partial x}+\mu \nabla^{2} u+\rho f_{x} \\
+		y \text { 方向动量方程 }    & \rho \frac{\mathrm{D} v}{\mathrm{D} t}=-\frac{\partial p}{\partial y}+\mu \nabla^{2} v+\rho f_{y} \\
+		z \text { 方向动量方程 }    & \rho \frac{\mathrm{D} w}{\mathrm{D} t}=-\frac{\partial p}{\partial z}+\mu \nabla^{2} w+\rho f_{z}
+	\end{array}
+$$
+
+迎风差分. 简答说就是在不同位置就算u, 在不同位置计算v.
+
+\subsection{数值方法: SIMPLE算法}
+Semi-implicit method for pressure-linked equations(压力耦合方程的半隐式算法)
+
+
+\subsection{马赫数}
+马赫数（Ma）
+
+这是流体力学中表征流体可压缩程度的一个重要的无量纲参数，记为Ma，定义为流场中某点的速度v 同该点的当地声速c 之比，它是以奥地利科学家E.马赫的姓氏命名的。
+
+$$
+	Ma = \frac{v}{c}
+$$
+
+由定义可知，马赫数是表示声速倍数的数，一马赫即一倍音速：马赫数小于1者为亚音速，近乎等于1为跨声速，大于1为超声速。
+
+\section{计算流体力学视频}
+\url{https://www.bilibili.com/video/BV1vE411W7kV?from=search&seid=17354358762961406319&spm_id_from=333.337.0.0}
+
+\section{申论积累}
+
+\subsection{xi主书记名言}
+
+绿水青山就是金山银山
+
+
+
+
 \section{附录: 相关样例}
 第一个公式
 \begin{equation}

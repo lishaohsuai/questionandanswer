@@ -82,7 +82,7 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.0.32}线程池参数}{17}{subsubsection.3.0.32}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.0.33}你觉得核心线程数和最大线程数之间应该如何设置呢}{18}{subsubsection.3.0.33}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.0.34}sychronized和ReentrantLock的区别}{18}{subsubsection.3.0.34}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.0.35}线程池中使用的BlockQueue}{18}{subsubsection.3.0.35}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.0.35}线程池ThreadPoolExecutor中使用的BlockQueue}{18}{subsubsection.3.0.35}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.0.36}Executors 工厂类实现线程池}{19}{subsubsection.3.0.36}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.0.37}线程池的拒绝策略}{20}{subsubsection.3.0.37}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.0.38}8种基本数据类型}{21}{subsubsection.3.0.38}\protected@file@percent }
@@ -197,12 +197,12 @@
 \newlabel{fig:ziplist}{{24}{58}{ziplist}{figure.24}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {6.0.11}AOF和RDB两种持久化方式区别}{58}{subsubsection.6.0.11}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {6.0.12}Redis中过期策略和缓存淘汰机制}{58}{subsubsection.6.0.12}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.0.13}为什么要使用Redis}{58}{subsubsection.6.0.13}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces jumptable}}{59}{figure.25}\protected@file@percent }
 \newlabel{fig:jumptable}{{25}{59}{jumptable}{figure.25}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.0.13}为什么要使用Redis}{59}{subsubsection.6.0.13}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {6.0.14}Redis底层实现跳表介绍一下}{59}{subsubsection.6.0.14}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {6.0.15}为什么要使用Redis而不用map/guavaCache做缓存}{59}{subsubsection.6.0.15}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.0.16}分布式锁如何使用redis实现}{59}{subsubsection.6.0.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.0.16}分布式锁如何使用redis实现}{60}{subsubsection.6.0.16}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {6.0.17}Redis的内存淘汰策略有哪些}{60}{subsubsection.6.0.17}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {6.0.18}Redis事物的概念}{60}{subsubsection.6.0.18}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces redis\_sharding}}{61}{figure.26}\protected@file@percent }
@@ -220,287 +220,354 @@
 \@writefile{toc}{\contentsline {section}{\numberline {7}计算机网络}{63}{section.7}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.1}查看端口信息}{63}{subsubsection.7.0.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.2}SYN攻击}{63}{subsubsection.7.0.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.3}arp协议}{63}{subsubsection.7.0.3}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {28}{\ignorespaces dns}}{64}{figure.28}\protected@file@percent }
 \newlabel{fig:dns}{{28}{64}{dns}{figure.28}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.3}arp协议}{64}{subsubsection.7.0.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.4}DNS过程}{64}{subsubsection.7.0.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.5}TCP如何保证可靠性}{64}{subsubsection.7.0.5}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.6}TCP报文头部内容}{65}{subsubsection.7.0.6}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.7}TCP三次握手和四次挥手示意图}{65}{subsubsection.7.0.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.8}Time\_wait状态}{65}{subsubsection.7.0.8}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {29}{\ignorespaces tcpconnectdis}}{66}{figure.29}\protected@file@percent }
 \newlabel{fig:tcpconnectdis}{{29}{66}{tcpconnectdis}{figure.29}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.8}Time\_wait状态}{66}{subsubsection.7.0.8}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.9}SYN-RCVD状态}{66}{subsubsection.7.0.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.10}TCP四个计时器}{66}{subsubsection.7.0.10}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {30}{\ignorespaces tcpsynrcvd}}{67}{figure.30}\protected@file@percent }
 \newlabel{fig:tcpsynrcvd}{{30}{67}{tcpsynrcvd}{figure.30}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.11}TCP流量控制}{67}{subsubsection.7.0.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.10}TCP四个计时器}{67}{subsubsection.7.0.10}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {31}{\ignorespaces liuliangkongzhi}}{68}{figure.31}\protected@file@percent }
 \newlabel{fig:liuliangkongzhi}{{31}{68}{liuliangkongzhi}{figure.31}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.11}TCP流量控制}{68}{subsubsection.7.0.11}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.12}HTTPS访问过程, SSL 握手的过程}{68}{subsubsection.7.0.12}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.13}计算机网络分层}{68}{subsubsection.7.0.13}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {32}{\ignorespaces https}}{69}{figure.32}\protected@file@percent }
 \newlabel{fig:https}{{32}{69}{https}{figure.32}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {33}{\ignorespaces TCP\_IP\_OSI}}{69}{figure.33}\protected@file@percent }
-\newlabel{fig:TCP_IP_OSI}{{33}{69}{TCP\_IP\_OSI}{figure.33}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {33}{\ignorespaces TCP\_IP\_OSI}}{70}{figure.33}\protected@file@percent }
+\newlabel{fig:TCP_IP_OSI}{{33}{70}{TCP\_IP\_OSI}{figure.33}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {34}{\ignorespaces osi}}{70}{figure.34}\protected@file@percent }
 \newlabel{fig:osi}{{34}{70}{osi}{figure.34}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.13}计算机网络分层}{70}{subsubsection.7.0.13}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.14}TCP和UDP区别?}{70}{subsubsection.7.0.14}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.15}TCP三次握手相关问题}{70}{subsubsection.7.0.15}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.16}TCP四次挥手问题}{70}{subsubsection.7.0.16}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {35}{\ignorespaces tcp}}{71}{figure.35}\protected@file@percent }
-\newlabel{fig:tcp}{{35}{71}{tcp}{figure.35}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.15}TCP三次握手相关问题}{71}{subsubsection.7.0.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.16}TCP四次挥手问题}{71}{subsubsection.7.0.16}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.17}TCP协议-如何保证传输的可靠性}{71}{subsubsection.7.0.17}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.18}Cookie作用, 安全性问题和Session的比较}{71}{subsubsection.7.0.18}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {35}{\ignorespaces tcp}}{72}{figure.35}\protected@file@percent }
+\newlabel{fig:tcp}{{35}{72}{tcp}{figure.35}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.18}Cookie作用, 安全性问题和Session的比较}{72}{subsubsection.7.0.18}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.19}HTTP1.1 和 HTTP1.0的比较}{72}{subsubsection.7.0.19}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.20}HTTP2.0 和 HTTP1.1的比较}{72}{subsubsection.7.0.20}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.20}HTTP2.0 和 HTTP1.1的比较}{73}{subsubsection.7.0.20}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.21}HTTP3.0}{73}{subsubsection.7.0.21}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.22}HTTPS加密}{73}{subsubsection.7.0.22}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.22}HTTPS加密}{74}{subsubsection.7.0.22}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {7.0.23}输入网址发生的事情}{74}{subsubsection.7.0.23}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {8}mysql}{74}{section.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.0.1}索引的使用原则}{74}{subsubsection.8.0.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8}mysql}{75}{section.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.0.1}索引的使用原则}{75}{subsubsection.8.0.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {8.0.2}主键自增}{75}{subsubsection.8.0.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {8.0.3}主键自增的好处}{75}{subsubsection.8.0.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {8.0.4}行锁 共享锁}{75}{subsubsection.8.0.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {8.0.5}回表}{75}{subsubsection.8.0.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.0.6}mybatis\#和\$区别以及原理}{75}{subsubsection.8.0.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.0.7}redo log 和 undo log, bin log }{75}{subsubsection.8.0.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.0.6}mybatis\#和\$区别以及原理}{76}{subsubsection.8.0.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.0.7}redo log 和 undo log, bin log }{76}{subsubsection.8.0.7}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {8.0.8}隔离级别}{76}{subsubsection.8.0.8}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {8.0.9}ACID}{77}{subsubsection.8.0.9}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {8.0.10}乐观锁和悲观锁}{77}{subsubsection.8.0.10}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {8.0.11}MVCC}{77}{subsubsection.8.0.11}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.0.12}RR和RC隔离级别下的InnoDB快照读有什么区别}{77}{subsubsection.8.0.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.0.12}RR和RC隔离级别下的InnoDB快照读有什么区别}{78}{subsubsection.8.0.12}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {8.0.13}B+/B树之间的比较}{78}{subsubsection.8.0.13}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {8.0.14}聚集索引\&非聚集索引}{78}{subsubsection.8.0.14}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {8.0.15}创建索引的优点}{78}{subsubsection.8.0.15}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {8.0.16}创建索引的缺点}{78}{subsubsection.8.0.16}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.0.17}MYSQL优化}{78}{subsubsection.8.0.17}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.0.18}InnoDB \& MyISAM}{78}{subsubsection.8.0.18}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.0.17}MYSQL优化}{79}{subsubsection.8.0.17}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.0.18}InnoDB \& MyISAM}{79}{subsubsection.8.0.18}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {8.0.19}创建存储过程}{79}{subsubsection.8.0.19}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {8.0.20}热备份和冷备份}{79}{subsubsection.8.0.20}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {8.0.21}Innode加锁}{79}{subsubsection.8.0.21}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.0.22}INNODB解决死锁}{79}{subsubsection.8.0.22}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.0.23}Mysql锁你了解哪些}{79}{subsubsection.8.0.23}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.0.22}INNODB解决死锁}{80}{subsubsection.8.0.22}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.0.23}Mysql锁你了解哪些}{80}{subsubsection.8.0.23}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {8.0.24}Mysql数据库中, 什么情况下设置了索引但是无法使用?}{80}{subsubsection.8.0.24}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {9}操作系统}{80}{section.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {9.0.1}共享内存}{80}{subsubsection.9.0.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {36}{\ignorespaces virtualMemory}}{81}{figure.36}\protected@file@percent }
-\newlabel{fig:virtualMemory}{{36}{81}{virtualMemory}{figure.36}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9}操作系统}{81}{section.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {9.0.1}共享内存}{81}{subsubsection.9.0.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {9.0.2}虚拟内存}{81}{subsubsection.9.0.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {9.0.3}上下文信息}{81}{subsubsection.9.0.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {37}{\ignorespaces mmu}}{82}{figure.37}\protected@file@percent }
-\newlabel{fig:mmu}{{37}{82}{mmu}{figure.37}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {36}{\ignorespaces virtualMemory}}{82}{figure.36}\protected@file@percent }
+\newlabel{fig:virtualMemory}{{36}{82}{virtualMemory}{figure.36}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {9.0.3}上下文信息}{82}{subsubsection.9.0.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {9.0.4}内存访问}{82}{subsubsection.9.0.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {9.0.5}匿名管道和命名管道的区别}{82}{subsubsection.9.0.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {37}{\ignorespaces mmu}}{83}{figure.37}\protected@file@percent }
+\newlabel{fig:mmu}{{37}{83}{mmu}{figure.37}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {9.0.5}匿名管道和命名管道的区别}{83}{subsubsection.9.0.5}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {9.0.6}线程和进程的区别}{83}{subsubsection.9.0.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {9.0.7}协程与线程进行比较}{83}{subsubsection.9.0.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {9.0.8}进程之间的通信方式有哪些?}{83}{subsubsection.9.0.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {9.0.7}协程与线程进行比较}{84}{subsubsection.9.0.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {9.0.8}进程之间的通信方式有哪些?}{84}{subsubsection.9.0.8}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {9.0.9}进程调度算法}{84}{subsubsection.9.0.9}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {9.0.10}epoll和poll的区别}{84}{subsubsection.9.0.10}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {10}设计模式}{84}{section.10}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.0.1}多线程下单例设计模式}{84}{subsubsection.10.0.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {10}设计模式}{85}{section.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.0.1}多线程下单例设计模式}{85}{subsubsection.10.0.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {10.0.2}为什么在wait代码块中要用while而不用if}{88}{subsubsection.10.0.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.0.3}Serializable}{92}{subsubsection.10.0.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.0.3}Serializable}{93}{subsubsection.10.0.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {11}C++}{93}{section.11}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.1}map 和 unordered\_map 不同点}{93}{subsubsection.11.0.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.2}C++ 不能重载的运算符}{93}{subsubsection.11.0.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.3}C++ 如果一个类中没有任何属性,占用空间为1, 这是规定}{93}{subsubsection.11.0.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.4}返回引用}{93}{subsubsection.11.0.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.3}C++ 如果一个类中没有任何属性,占用空间为1, 这是规定}{94}{subsubsection.11.0.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.4}返回引用}{94}{subsubsection.11.0.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.5}类和结构体的区别}{94}{subsubsection.11.0.5}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.6}类的大小}{94}{subsubsection.11.0.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.7}C++ 内存对齐}{94}{subsubsection.11.0.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.8}C++11}{94}{subsubsection.11.0.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.9}C++14特性}{95}{subsubsection.11.0.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.10}C++17特性}{95}{subsubsection.11.0.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.7}C++ 内存对齐}{95}{subsubsection.11.0.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.8}C++11}{95}{subsubsection.11.0.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.9}C++14特性}{96}{subsubsection.11.0.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.10}C++17特性}{96}{subsubsection.11.0.10}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.11}C++20特性}{96}{subsubsection.11.0.11}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.12}模板类的函数定义}{96}{subsubsection.11.0.12}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.13}尾递归的实现}{96}{subsubsection.11.0.13}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.14}socket 如何实现可靠连接}{96}{subsubsection.11.0.14}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.15}set, multiset, map, multiset}{96}{subsubsection.11.0.15}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.16}定义的静态全局变量作用于是}{96}{subsubsection.11.0.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.13}尾递归的实现}{97}{subsubsection.11.0.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.14}socket 如何实现可靠连接}{97}{subsubsection.11.0.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.15}set, multiset, map, multiset}{97}{subsubsection.11.0.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.16}定义的静态全局变量作用于是}{97}{subsubsection.11.0.16}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.17}如何判断一段程序是由C编译器编译还是由C++编译器编译的}{97}{subsubsection.11.0.17}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.18}在C++程序中调用被C编译器编译后的函数, 为什么要加extern"C"}{97}{subsubsection.11.0.18}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.19}C++, const规则}{97}{subsubsection.11.0.19}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.20}C++, const 和 \#define 之间的区别}{97}{subsubsection.11.0.20}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.21}指针和引用之间的区别}{97}{subsubsection.11.0.21}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.22}inline的优劣}{97}{subsubsection.11.0.22}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.19}C++, const规则}{98}{subsubsection.11.0.19}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.20}C++, const 和 \#define 之间的区别}{98}{subsubsection.11.0.20}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.21}指针和引用之间的区别}{98}{subsubsection.11.0.21}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.22}inline的优劣}{98}{subsubsection.11.0.22}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.23}C++11有什么你使用到的新特性}{98}{subsubsection.11.0.23}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.24}C++中有malloc/free, 为什么还需要new/delete}{98}{subsubsection.11.0.24}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.25}面向对象技术的基本概念是什么，三个基本特征是什么?}{98}{subsubsection.11.0.25}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.26}为什么基类的析构函数是虚函数?}{98}{subsubsection.11.0.26}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.27}为什么构造函数不能为虚函数？}{98}{subsubsection.11.0.27}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.28}如果虚函数是有效的，那为什么不把所有函数设为虚函数？}{98}{subsubsection.11.0.28}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.25}面向对象技术的基本概念是什么，三个基本特征是什么?}{99}{subsubsection.11.0.25}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.26}为什么基类的析构函数是虚函数?}{99}{subsubsection.11.0.26}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.27}为什么构造函数不能为虚函数？}{99}{subsubsection.11.0.27}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.28}如果虚函数是有效的，那为什么不把所有函数设为虚函数？}{99}{subsubsection.11.0.28}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.29}什么是多态？多态有什么作用？}{99}{subsubsection.11.0.29}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.30}重载和覆盖有什么区别？}{99}{subsubsection.11.0.30}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.31}什么是虚指针？}{99}{subsubsection.11.0.31}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.32}main函数执行之前会执行什么？执行之后还能执行代码吗？}{99}{subsubsection.11.0.32}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.33}经常要操作的内存分为那几个类别？}{99}{subsubsection.11.0.33}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.31}什么是虚指针？}{100}{subsubsection.11.0.31}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.32}main函数执行之前会执行什么？执行之后还能执行代码吗？}{100}{subsubsection.11.0.32}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.33}经常要操作的内存分为那几个类别？}{100}{subsubsection.11.0.33}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.34}链接器}{100}{subsubsection.11.0.34}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.35}符号表的作用}{100}{subsubsection.11.0.35}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.36}函数指针与指针函数}{100}{subsubsection.11.0.36}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.37}内部连接和外部链接有什么区别?}{100}{subsubsection.11.0.37}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.35}符号表的作用}{101}{subsubsection.11.0.35}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.36}函数指针与指针函数}{101}{subsubsection.11.0.36}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.37}内部连接和外部链接有什么区别?}{101}{subsubsection.11.0.37}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.38}声明与定义的区别}{101}{subsubsection.11.0.38}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.39}编译链接过程}{101}{subsubsection.11.0.39}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.40}C++函数中值的传递方式有哪几种?}{101}{subsubsection.11.0.40}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.41}信号量和互斥量}{101}{subsubsection.11.0.41}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.42}RVO和NRVO}{101}{subsubsection.11.0.42}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.43}听说过mangling么？}{102}{subsubsection.11.0.43}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.44}模板代码如何组织？模板的编译以及实例化过程？}{102}{subsubsection.11.0.44}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.40}C++函数中值的传递方式有哪几种?}{102}{subsubsection.11.0.40}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.41}信号量和互斥量}{102}{subsubsection.11.0.41}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.42}RVO和NRVO}{102}{subsubsection.11.0.42}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.43}听说过mangling么？}{103}{subsubsection.11.0.43}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.44}模板代码如何组织？模板的编译以及实例化过程？}{103}{subsubsection.11.0.44}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.45}C++中四种Cast的使用场景}{103}{subsubsection.11.0.45}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.46}C++什么是常量折叠}{103}{subsubsection.11.0.46}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.47}为什么const修饰成员函数后不能修改成员变量}{103}{subsubsection.11.0.47}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.48}auto\_ptr 被弃用了}{103}{subsubsection.11.0.48}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.49}const int*}{103}{subsubsection.11.0.49}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.50}C++智能指针}{103}{subsubsection.11.0.50}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.46}C++什么是常量折叠}{104}{subsubsection.11.0.46}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.47}为什么const修饰成员函数后不能修改成员变量}{104}{subsubsection.11.0.47}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.48}auto\_ptr 被弃用了}{104}{subsubsection.11.0.48}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.49}const int*}{104}{subsubsection.11.0.49}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.50}C++智能指针}{104}{subsubsection.11.0.50}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.51}C++与java的不同点}{104}{subsubsection.11.0.51}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.52}C++异常和java异常处理的对比}{108}{subsubsection.11.0.52}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {38}{\ignorespaces exception\_cpp}}{109}{figure.38}\protected@file@percent }
 \newlabel{fig:exception_cpp}{{38}{109}{exception\_cpp}{figure.38}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {39}{\ignorespaces exception\_java}}{109}{figure.39}\protected@file@percent }
-\newlabel{fig:exception_java}{{39}{109}{exception\_java}{figure.39}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.53}C++虚函数原理}{109}{subsubsection.11.0.53}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.52}C++异常和java异常处理的对比}{109}{subsubsection.11.0.52}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {39}{\ignorespaces exception\_java}}{110}{figure.39}\protected@file@percent }
+\newlabel{fig:exception_java}{{39}{110}{exception\_java}{figure.39}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.53}C++虚函数原理}{110}{subsubsection.11.0.53}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.54}C++虚函数表的开销}{110}{subsubsection.11.0.54}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.55}epoll水平触发\&epoll边缘触发}{110}{subsubsection.11.0.55}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.56}传统IO和mmap}{110}{subsubsection.11.0.56}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.57}write 和 fwrite}{110}{subsubsection.11.0.57}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.56}传统IO和mmap}{111}{subsubsection.11.0.56}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.57}write 和 fwrite}{111}{subsubsection.11.0.57}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {12}项目解析}{111}{section.12}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {12.0.1}华为软件精英挑战赛2020}{111}{subsubsection.12.0.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {12.0.2}华为软件精英挑战赛2021}{111}{subsubsection.12.0.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {12.0.3}数学建模2020}{113}{subsubsection.12.0.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {12.0.4}之江天枢深度学习可视化项目}{114}{subsubsection.12.0.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {12.0.5}快乐慕商城电商后台项目介绍}{115}{subsubsection.12.0.5}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {40}{\ignorespaces happymmallOne}}{117}{figure.40}\protected@file@percent }
-\newlabel{fig:happymmallOne}{{40}{117}{happymmallOne}{figure.40}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {12.0.6}秒杀项目介绍}{118}{subsubsection.12.0.6}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {41}{\ignorespaces happymmallTwo}}{119}{figure.41}\protected@file@percent }
-\newlabel{fig:happymmallTwo}{{41}{119}{happymmallTwo}{figure.41}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {42}{\ignorespaces redislockdistribution}}{119}{figure.42}\protected@file@percent }
-\newlabel{fig:redislockdistribution}{{42}{119}{redislockdistribution}{figure.42}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {43}{\ignorespaces happymmallexception}}{120}{figure.43}\protected@file@percent }
-\newlabel{fig:happymmallexception}{{43}{120}{happymmallexception}{figure.43}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {13}游戏开发}{121}{section.13}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {13.0.1}渲染管线}{121}{subsubsection.13.0.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {44}{\ignorespaces rockmq}}{122}{figure.44}\protected@file@percent }
-\newlabel{fig:rockmq}{{44}{122}{rockmq}{figure.44}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {14}自我}{122}{section.14}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {14.0.1}自我介绍}{122}{subsubsection.14.0.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {14.0.2}自我介绍英文版本}{122}{subsubsection.14.0.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {14.0.3}优缺点}{123}{subsubsection.14.0.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {14.0.4}如何看待华为文化}{123}{subsubsection.14.0.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {14.0.5}遇到的困难以及解决办法?}{123}{subsubsection.14.0.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {14.0.6}未来3\nobreakspace  {}5年的规划和职业目标是什么？}{123}{subsubsection.14.0.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {14.0.7}加入不同项目组认为自己的板块是最重要的，没有及时给你配合或者你遇到配合上，进度上的问题如何解决？}{123}{subsubsection.14.0.7}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {45}{\ignorespaces simpleFactory}}{124}{figure.45}\protected@file@percent }
-\newlabel{fig:simpleFactory}{{45}{124}{simpleFactory}{figure.45}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {14.0.8}反问}{124}{subsubsection.14.0.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {14.0.9}为什么读研}{124}{subsubsection.14.0.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {15}设计模式}{124}{section.15}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {15.0.1}工厂模式}{124}{subsubsection.15.0.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {46}{\ignorespaces abstractFactory}}{125}{figure.46}\protected@file@percent }
-\newlabel{fig:abstractFactory}{{46}{125}{abstractFactory}{figure.46}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {15.0.2}单例模式}{125}{subsubsection.15.0.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {15.0.3}中介模式}{126}{subsubsection.15.0.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {15.0.4}代理模式}{126}{subsubsection.15.0.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {16}常用算法题以及思路}{131}{section.16}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {16.0.1}\url  {https://leetcode-cn.com/problems/longest-increasing-subsequence/submissions/}}{131}{subsubsection.16.0.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {17}智力题}{131}{section.17}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {17.0.1}一根金条，需要付给工人，工人工作七天，需要每天给他一段1/7的金条，如何保证切两刀就完成任务。}{131}{subsubsection.17.0.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {17.0.2}浅谈一下1000瓶水有关思路(图解)与用java代码具体解决方案}{132}{subsubsection.17.0.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {18}系统设计题}{132}{section.18}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {18.0.1}分布式ID生成器}{132}{subsubsection.18.0.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {19}bash}{132}{section.19}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {19.0.1}awk 命令}{132}{subsubsection.19.0.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {19.0.2}找出那些js文件没有设置好权限}{132}{subsubsection.19.0.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {20}公务员总览}{133}{section.20}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {21}数量关系总览}{133}{section.21}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {21.1}分数}{133}{subsection.21.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {21.2}倍数}{133}{subsection.21.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {21.3}奇偶特性}{133}{subsection.21.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {21.4}倍数特性}{134}{subsection.21.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {21.5}方程法}{134}{subsection.21.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {21.6}赋值法}{134}{subsection.21.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {21.7}等距离平均速度公式}{134}{subsection.21.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {21.8}利润率问题}{134}{subsection.21.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {21.9}溶质问题}{134}{subsection.21.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {21.10}排列组合}{135}{subsection.21.10}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {21.11}几何}{135}{subsection.21.11}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {21.12}周期问题}{135}{subsection.21.12}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {21.13}全错误排列}{135}{subsection.21.13}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {21.14}三集合容斥原理}{135}{subsection.21.14}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {21.15}追及问题}{136}{subsection.21.15}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {21.16}代入排除法}{136}{subsection.21.16}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {22}判断推理总览}{136}{section.22}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {22.1}推理}{136}{subsection.22.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {22.2}图形推理}{136}{subsection.22.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {22.3}九宫格图推}{137}{subsection.22.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {22.4}翻转}{137}{subsection.22.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {22.5}样式规律}{137}{subsection.22.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {22.6}属性规律}{137}{subsection.22.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {22.7}数量规律}{138}{subsection.22.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {22.8}特殊规律}{138}{subsection.22.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {22.9}空间重构}{139}{subsection.22.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {22.10}定义判断}{139}{subsection.22.10}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {22.11}类比推理}{139}{subsection.22.11}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {22.12}翻译推理}{140}{subsection.22.12}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {22.12.1}前推后}{140}{subsubsection.22.12.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {22.12.2}后推前}{140}{subsubsection.22.12.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {22.12.3}推理规则-逆否等价}{140}{subsubsection.22.12.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {22.12.4}传递规则}{141}{subsubsection.22.12.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {22.12.5}tricks}{141}{subsubsection.22.12.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {22.13}排列组合}{141}{subsection.22.13}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {22.14}加强与削弱}{141}{subsection.22.14}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {22.14.1}削弱}{141}{subsubsection.22.14.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {22.14.2}加强}{141}{subsubsection.22.14.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {22.14.3}日常结论}{142}{subsubsection.22.14.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {23}常识总览}{142}{section.23}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {24}资料分析总览}{142}{section.24}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {24.1}术语}{142}{subsection.24.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {24.2}特定历史时期}{142}{subsection.24.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {24.3}结构阅读法}{142}{subsection.24.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {24.4}间隔增长率}{142}{subsection.24.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {24.5}年均增长率}{143}{subsection.24.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {24.6}基期倍数公式}{143}{subsection.24.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {24.7}两期增长比重}{143}{subsection.24.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {24.8}平均增长量}{143}{subsection.24.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {24.9}平均增长率}{143}{subsection.24.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {24.10}加速计算}{144}{subsection.24.10}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {25}言语总览}{144}{section.25}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {26}申论总览}{144}{section.26}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {27}公务员补充}{144}{section.27}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {28}数量关系}{144}{section.28}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {28.1}例题: 圆桌公式}{144}{subsection.28.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {28.2}例题: 周期公式}{144}{subsection.28.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {28.3}例题: 单端触发相遇问题}{145}{subsection.28.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {29}判断推理}{145}{section.29}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {29.1}例题}{145}{subsection.29.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {30}常识}{146}{section.30}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {31}资料分析}{146}{section.31}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {32}言语}{146}{section.32}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {32.1}成语积累}{146}{subsection.32.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {33}申论}{146}{section.33}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {34}英语}{146}{section.34}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {35}流体力学}{146}{section.35}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {35.1}流体力学需要遵守的三个物理学原理}{146}{subsection.35.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {35.2}流体力学基本控制方程}{146}{subsection.35.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {35.3}流体力学流动模型}{147}{subsection.35.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {35.4}条件}{147}{subsection.35.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {35.5}速度向量场}{147}{subsection.35.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {35.6}标量密度场}{147}{subsection.35.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {35.7}物质导数}{147}{subsection.35.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {35.8}速度散度}{148}{subsection.35.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {35.9}空间位置固定的有限控制体模型}{148}{subsection.35.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {35.10}随流体运动的有限控制体模型}{148}{subsection.35.10}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {35.11}空间位置固定的无穷小微团模型}{149}{subsection.35.11}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {35.12}随流体运动的无穷小微团模型}{150}{subsection.35.12}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {36}附录: 相关样例}{150}{section.36}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {36.0.1}小练习}{151}{subsubsection.36.0.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {36.0.2}三级标题}{151}{subsubsection.36.0.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {36.0.3}第二个三级标题}{152}{subsubsection.36.0.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {36.0.4}第三个三级标题}{152}{subsubsection.36.0.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {37}公式的写作}{152}{section.37}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {37.0.1}练习}{152}{subsubsection.37.0.1}\protected@file@percent }
-\newlabel{eq:ceshi}{{18}{152}{练习}{equation.37.18}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {37.0.2}表格的插入}{153}{subsubsection.37.0.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces 标题}}{153}{table.3}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces 标题}}{153}{table.4}\protected@file@percent }
-\gdef \@abspage@last{153}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {12.0.2}华为软件精英挑战赛2021}{112}{subsubsection.12.0.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {12.0.3}数学建模2020}{114}{subsubsection.12.0.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {12.0.4}之江天枢深度学习可视化项目}{115}{subsubsection.12.0.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {12.0.5}快乐慕商城电商后台项目介绍}{116}{subsubsection.12.0.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {40}{\ignorespaces happymmallOne}}{118}{figure.40}\protected@file@percent }
+\newlabel{fig:happymmallOne}{{40}{118}{happymmallOne}{figure.40}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {12.0.6}秒杀项目介绍}{119}{subsubsection.12.0.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {41}{\ignorespaces happymmallTwo}}{120}{figure.41}\protected@file@percent }
+\newlabel{fig:happymmallTwo}{{41}{120}{happymmallTwo}{figure.41}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {42}{\ignorespaces redislockdistribution}}{120}{figure.42}\protected@file@percent }
+\newlabel{fig:redislockdistribution}{{42}{120}{redislockdistribution}{figure.42}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {43}{\ignorespaces happymmallexception}}{121}{figure.43}\protected@file@percent }
+\newlabel{fig:happymmallexception}{{43}{121}{happymmallexception}{figure.43}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {44}{\ignorespaces rockmq}}{123}{figure.44}\protected@file@percent }
+\newlabel{fig:rockmq}{{44}{123}{rockmq}{figure.44}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {12.0.7}英文项目介绍}{123}{subsubsection.12.0.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {13}游戏开发}{124}{section.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {13.0.1}渲染管线}{124}{subsubsection.13.0.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {14}自我}{124}{section.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {14.0.1}自我介绍}{124}{subsubsection.14.0.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {14.0.2}自我介绍英文版本}{124}{subsubsection.14.0.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {14.0.3}优缺点}{125}{subsubsection.14.0.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {14.0.4}如何看待华为文化}{125}{subsubsection.14.0.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {14.0.5}遇到的困难以及解决办法?}{125}{subsubsection.14.0.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {14.0.6}未来3\nobreakspace  {}5年的规划和职业目标是什么？}{125}{subsubsection.14.0.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {14.0.7}加入不同项目组认为自己的板块是最重要的，没有及时给你配合或者你遇到配合上，进度上的问题如何解决？}{125}{subsubsection.14.0.7}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {45}{\ignorespaces simpleFactory}}{126}{figure.45}\protected@file@percent }
+\newlabel{fig:simpleFactory}{{45}{126}{simpleFactory}{figure.45}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {14.0.8}反问}{126}{subsubsection.14.0.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {14.0.9}为什么读研}{126}{subsubsection.14.0.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {14.0.10}用英语简单聊}{126}{subsubsection.14.0.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {15}设计模式}{126}{section.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {15.0.1}工厂模式}{126}{subsubsection.15.0.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {46}{\ignorespaces abstractFactory}}{127}{figure.46}\protected@file@percent }
+\newlabel{fig:abstractFactory}{{46}{127}{abstractFactory}{figure.46}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {15.0.2}单例模式}{127}{subsubsection.15.0.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {15.0.3}中介模式}{129}{subsubsection.15.0.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {15.0.4}代理模式}{129}{subsubsection.15.0.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {16}常用算法题以及思路}{133}{section.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {16.0.1}\url  {https://leetcode-cn.com/problems/longest-increasing-subsequence/submissions/}}{133}{subsubsection.16.0.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {17}智力题}{134}{section.17}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {17.0.1}一根金条，需要付给工人，工人工作七天，需要每天给他一段1/7的金条，如何保证切两刀就完成任务。}{134}{subsubsection.17.0.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {17.0.2}浅谈一下1000瓶水有关思路(图解)与用java代码具体解决方案}{134}{subsubsection.17.0.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {18}系统设计题}{134}{section.18}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {18.0.1}分布式ID生成器}{134}{subsubsection.18.0.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {19}bash}{134}{section.19}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {19.0.1}awk 命令}{134}{subsubsection.19.0.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {19.0.2}找出那些js文件没有设置好权限}{135}{subsubsection.19.0.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {20}公务员总览}{135}{section.20}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {21}数量关系总览}{135}{section.21}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {21.1}分数}{135}{subsection.21.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {21.2}圆}{135}{subsection.21.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {21.3}空瓶换酒}{136}{subsection.21.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {21.4}路程}{136}{subsection.21.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {21.5}平年, 闰年}{136}{subsection.21.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {21.6}倍数}{136}{subsection.21.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {21.7}奇偶特性}{136}{subsection.21.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {21.8}倍数特性}{136}{subsection.21.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {21.9}方程法}{137}{subsection.21.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {21.10}赋值法}{137}{subsection.21.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {21.11}等距离平均速度公式}{137}{subsection.21.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {21.12}利润率问题}{137}{subsection.21.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {21.13}溶质问题}{137}{subsection.21.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {21.14}排列组合}{137}{subsection.21.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {21.15}几何}{138}{subsection.21.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {21.16}周期问题}{138}{subsection.21.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {21.17}全错误排列}{138}{subsection.21.17}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {21.18}三集合容斥原理}{138}{subsection.21.18}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {21.19}追及问题}{138}{subsection.21.19}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {21.20}代入排除法}{139}{subsection.21.20}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {22}判断推理总览}{139}{section.22}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {22.1}推理}{139}{subsection.22.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {22.2}图形推理}{139}{subsection.22.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {22.3}九宫格图推}{140}{subsection.22.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {22.4}翻转}{140}{subsection.22.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {22.5}样式规律}{140}{subsection.22.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {22.6}属性规律}{140}{subsection.22.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {22.7}数量规律}{141}{subsection.22.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {22.8}特殊规律}{141}{subsection.22.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {22.9}空间重构}{142}{subsection.22.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {22.10}定义判断}{142}{subsection.22.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {22.11}类比推理}{142}{subsection.22.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {22.12}翻译推理}{143}{subsection.22.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {22.12.1}前推后}{143}{subsubsection.22.12.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {22.12.2}后推前}{143}{subsubsection.22.12.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {22.12.3}推理规则-逆否等价}{144}{subsubsection.22.12.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {22.12.4}传递规则}{144}{subsubsection.22.12.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {22.12.5}tricks}{144}{subsubsection.22.12.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {22.13}排列组合}{144}{subsection.22.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {22.14}加强与削弱}{144}{subsection.22.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {22.14.1}削弱}{144}{subsubsection.22.14.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {22.14.2}加强}{145}{subsubsection.22.14.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {22.14.3}日常结论}{145}{subsubsection.22.14.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {23}常识总览}{145}{section.23}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {23.1}常识蒙题}{146}{subsection.23.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {24}资料分析总览}{146}{section.24}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {24.1}速算技巧}{146}{subsection.24.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {24.2}增长量比较}{147}{subsection.24.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {24.3}术语}{147}{subsection.24.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {24.4}特定历史时期}{147}{subsection.24.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {24.5}结构阅读法}{147}{subsection.24.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {24.6}间隔增长率}{147}{subsection.24.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {24.7}年均增长率}{147}{subsection.24.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {24.8}基期比重}{147}{subsection.24.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {24.9}平均数}{148}{subsection.24.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {24.10}平均值增长率}{148}{subsection.24.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {24.11}年均增长量}{148}{subsection.24.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {24.12}多多少倍数}{148}{subsection.24.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {24.13}基期倍数公式}{148}{subsection.24.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {24.14}两期增长比重}{148}{subsection.24.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {24.15}平均增长量}{149}{subsection.24.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {24.16}两期比重差}{149}{subsection.24.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {24.17}平均增长率}{149}{subsection.24.17}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {24.18}加速计算}{149}{subsection.24.18}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {25}言语总览}{149}{section.25}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {25.1}中心理解题}{149}{subsection.25.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {25.2}细节题的容易错误的点}{150}{subsection.25.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {25.3}排序}{150}{subsection.25.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {25.3.1}确定首句}{150}{subsubsection.25.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {25.3.2}确定尾句}{150}{subsubsection.25.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {25.4}篇章阅读题}{150}{subsection.25.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {25.5}定义}{151}{subsection.25.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {26}申论总览}{151}{section.26}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {26.1}规范词梳理}{151}{subsection.26.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {26.2}tricks}{151}{subsection.26.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {27}公务员补充}{151}{section.27}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {28}数量关系}{151}{section.28}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {28.1}蒙题大法}{151}{subsection.28.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {28.2}例题: 圆桌公式}{152}{subsection.28.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {28.3}例题: 周期公式}{152}{subsection.28.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {28.4}例题: 单端触发相遇问题}{152}{subsection.28.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {29}判断推理}{153}{section.29}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {29.1}例题}{153}{subsection.29.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {29.2}正方形}{153}{subsection.29.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {30}常识}{153}{section.30}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {30.1}关键语句}{153}{subsection.30.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {31}资料分析}{154}{section.31}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {32}言语}{154}{section.32}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {32.1}tricks}{154}{subsection.32.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {32.2}成语积累 \& 词语积累}{154}{subsection.32.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {33}申论}{155}{section.33}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {34}英语}{155}{section.34}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {35}流体力学}{155}{section.35}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.1}流体力学需要遵守的三个物理学原理}{155}{subsection.35.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.2}流体力学基本控制方程}{155}{subsection.35.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.3}流体力学流动模型}{155}{subsection.35.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.4}条件}{156}{subsection.35.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.5}速度向量场}{156}{subsection.35.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.6}标量密度场}{156}{subsection.35.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.7}物质导数}{156}{subsection.35.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.8}速度散度}{157}{subsection.35.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.9}空间位置固定的有限控制体模型}{157}{subsection.35.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.10}随流体运动的有限控制体模型}{157}{subsection.35.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.11}空间位置固定的无穷小微团模型}{158}{subsection.35.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.12}随流体运动的无穷小微团模型}{159}{subsection.35.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.13}散度定理}{159}{subsection.35.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.14}对于标量与向量成绩的散度, 有向量恒等式}{159}{subsection.35.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.15}动量方程}{160}{subsection.35.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.16}能量方程}{162}{subsection.35.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.17}粘性流动的NS方程}{164}{subsection.35.17}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.18}无粘性流动的NS方程}{166}{subsection.35.18}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.19}无粘性流动物理边界条件}{167}{subsection.35.19}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.20}强守恒和弱守恒}{167}{subsection.35.20}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.21}特征线}{167}{subsection.35.21}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.22}特征值}{168}{subsection.35.22}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.23}双曲线 \& 抛物线}{168}{subsection.35.23}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.24}椭圆}{168}{subsection.35.24}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.25}定义适定性}{168}{subsection.35.25}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.26}偏微分形式和积分形式的求解}{168}{subsection.35.26}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.27}CFD的求解方法分类}{168}{subsection.35.27}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.28}前向差分}{169}{subsection.35.28}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.29}后向差分}{169}{subsection.35.29}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.30}二阶中心差分}{169}{subsection.35.30}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.31}边界处理}{169}{subsection.35.31}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.32}显式方法}{169}{subsection.35.32}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {47}{\ignorespaces youxianchafentujie}}{170}{figure.47}\protected@file@percent }
+\newlabel{fig:youxianchafentujie}{{47}{170}{youxianchafentujie}{figure.47}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {48}{\ignorespaces youxianchafentujie2}}{170}{figure.48}\protected@file@percent }
+\newlabel{fig:youxianchafentujie2}{{48}{170}{youxianchafentujie2}{figure.48}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {49}{\ignorespaces youxianchafentujie3}}{171}{figure.49}\protected@file@percent }
+\newlabel{fig:youxianchafentujie3}{{49}{171}{youxianchafentujie3}{figure.49}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.33}隐式方法}{171}{subsection.35.33}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.34}波数}{171}{subsection.35.34}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.35}稳定解判定}{171}{subsection.35.35}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.36}网格变换}{172}{subsection.35.36}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.37}自适应网格}{173}{subsection.35.37}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.38}显示有限差分方法}{173}{subsection.35.38}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.39}交替方向隐式(ADI)方法}{173}{subsection.35.39}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.40}压力修正法}{174}{subsection.35.40}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.41}数值方法: SIMPLE算法}{174}{subsection.35.41}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {35.42}马赫数}{174}{subsection.35.42}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {36}计算流体力学视频}{174}{section.36}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {37}申论积累}{174}{section.37}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {37.1}xi主书记名言}{174}{subsection.37.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {38}附录: 相关样例}{175}{section.38}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {38.0.1}小练习}{175}{subsubsection.38.0.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {38.0.2}三级标题}{175}{subsubsection.38.0.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {38.0.3}第二个三级标题}{176}{subsubsection.38.0.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {38.0.4}第三个三级标题}{176}{subsubsection.38.0.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {39}公式的写作}{176}{section.39}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {39.0.1}练习}{176}{subsubsection.39.0.1}\protected@file@percent }
+\newlabel{eq:ceshi}{{18}{176}{练习}{equation.39.18}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {39.0.2}表格的插入}{177}{subsubsection.39.0.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces 标题}}{177}{table.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces 标题}}{177}{table.4}\protected@file@percent }
+\gdef \@abspage@last{177}

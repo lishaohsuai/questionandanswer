@@ -1,0 +1,962 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\let \CTEX@spaceChar \relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{前\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 言}{i}{chapter*.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{概\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 览}{v}{chapter*.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {第一章\hspace {.3em}}题典之Hash}{1}{chapter.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}知识点和方法论}{1}{section.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1.1}知识点}{1}{subsection.1.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1.2}方法论}{2}{subsection.1.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}真题实战}{2}{section.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.1}2017年第8题}{2}{subsection.1.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.2}王道269综合应用题第3题}{3}{subsection.1.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.3}2015年第(5)题}{5}{subsection.1.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.4}2013年第4题}{6}{subsection.1.2.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.5}2014年第4题}{7}{subsection.1.2.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {第二章\hspace {.3em}}计算机体系结构}{9}{chapter.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}知识点和方法论}{9}{section.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.1}知识点}{9}{subsection.2.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.1.1.1}CPU内存模型}{9}{subsubsection.2.1.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.1.1.2}linux 用户态和内核态}{9}{subsubsection.2.1.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.1.1.3}nginx高性能原因}{10}{subsubsection.2.1.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.1.1.4}bio select epoll}{10}{subsubsection.2.1.1.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {第三章\hspace {.3em}}Spring}{11}{chapter.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}知识点和方法论}{11}{section.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.1}知识点}{11}{subsection.3.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.1.1.1}jar 和 war 包之间的区别}{11}{subsubsection.3.1.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.1.1.2}SpringBoot 和 SpringMVC 有什么区别}{11}{subsubsection.3.1.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.1.1.3}Spring 框架能带来哪些好处}{11}{subsubsection.3.1.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.1.1.4}如何实现AOP, 项目那些地方用到了AOP}{12}{subsubsection.3.1.1.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.1.1.5}Spring的事物机制}{12}{subsubsection.3.1.1.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.1.1.6}Spring什么时候@Transactional失效}{12}{subsubsection.3.1.1.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.1.1.7}介绍一下Spring, 读过源码介绍一下大致流程}{12}{subsubsection.3.1.1.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.1.1.8}Autowired}{13}{subsubsection.3.1.1.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.1.1.9}什么是控制反转(IOC)}{13}{subsubsection.3.1.1.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.1.1.10}什么是依赖注入?}{13}{subsubsection.3.1.1.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.1.1.11}Spring 对对象进行创建流程}{13}{subsubsection.3.1.1.11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.1.1.12}什么是AOP}{14}{subsubsection.3.1.1.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.1.1.13}bean的生命周期}{14}{subsubsection.3.1.1.13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.1.1.14}简单阐述SpringMVC的流程}{15}{subsubsection.3.1.1.14}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.1.1.15}第三个三级标题}{15}{subsubsection.3.1.1.15}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {第四章\hspace {.3em}}java基础}{17}{chapter.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}知识点和方法论}{17}{section.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.1}知识点}{17}{subsection.4.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.1}双亲委派机制}{17}{subsubsection.4.1.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.2}AQS 浅析}{17}{subsubsection.4.1.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.3}java加密算法浅析}{18}{subsubsection.4.1.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.4}java 使用流的方式去除某些变量}{18}{subsubsection.4.1.1.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.5}java中的变量如果直接赋值为null下面直接使用的话, 会报空指针异常}{18}{subsubsection.4.1.1.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.6}java接口中默认成员变量的修饰符}{18}{subsubsection.4.1.1.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.7}快速排序}{19}{subsubsection.4.1.1.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.8}UML图标}{19}{subsubsection.4.1.1.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.9}session与token的区别?}{19}{subsubsection.4.1.1.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.10}注解以及相关问题}{19}{subsubsection.4.1.1.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.11}juc arraylist \& int}{19}{subsubsection.4.1.1.11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.12}本地方法栈溢出的情况}{20}{subsubsection.4.1.1.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.13}堆内存溢出}{20}{subsubsection.4.1.1.13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.14}HTTP请求头中有什么参数}{21}{subsubsection.4.1.1.14}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.15}HTTP请求资源的方式}{21}{subsubsection.4.1.1.15}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.16}如何防止SQL注入}{21}{subsubsection.4.1.1.16}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.17}如何实现10000个qq判断是否在线的情况}{21}{subsubsection.4.1.1.17}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.18}hashmap死锁产生情况}{21}{subsubsection.4.1.1.18}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.19}谈谈对ConcurrentHashMap的扩容机制}{22}{subsubsection.4.1.1.19}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.20}hashTable}{23}{subsubsection.4.1.1.20}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.21}造成死锁的原因}{23}{subsubsection.4.1.1.21}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.22}深拷贝和浅拷贝}{23}{subsubsection.4.1.1.22}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.23}如果你提交任务时, 线程池队列已满, 这时会发生什么}{23}{subsubsection.4.1.1.23}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.24}遇到过哪些设计模式}{24}{subsubsection.4.1.1.24}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.25}Spring中Bean是线程安全的吗?}{24}{subsubsection.4.1.1.25}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.26}说说你了解的分布式锁实现}{24}{subsubsection.4.1.1.26}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.27}如何查看线程死锁}{24}{subsubsection.4.1.1.27}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.28}线程之间如何进行通讯的}{24}{subsubsection.4.1.1.28}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.29}快速失败(fail-fast) 和 安全失败(fail-safe) 的区别是什么?}{25}{subsubsection.4.1.1.29}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.30}异常}{25}{subsubsection.4.1.1.30}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.31}synchronized的底层实现细节}{25}{subsubsection.4.1.1.31}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.32}线程池参数}{26}{subsubsection.4.1.1.32}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.33}你觉得核心线程数和最大线程数之间应该如何设置呢}{26}{subsubsection.4.1.1.33}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.34}sychronized和ReentrantLock的区别}{26}{subsubsection.4.1.1.34}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.35}线程池ThreadPoolExecutor中使用的BlockQueue}{27}{subsubsection.4.1.1.35}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.36}Executors 工厂类实现线程池}{27}{subsubsection.4.1.1.36}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.37}线程池的拒绝策略}{28}{subsubsection.4.1.1.37}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.38}8种基本数据类型}{28}{subsubsection.4.1.1.38}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.39}Comparable \& Comparator 区别}{28}{subsubsection.4.1.1.39}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.40}java采用值传递还是引用传递?}{29}{subsubsection.4.1.1.40}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.41}java深拷贝和浅拷贝}{29}{subsubsection.4.1.1.41}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.42}java"==" 和 equals 的区别}{29}{subsubsection.4.1.1.42}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.43}String和StringBuilder, StringBuffer的区别}{30}{subsubsection.4.1.1.43}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.44}Java反射机制}{30}{subsubsection.4.1.1.44}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.45}简述面向对象三大特征, 继承, 封装, 多态}{30}{subsubsection.4.1.1.45}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.46}多态}{30}{subsubsection.4.1.1.46}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.47}内部类}{31}{subsubsection.4.1.1.47}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.48}红黑树}{31}{subsubsection.4.1.1.48}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.49}hashmap的数据结构}{31}{subsubsection.4.1.1.49}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.50}hashmap的put方法}{32}{subsubsection.4.1.1.50}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.51}介绍一下ThreadLocal}{32}{subsubsection.4.1.1.51}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.52}heap和stack有什么区别}{32}{subsubsection.4.1.1.52}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.53}Array 和 ArrayList 的区别}{33}{subsubsection.4.1.1.53}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.54}Java各种锁: 悲观锁, 泪管所, 自旋锁, 偏向锁, 轻量/重量锁, 读写锁, 可重入锁}{33}{subsubsection.4.1.1.54}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.55}Collection 和 Collections 的区别}{33}{subsubsection.4.1.1.55}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.56}接口与抽象类区别}{33}{subsubsection.4.1.1.56}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.57}ArrayList和LinkedList内部实现大致是怎样的? 他们之间的区别和优缺点}{34}{subsubsection.4.1.1.57}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.58}==和equals的区别}{34}{subsubsection.4.1.1.58}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.59}hashCode方法的作用}{35}{subsubsection.4.1.1.59}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.60}反射}{35}{subsubsection.4.1.1.60}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.61}简述Java内存模型(JMM)}{35}{subsubsection.4.1.1.61}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.62}Java内存模型中的可见性, 原子性和有序性}{36}{subsubsection.4.1.1.62}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.63}happen-before原则}{36}{subsubsection.4.1.1.63}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.64}wait/notify, await/singal}{36}{subsubsection.4.1.1.64}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.65}多线程wait和sleep区别}{36}{subsubsection.4.1.1.65}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.66}Collection<? extends Person> s}{36}{subsubsection.4.1.1.66}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.67}线程的状态有哪些?}{40}{subsubsection.4.1.1.67}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.68}进程的状态有哪些?}{40}{subsubsection.4.1.1.68}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.69}创建线程的几种方式}{41}{subsubsection.4.1.1.69}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.70}synchronized锁升级: 无锁, 偏向锁, 轻量级锁, 重量级锁(与锁的优化一起学习}{42}{subsubsection.4.1.1.70}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1.71}如何使用synchronized}{43}{subsubsection.4.1.1.71}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {第五章\hspace {.3em}}JVM}{45}{chapter.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}知识点和方法论}{45}{section.5.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.1}知识点}{45}{subsection.5.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.1.1.1}新生代复制算法的使用}{45}{subsubsection.5.1.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.1.1.2}说一下JVM中, 哪些是共享区, 哪些可以作为gc root}{45}{subsubsection.5.1.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.1.1.3}你们项目如何排查JVM问题}{46}{subsubsection.5.1.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.1.1.4}GC的三种收集方法: 标记清除, 标记整理, 复制算法的原理与特点, 分别用在什么地方, 如果让你优化收集方法, 有什么思路}{46}{subsubsection.5.1.1.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.1.1.5}JVM的主要组成部分及其作用?}{47}{subsubsection.5.1.1.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.1.1.6}JVM运行时数据区}{48}{subsubsection.5.1.1.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.1.1.7}JVM运行时数据区这些方法的关系}{48}{subsubsection.5.1.1.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.1.1.8}永久代PermGen 和 元空间Metaspace 区别}{50}{subsubsection.5.1.1.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.1.1.9}说一下堆栈的区别?}{50}{subsubsection.5.1.1.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.1.1.10}常见的垃圾收集器?}{50}{subsubsection.5.1.1.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.1.1.11}内存分配与回收策略. }{52}{subsubsection.5.1.1.11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.1.1.12}虚拟机性能监控和故障处理工具}{52}{subsubsection.5.1.1.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.1.1.13}简述JVM中类加载机制}{52}{subsubsection.5.1.1.13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.1.1.14}对象的访问定位?}{53}{subsubsection.5.1.1.14}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.1.1.15}垃圾回收器的基本原理是什么?}{54}{subsubsection.5.1.1.15}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.1.1.16}在java中, 对象什么时候可以被垃圾回收?}{54}{subsubsection.5.1.1.16}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.1.1.17}如何判断对象已经死亡?}{54}{subsubsection.5.1.1.17}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.1.1.18}简述强, 软, 弱, 虚引用?}{55}{subsubsection.5.1.1.18}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {第六章\hspace {.3em}}RocketMq}{57}{chapter.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.1}知识点和方法论}{57}{section.6.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1.1}知识点}{57}{subsection.6.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.1.1.1}信息流}{57}{subsubsection.6.1.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.1.1.2}消息队列如何保证消息可靠传输}{58}{subsubsection.6.1.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.1.1.3}消息队列有哪些作用}{58}{subsubsection.6.1.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.1.1.4}RocketMQ架构设计}{59}{subsubsection.6.1.1.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.1.1.5}RocketMQ事物型消息}{59}{subsubsection.6.1.1.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {第七章\hspace {.3em}}Redis}{61}{chapter.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.1}知识点和方法论}{61}{section.7.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.1.0.1}布隆过滤器}{61}{subsubsection.7.1.0.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.1.0.2}如何解决并发数据一致性问题?}{61}{subsubsection.7.1.0.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.1.0.3}Redis的数据结构及使用场景}{62}{subsubsection.7.1.0.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.1.0.4}Redis集群策略}{62}{subsubsection.7.1.0.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.1.0.5}什么是Redis?}{63}{subsubsection.7.1.0.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.1.0.6}简述Redis单线程模型?}{64}{subsubsection.7.1.0.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.1.0.7}Redis五种类型数据的实现方式}{64}{subsubsection.7.1.0.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.1.0.8}redis字典的底层实现hashTable相关问题}{65}{subsubsection.7.1.0.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.1.0.9}压缩链表原理ziplist}{65}{subsubsection.7.1.0.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.1.0.10}zset}{66}{subsubsection.7.1.0.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.1.0.11}AOF和RDB两种持久化方式区别}{66}{subsubsection.7.1.0.11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.1.0.12}Redis中过期策略和缓存淘汰机制}{66}{subsubsection.7.1.0.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.1.0.13}为什么要使用Redis}{66}{subsubsection.7.1.0.13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.1.0.14}Redis底层实现跳表介绍一下}{66}{subsubsection.7.1.0.14}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.1.0.15}为什么要使用Redis而不用map/guavaCache做缓存}{67}{subsubsection.7.1.0.15}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.1.0.16}分布式锁如何使用redis实现}{67}{subsubsection.7.1.0.16}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.1.0.17}Redis的内存淘汰策略有哪些}{67}{subsubsection.7.1.0.17}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.1.0.18}Redis事物的概念}{68}{subsubsection.7.1.0.18}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.1.0.19}RedisSharding问题}{68}{subsubsection.7.1.0.19}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.1.0.20}缓存雪崩}{69}{subsubsection.7.1.0.20}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.1.0.21}缓存穿透}{69}{subsubsection.7.1.0.21}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.1.0.22}缓存击穿}{69}{subsubsection.7.1.0.22}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.1.0.23}缓存预热}{69}{subsubsection.7.1.0.23}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.1.0.24}Redis6.0 为什么要引入多线程呢?}{69}{subsubsection.7.1.0.24}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.1.0.25}Redis主从复制模式}{70}{subsubsection.7.1.0.25}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.1.0.26}Redis中持久化机制}{70}{subsubsection.7.1.0.26}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {第八章\hspace {.3em}}计算机网络}{71}{chapter.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.1}知识点和方法论}{71}{section.8.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.1.0.1}查看端口信息}{71}{subsubsection.8.1.0.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.1.0.2}SYN攻击}{71}{subsubsection.8.1.0.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.1.0.3}arp协议}{71}{subsubsection.8.1.0.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.1.0.4}DNS过程}{71}{subsubsection.8.1.0.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.1.0.5}TCP如何保证可靠性}{72}{subsubsection.8.1.0.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.1.0.6}TCP报文头部内容}{73}{subsubsection.8.1.0.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.1.0.7}TCP三次握手和四次挥手示意图}{73}{subsubsection.8.1.0.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.1.0.8}Time\_wait状态}{73}{subsubsection.8.1.0.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.1.0.9}SYN-RCVD状态}{73}{subsubsection.8.1.0.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.1.0.10}TCP四个计时器}{74}{subsubsection.8.1.0.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.1.0.11}TCP流量控制}{75}{subsubsection.8.1.0.11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.1.0.12}HTTPS访问过程, SSL 握手的过程}{75}{subsubsection.8.1.0.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.1.0.13}计算机网络分层}{76}{subsubsection.8.1.0.13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.1.0.14}TCP和UDP区别?}{76}{subsubsection.8.1.0.14}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.1.0.15}TCP三次握手相关问题}{76}{subsubsection.8.1.0.15}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.1.0.16}TCP四次挥手问题}{78}{subsubsection.8.1.0.16}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.1.0.17}TCP协议-如何保证传输的可靠性}{78}{subsubsection.8.1.0.17}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.1.0.18}Cookie作用, 安全性问题和Session的比较}{79}{subsubsection.8.1.0.18}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.1.0.19}HTTP1.1 和 HTTP1.0的比较}{80}{subsubsection.8.1.0.19}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.1.0.20}HTTP2.0 和 HTTP1.1的比较}{80}{subsubsection.8.1.0.20}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.1.0.21}HTTP3.0}{81}{subsubsection.8.1.0.21}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.1.0.22}HTTPS加密}{81}{subsubsection.8.1.0.22}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.1.0.23}输入网址发生的事情}{81}{subsubsection.8.1.0.23}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {第九章\hspace {.3em}}mysql}{83}{chapter.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.1}知识点和方法论}{83}{section.9.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {9.1.0.1}索引的使用原则}{83}{subsubsection.9.1.0.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {9.1.0.2}主键自增}{83}{subsubsection.9.1.0.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {9.1.0.3}主键自增的好处}{83}{subsubsection.9.1.0.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {9.1.0.4}行锁 共享锁}{83}{subsubsection.9.1.0.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {9.1.0.5}回表}{84}{subsubsection.9.1.0.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {9.1.0.6}mybatis\#和\$区别以及原理}{84}{subsubsection.9.1.0.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {9.1.0.7}redo log 和 undo log, bin log }{84}{subsubsection.9.1.0.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {9.1.0.8}隔离级别}{85}{subsubsection.9.1.0.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {9.1.0.9}ACID}{85}{subsubsection.9.1.0.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {9.1.0.10}乐观锁和悲观锁}{85}{subsubsection.9.1.0.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {9.1.0.11}MVCC}{85}{subsubsection.9.1.0.11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {9.1.0.12}RR和RC隔离级别下的InnoDB快照读有什么区别}{86}{subsubsection.9.1.0.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {9.1.0.13}B+/B树之间的比较}{86}{subsubsection.9.1.0.13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {9.1.0.14}聚集索引\&非聚集索引}{86}{subsubsection.9.1.0.14}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {9.1.0.15}创建索引的优点}{86}{subsubsection.9.1.0.15}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {9.1.0.16}创建索引的缺点}{86}{subsubsection.9.1.0.16}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {9.1.0.17}MYSQL优化}{87}{subsubsection.9.1.0.17}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {9.1.0.18}InnoDB \& MyISAM}{87}{subsubsection.9.1.0.18}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {9.1.0.19}创建存储过程}{87}{subsubsection.9.1.0.19}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {9.1.0.20}热备份和冷备份}{87}{subsubsection.9.1.0.20}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {9.1.0.21}Innode加锁}{87}{subsubsection.9.1.0.21}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {9.1.0.22}INNODB解决死锁}{88}{subsubsection.9.1.0.22}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {9.1.0.23}Mysql锁你了解哪些}{88}{subsubsection.9.1.0.23}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {9.1.0.24}Mysql数据库中, 什么情况下设置了索引但是无法使用?}{88}{subsubsection.9.1.0.24}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {第十章\hspace {.3em}}操作系统}{89}{chapter.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10.1}知识点和方法论}{89}{section.10.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {10.1.0.1}共享内存}{89}{subsubsection.10.1.0.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {10.1.0.2}虚拟内存}{89}{subsubsection.10.1.0.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {10.1.0.3}上下文信息}{90}{subsubsection.10.1.0.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {10.1.0.4}内存访问}{91}{subsubsection.10.1.0.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {10.1.0.5}匿名管道和命名管道的区别}{91}{subsubsection.10.1.0.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {10.1.0.6}线程和进程的区别}{91}{subsubsection.10.1.0.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {10.1.0.7}协程与线程进行比较}{92}{subsubsection.10.1.0.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {10.1.0.8}进程之间的通信方式有哪些?}{92}{subsubsection.10.1.0.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {10.1.0.9}进程调度算法}{92}{subsubsection.10.1.0.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {10.1.0.10}epoll和poll的区别}{93}{subsubsection.10.1.0.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {第十一章\hspace {.3em}}设计模式}{95}{chapter.11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11.1}知识点和方法论}{95}{section.11.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {11.1.0.1}多线程下单例设计模式}{95}{subsubsection.11.1.0.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {11.1.0.2}为什么在wait代码块中要用while而不用if}{98}{subsubsection.11.1.0.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {11.1.0.3}Serializable}{101}{subsubsection.11.1.0.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {11.1.0.4}工厂模式}{101}{subsubsection.11.1.0.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {11.1.0.5}单例模式}{102}{subsubsection.11.1.0.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {11.1.0.6}中介模式}{103}{subsubsection.11.1.0.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {11.1.0.7}代理模式}{103}{subsubsection.11.1.0.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {第十二章\hspace {.3em}}C++}{107}{chapter.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {12.1}知识点和方法论}{107}{section.12.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.1}map 和 unordered\_map 不同点}{107}{subsubsection.12.1.0.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.2}C++ 不能重载的运算符}{107}{subsubsection.12.1.0.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.3}C++ 如果一个类中没有任何属性,占用空间为1, 这是规定}{108}{subsubsection.12.1.0.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.4}返回引用}{108}{subsubsection.12.1.0.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.5}类和结构体的区别}{108}{subsubsection.12.1.0.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.6}类的大小}{108}{subsubsection.12.1.0.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.7}C++ 内存对齐}{109}{subsubsection.12.1.0.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.8}C++11}{109}{subsubsection.12.1.0.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.9}C++14特性}{109}{subsubsection.12.1.0.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.10}C++17特性}{110}{subsubsection.12.1.0.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.11}C++20特性}{110}{subsubsection.12.1.0.11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.12}模板类的函数定义}{110}{subsubsection.12.1.0.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.13}尾递归的实现}{110}{subsubsection.12.1.0.13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.14}socket 如何实现可靠连接}{110}{subsubsection.12.1.0.14}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.15}set, multiset, map, multiset}{110}{subsubsection.12.1.0.15}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.16}定义的静态全局变量作用于是}{111}{subsubsection.12.1.0.16}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.17}如何判断一段程序是由C编译器编译还是由C++编译器编译的}{111}{subsubsection.12.1.0.17}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.18}在C++程序中调用被C编译器编译后的函数, 为什么要加extern"C"}{111}{subsubsection.12.1.0.18}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.19}C++, const规则}{111}{subsubsection.12.1.0.19}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.20}C++, const 和 \#define 之间的区别}{111}{subsubsection.12.1.0.20}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.21}指针和引用之间的区别}{111}{subsubsection.12.1.0.21}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.22}inline的优劣}{111}{subsubsection.12.1.0.22}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.23}C++11有什么你使用到的新特性}{111}{subsubsection.12.1.0.23}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.24}C++中有malloc/free, 为什么还需要new/delete}{112}{subsubsection.12.1.0.24}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.25}面向对象技术的基本概念是什么，三个基本特征是什么?}{112}{subsubsection.12.1.0.25}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.26}为什么基类的析构函数是虚函数?}{112}{subsubsection.12.1.0.26}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.27}为什么构造函数不能为虚函数？}{112}{subsubsection.12.1.0.27}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.28}如果虚函数是有效的，那为什么不把所有函数设为虚函数？}{112}{subsubsection.12.1.0.28}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.29}什么是多态？多态有什么作用？}{112}{subsubsection.12.1.0.29}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.30}重载和覆盖有什么区别？}{113}{subsubsection.12.1.0.30}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.31}什么是虚指针？}{113}{subsubsection.12.1.0.31}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.32}main函数执行之前会执行什么？执行之后还能执行代码吗？}{113}{subsubsection.12.1.0.32}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.33}经常要操作的内存分为那几个类别？}{113}{subsubsection.12.1.0.33}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.34}链接器}{114}{subsubsection.12.1.0.34}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.35}符号表的作用}{114}{subsubsection.12.1.0.35}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.36}函数指针与指针函数}{114}{subsubsection.12.1.0.36}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.37}内部连接和外部链接有什么区别?}{114}{subsubsection.12.1.0.37}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.38}声明与定义的区别}{114}{subsubsection.12.1.0.38}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.39}编译链接过程}{115}{subsubsection.12.1.0.39}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.40}C++函数中值的传递方式有哪几种?}{115}{subsubsection.12.1.0.40}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.41}信号量和互斥量}{115}{subsubsection.12.1.0.41}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.42}RVO和NRVO}{115}{subsubsection.12.1.0.42}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.43}听说过mangling么？}{116}{subsubsection.12.1.0.43}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.44}模板代码如何组织？模板的编译以及实例化过程？}{116}{subsubsection.12.1.0.44}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.45}C++中四种Cast的使用场景}{116}{subsubsection.12.1.0.45}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.46}C++什么是常量折叠}{116}{subsubsection.12.1.0.46}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.47}为什么const修饰成员函数后不能修改成员变量}{117}{subsubsection.12.1.0.47}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.48}auto\_ptr 被弃用了}{117}{subsubsection.12.1.0.48}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.49}const int*}{117}{subsubsection.12.1.0.49}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.50}C++智能指针}{117}{subsubsection.12.1.0.50}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.51}C++与java的不同点}{117}{subsubsection.12.1.0.51}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.52}C++异常和java异常处理的对比}{120}{subsubsection.12.1.0.52}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.53}C++虚函数原理}{122}{subsubsection.12.1.0.53}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.54}C++虚函数表的开销}{122}{subsubsection.12.1.0.54}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.55}epoll水平触发\&epoll边缘触发}{122}{subsubsection.12.1.0.55}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.56}传统IO和mmap}{122}{subsubsection.12.1.0.56}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {12.1.0.57}write 和 fwrite}{123}{subsubsection.12.1.0.57}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {第十三章\hspace {.3em}}项目解析}{125}{chapter.13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {13.1}知识点和方法论}{125}{section.13.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {13.1.0.1}华为软件精英挑战赛2020}{125}{subsubsection.13.1.0.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {13.1.0.2}华为软件精英挑战赛2021}{126}{subsubsection.13.1.0.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {13.1.0.3}数学建模2020}{127}{subsubsection.13.1.0.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {13.1.0.4}之江天枢深度学习可视化项目}{128}{subsubsection.13.1.0.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {13.1.0.5}快乐慕商城电商后台项目介绍}{129}{subsubsection.13.1.0.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {13.1.0.6}秒杀项目介绍}{132}{subsubsection.13.1.0.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {13.1.0.7}英文项目介绍}{135}{subsubsection.13.1.0.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {第十四章\hspace {.3em}}游戏开发}{137}{chapter.14}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {14.1}知识点和方法论}{137}{section.14.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {14.1.0.1}渲染管线}{137}{subsubsection.14.1.0.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {第十五章\hspace {.3em}}自我}{139}{chapter.15}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {15.1}知识点和方法论}{139}{section.15.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {15.1.0.1}自我介绍}{139}{subsubsection.15.1.0.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {15.1.0.2}自我介绍英文版本}{139}{subsubsection.15.1.0.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {15.1.0.3}优缺点}{140}{subsubsection.15.1.0.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {15.1.0.4}如何看待华为文化}{140}{subsubsection.15.1.0.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {15.1.0.5}遇到的困难以及解决办法?}{140}{subsubsection.15.1.0.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {15.1.0.6}未来3\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 5年的规划和职业目标是什么？}{140}{subsubsection.15.1.0.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {15.1.0.7}加入不同项目组认为自己的板块是最重要的，没有及时给你配合或者你遇到配合上，进度上的问题如何解决？}{140}{subsubsection.15.1.0.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {15.1.0.8}反问}{141}{subsubsection.15.1.0.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {15.1.0.9}为什么读研}{141}{subsubsection.15.1.0.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {15.1.0.10}用英语简单聊}{141}{subsubsection.15.1.0.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {第十六章\hspace {.3em}}常用算法题以及思路}{143}{chapter.16}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {16.1}知识点和方法论}{143}{section.16.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {16.1.0.1}\url {https://leetcode-cn.com/problems/longest-increasing-subsequence/submissions/}}{143}{subsubsection.16.1.0.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {16.2}智力题}{143}{section.16.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {16.2.0.1}一根金条，需要付给工人，工人工作七天，需要每天给他一段1/7的金条，如何保证切两刀就完成任务。}{143}{subsubsection.16.2.0.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {16.2.0.2}浅谈一下1000瓶水有关思路(图解)与用java代码具体解决方案}{143}{subsubsection.16.2.0.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {第十七章\hspace {.3em}}系统设计题}{145}{chapter.17}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {17.1}知识点和方法论}{145}{section.17.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {17.1.0.1}分布式ID生成器}{145}{subsubsection.17.1.0.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {第十八章\hspace {.3em}}bash}{147}{chapter.18}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {18.1}知识点和方法论}{147}{section.18.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {18.1.0.1}awk 命令}{147}{subsubsection.18.1.0.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {18.1.0.2}找出那些js文件没有设置好权限}{147}{subsubsection.18.1.0.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {第十九章\hspace {.3em}}数量关系总览}{149}{chapter.19}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {19.1}知识点和方法论}{149}{section.19.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {19.1.1}分数}{149}{subsection.19.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {19.1.2}圆}{150}{subsection.19.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {19.1.3}空瓶换酒}{150}{subsection.19.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {19.1.4}路程}{150}{subsection.19.1.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {19.1.5}平年, 闰年}{150}{subsection.19.1.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {19.1.6}倍数}{150}{subsection.19.1.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {19.1.7}奇偶特性}{150}{subsection.19.1.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {19.1.8}倍数特性}{150}{subsection.19.1.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {19.1.9}方程法}{151}{subsection.19.1.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {19.1.10}赋值法}{151}{subsection.19.1.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {19.1.11}等距离平均速度公式}{151}{subsection.19.1.11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {19.1.12}利润率问题}{151}{subsection.19.1.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {19.1.13}溶质问题}{151}{subsection.19.1.13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {19.1.14}排列组合}{151}{subsection.19.1.14}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {19.1.15}几何}{152}{subsection.19.1.15}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {19.1.16}周期问题}{152}{subsection.19.1.16}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {19.1.17}全错误排列}{152}{subsection.19.1.17}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {19.1.18}三集合容斥原理}{152}{subsection.19.1.18}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {19.1.19}追及问题}{152}{subsection.19.1.19}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {19.1.20}代入排除法}{152}{subsection.19.1.20}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {19.2}数量关系补充}{153}{section.19.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {19.2.1}蒙题大法}{153}{subsection.19.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {19.2.2}例题: 圆桌公式}{153}{subsection.19.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {19.2.3}例题: 周期公式}{153}{subsection.19.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {19.2.4}例题: 单端触发相遇问题}{153}{subsection.19.2.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {第二十章\hspace {.3em}}判断推理总览}{155}{chapter.20}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {20.1}知识点和方法论}{155}{section.20.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {20.1.1}推理}{155}{subsection.20.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {20.1.2}图形推理}{156}{subsection.20.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {20.1.3}九宫格图推}{156}{subsection.20.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {20.1.4}翻转}{156}{subsection.20.1.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {20.1.5}样式规律}{156}{subsection.20.1.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {20.1.6}属性规律}{157}{subsection.20.1.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {20.1.7}数量规律}{157}{subsection.20.1.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {20.1.8}特殊规律}{158}{subsection.20.1.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {20.1.9}空间重构}{158}{subsection.20.1.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {20.1.10}定义判断}{158}{subsection.20.1.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {20.1.11}类比推理}{159}{subsection.20.1.11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {20.1.12}翻译推理}{159}{subsection.20.1.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {20.1.12.1}前推后}{159}{subsubsection.20.1.12.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {20.1.12.2}后推前}{160}{subsubsection.20.1.12.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {20.1.12.3}推理规则-逆否等价}{160}{subsubsection.20.1.12.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {20.1.12.4}传递规则}{160}{subsubsection.20.1.12.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {20.1.12.5}tricks}{160}{subsubsection.20.1.12.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {20.1.13}排列组合}{160}{subsection.20.1.13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {20.1.14}加强与削弱}{160}{subsection.20.1.14}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {20.1.14.1}削弱}{160}{subsubsection.20.1.14.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {20.1.14.2}加强}{161}{subsubsection.20.1.14.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {20.1.14.3}日常结论}{161}{subsubsection.20.1.14.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {20.2}判断推理}{161}{section.20.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {20.2.1}例题}{161}{subsection.20.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {20.2.2}正方形}{162}{subsection.20.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {第二十一章\hspace {.3em}}常识}{163}{chapter.21}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {21.1}知识点和方法论}{163}{section.21.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {21.2}常识总览}{163}{section.21.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {21.2.1}常识蒙题}{164}{subsection.21.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {21.3}常识}{164}{section.21.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {21.3.1}关键语句}{164}{subsection.21.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {第二十二章\hspace {.3em}}资料分析总览}{167}{chapter.22}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {22.1}知识点和方法论}{167}{section.22.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {22.1.1}速算技巧}{167}{subsection.22.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {22.1.2}增长量比较}{167}{subsection.22.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {22.1.3}术语}{167}{subsection.22.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {22.1.4}特定历史时期}{168}{subsection.22.1.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {22.1.5}结构阅读法}{168}{subsection.22.1.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {22.1.6}间隔增长率}{168}{subsection.22.1.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {22.1.7}年均增长率}{168}{subsection.22.1.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {22.1.8}基期比重}{168}{subsection.22.1.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {22.1.9}平均数}{168}{subsection.22.1.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {22.1.10}平均值增长率}{168}{subsection.22.1.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {22.1.11}年均增长量}{169}{subsection.22.1.11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {22.1.12}多多少倍数}{169}{subsection.22.1.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {22.1.13}基期倍数公式}{169}{subsection.22.1.13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {22.1.14}两期增长比重}{169}{subsection.22.1.14}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {22.1.15}平均增长量}{169}{subsection.22.1.15}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {22.1.16}两期比重差}{169}{subsection.22.1.16}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {22.1.17}平均增长率}{170}{subsection.22.1.17}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {22.1.18}加速计算}{170}{subsection.22.1.18}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {第二十三章\hspace {.3em}}言语总览}{171}{chapter.23}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {23.1}知识点和方法论}{171}{section.23.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {23.1.1}中心理解题}{171}{subsection.23.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {23.1.2}细节题的容易错误的点}{171}{subsection.23.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {23.1.3}排序}{172}{subsection.23.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {23.1.3.1}确定首句}{172}{subsubsection.23.1.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {23.1.3.2}确定尾句}{172}{subsubsection.23.1.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {23.1.4}篇章阅读题}{172}{subsection.23.1.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {23.1.5}定义}{172}{subsection.23.1.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {23.2}申论总览}{172}{section.23.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {23.2.1}规范词梳理}{172}{subsection.23.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {23.2.2}tricks}{173}{subsection.23.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {23.3}言语}{173}{section.23.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {23.3.1}tricks}{173}{subsection.23.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {23.3.2}成语积累 \& 词语积累}{173}{subsection.23.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {第二十四章\hspace {.3em}}流体力学}{175}{chapter.24}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {24.1}知识点和方法论}{175}{section.24.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.1}流体力学需要遵守的三个物理学原理}{175}{subsection.24.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.2}流体力学基本控制方程}{175}{subsection.24.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.3}流体力学流动模型}{175}{subsection.24.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.4}条件}{176}{subsection.24.1.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.5}速度向量场}{176}{subsection.24.1.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.6}标量密度场}{176}{subsection.24.1.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.7}物质导数}{176}{subsection.24.1.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.8}速度散度}{176}{subsection.24.1.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.9}空间位置固定的有限控制体模型}{177}{subsection.24.1.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.10}随流体运动的有限控制体模型}{177}{subsection.24.1.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.11}空间位置固定的无穷小微团模型}{177}{subsection.24.1.11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.12}随流体运动的无穷小微团模型}{178}{subsection.24.1.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.13}散度定理}{179}{subsection.24.1.13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.14}对于标量与向量成绩的散度, 有向量恒等式}{179}{subsection.24.1.14}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.15}动量方程}{179}{subsection.24.1.15}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.16}能量方程}{181}{subsection.24.1.16}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.17}粘性流动的NS方程}{184}{subsection.24.1.17}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.18}无粘性流动的NS方程}{185}{subsection.24.1.18}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.19}无粘性流动物理边界条件}{186}{subsection.24.1.19}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.20}强守恒和弱守恒}{186}{subsection.24.1.20}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.21}特征线}{187}{subsection.24.1.21}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.22}特征值}{187}{subsection.24.1.22}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.23}双曲线 \& 抛物线}{187}{subsection.24.1.23}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.24}椭圆}{187}{subsection.24.1.24}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.25}定义适定性}{187}{subsection.24.1.25}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.26}偏微分形式和积分形式的求解}{187}{subsection.24.1.26}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.27}CFD的求解方法分类}{188}{subsection.24.1.27}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.28}前向差分}{188}{subsection.24.1.28}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.29}后向差分}{188}{subsection.24.1.29}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.30}二阶中心差分}{188}{subsection.24.1.30}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.31}边界处理}{188}{subsection.24.1.31}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.32}显式方法}{191}{subsection.24.1.32}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.33}隐式方法}{191}{subsection.24.1.33}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.34}波数}{191}{subsection.24.1.34}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.35}稳定解判定}{191}{subsection.24.1.35}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.36}网格变换}{191}{subsection.24.1.36}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.37}自适应网格}{192}{subsection.24.1.37}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.38}显示有限差分方法}{193}{subsection.24.1.38}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.39}交替方向隐式(ADI)方法}{193}{subsection.24.1.39}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.40}压力修正法}{193}{subsection.24.1.40}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.41}数值方法: SIMPLE算法}{193}{subsection.24.1.41}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {24.1.42}马赫数}{194}{subsection.24.1.42}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {24.2}计算流体力学视频}{194}{section.24.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {第二十五章\hspace {.3em}}申论}{195}{chapter.25}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {25.1}知识点和方法论}{195}{section.25.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {25.1.1}xi主书记名言}{195}{subsection.25.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {25.1.2}2022年国考}{195}{subsection.25.1.2}%

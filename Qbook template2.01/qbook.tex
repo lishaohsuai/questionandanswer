@@ -1,0 +1,102 @@
+%# -*- coding: utf-8-unix -*-
+%======================================================================
+% qbook.tex for Qbook Template
+%======================================================================
+% 双面打印
+\documentclass{qbook}
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\addbibresource{bib/qbook.bib}  % 导入参考文献数据库
+
+\begin{document}
+\pagestyle{empty}
+\include{tex/cover}  % 载入封面
+
+%\begin{center}
+%	\Large{\sffamily\bfseries\heiti Version 2.00} \\ \vspace{2em}
+%	\Large{\sffamily\bfseries\heiti 编译日期: \today} \\ \vspace{1em}
+%	\Large{\sffamily\bfseries\heiti 任何建议及错误信息请发送至邮箱} \\
+%	\texttt{1049188593@qq.com}
+%\end{center}
+
+\vfill
+\vspace{30em}
+\begin{tabular}{\textwidth}{ccc}
+	%\includegraphics{figure/by-nc.eps}
+	 & \begin{minipage}[b]{0.6\textwidth}
+		   \small\sffamily
+		   % 署名-非商业性使用 4.0 国际 许可协议进行许可. 访问\url{http://creativecommons.org/licenses/by-nc/4.0/  }查看该许可协议.
+
+	   \end{minipage}
+\end{tabular}
+\thispagestyle{empty}
+\frontmatter  % 对前言和概览用罗马数字作为页码
+\pagestyle{empty}
+\include{tex/preface}
+\pagestyle{empty}
+\tableofcontents
+\cleardoublepage
+\include{tex/overview}
+\mainmatter	  % 对正文用阿拉伯数字作为页码
+
+%======================================================================
+% 正文内容
+\pagestyle{fancy}
+\setcounter{page}{0}
+\include{tex/chapter1} % hash
+%\include{tex/chapter2} % 树和二叉树 新增一丢丢 
+%\include{tex/chapter3} % 哈夫曼树
+%\include{tex/chapter4} % 广义表
+%\include{tex/chapter5} % 最小生成树
+%\include{tex/chapter6} % B+- 新增题目
+%\include{tex/chapter7} % 平衡二叉树 二叉排序树
+%\include{tex/chapter8} % AOV 和 AOE 和 bfs 和 dfs 和 floyd
+%\include{tex/chapter9} % Dijikstra 算法 但是是空的
+%\include{tex/chapter10} % 算法背诵
+%\include{tex/chapter11} % 时间复杂地计算
+%\include{tex/chapter12} % 线性表队列栈
+%\include{tex/chapter13} % 查找与排序
+%\include{tex/chapter14}
+%\include{tex/chapter15}
+%\include{tex/chapter16}
+%\include{tex/chapter17}
+%\include{tex/chapter18}
+%\include{tex/chapter19}
+%\include{tex/chapter20}
+%\include{tex/chapter21} % 2017 数据结构真题 
+%\include{tex/chapter22} % 2017 组成结构真题
+%\include{tex/chapter23} % 2019 年组成原理和数据结构
+%\include{tex/chapter24} % 临时要求
+\include{tex/chapter25} % 计算机体系结构
+\include{tex/chapter26} % Spring
+\include{tex/chapter27} % Java基础
+\include{tex/chapter28} % JVM
+\include{tex/chapter29} % JVM
+\include{tex/chapter30} % JVM
+\include{tex/chapter31} % JVM
+\include{tex/chapter32} % JVM
+\include{tex/chapter33} % JVM
+\include{tex/chapter34} % JVM
+\include{tex/chapter35} % JVM
+\include{tex/chapter36} % JVM
+\include{tex/chapter37} % JVM
+\include{tex/chapter38} % JVM
+\include{tex/chapter39} % JVM
+\include{tex/chapter40} % JVM
+\include{tex/chapter41} % JVM
+\include{tex/chapter42} % JVM
+\include{tex/chapter43} % JVM
+\include{tex/chapter44} % JVM
+\include{tex/chapter45} % JVM
+\include{tex/chapter46} % JVM
+\include{tex/chapter47} % JVM
+\include{tex/chapter48} % JVM
+\backmatter
+%======================================================================
+% 打印参考文献
+%\printbibliography[heading=bibintoc]
+\makeatletter
+\makeatother
+\end{document}

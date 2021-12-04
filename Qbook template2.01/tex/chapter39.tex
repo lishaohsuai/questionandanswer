@@ -1,0 +1,24 @@
+%# -*- coding: utf-8-unix -*-
+%%==================================================
+\chapter{常用算法题以及思路}
+\label{chap1}
+\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+	\item ...
+\end{itemize}
+
+\section{知识点和方法论}
+\subsubsection{\url{https://leetcode-cn.com/problems/longest-increasing-subsequence/submissions/}}
+思路: 两重for循环
+\begin{lstlisting}
+if(n[i] > n[j]) {
+	dp[i] = max(dp[i], dp[j]+1);
+}
+\end{lstlisting}
+
+\section{智力题}
+
+\subsubsection{一根金条，需要付给工人，工人工作七天，需要每天给他一段1/7的金条，如何保证切两刀就完成任务。}
+\url{https://blog.csdn.net/qq_43264029/article/details/107270544}
+
+\subsubsection{浅谈一下1000瓶水有关思路(图解)与用java代码具体解决方案}
+\url{https://blog.csdn.net/sunkun2013/article/details/12035071}

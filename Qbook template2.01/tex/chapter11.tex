@@ -1,0 +1,87 @@
+\chapter{时间复杂度的计算}
+\label{chap11}
+\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+	\item 知识点：讲解相关知识点。
+	\item 题型：直接上真题。
+\end{itemize}
+
+\section{知识点和方法论}
+
+\subsection{知识点}
+\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+	\item 时间复杂度常用大 O 符号表示
+	\item 时间复杂度是去掉最高项多项式前面的系数,且不包括函数的低阶项。
+	\item 常见时间复杂度$Ο(1)<Ο(log_2 n)<Ο(n)<Ο(nlog_2 n)<Ο(n^2)<Ο(n^3)<Ο(2^n)<O(n!)<O(n^n)$
+	\item 空间复杂度如果，算法原地工作那么，空间复杂度为O(1)
+\end{itemize}
+
+\subsection{方法论}
+\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+	\item 简单计算相关的要计算的函数关键语句执行的次数。
+	\item 对于关键语句使用令 关键语句执行的次数是 t 次。
+\end{itemize}
+
+\section{真题实战}
+
+\subsection{2011年408}
+设n是描述问题规模的非负整数，下面程序片段的时间复杂度是( )
+\begin{lstlisting}[basicstyle=\small\ttfamily, caption={}, numbers=none]
+x = 2;
+while(x < n/2)
+	x=2*x; // 3
+\end{lstlisting}
+解:\newline
+{\color{red}(计算函数关键语句的执行次数)}\newline
+令： 第三行语句执行了t次，\newline
+可知条件不满足的情况是$ x*2^t >= n/2 $,其中x = 2\newline
+所以条件不满足的情况 $ 2^{t+1} >= n/2  $ \newline
+求解t： 可知 $t >= log_2(n) - 2$ \newline
+舍去低阶项，可知 $ t >= log_2(n)$ \newline
+再用大O表示，可得时间复杂度为 $O(log_2 n)$
+
+\subsection{2014年408}
+下面程序片段的时间复杂度是( )
+\begin{lstlisting}[basicstyle=\small\ttfamily, caption={}, numbers=none]
+count=0;
+for(k=1; k<=n; k*=2)// 1
+	for(j=1; j<=n; j++) // 2
+		count++;// 3
+\end{lstlisting}
+解:\newline
+{\color{red}(计算函数关键语句的执行次数)}\newline
+计算 3 语句的频度\newline
+已知：for里面for循环导致3语句执行次数是两个for次数相乘\newline
+令 1语句中 k*=2 执行了 t 次。
+1 语句可以执行 $ k*2^t > n $ \newline
+可得 $ t > log_2 (n) $ \newline
+1的每个循环中，易知 2 语句中 j++ 执行了 n 次。\newline
+易知，3语句的执行次数和2语句中 j++是一样的的。\newline
+得到总执行次数$ log_2 (n) * n$ (前面的系数忽略)\newline
+易知，时间复杂度为 $ log_2 (n) * n $\newline
+
+\subsection{2017年408}
+下列函数的时间复杂度是( )
+\begin{lstlisting}[basicstyle=\small\ttfamily, caption={}, numbers=none]
+int func(int n){
+	int i=0; sum=0;
+	while(sum < n) 
+		sum += ++i;\\ 4
+	return i;
+}
+\end{lstlisting}
+解:\newline
+{\color{red}(计算函数关键语句的执行次数)}\newline
+可知i的变化是 1,2,3,4,5...\newline
+令 4 语句执行了 t 次\newline
+sum = 1 + 2 + 3 + ... + t \newline
+可知当条件不满足时$ sum = \frac{t * (1 + t)}{2} >= n $\newline
+得知 $ t + t^2 >= 2n$\newline
+忽略低次项$ t >= \sqrt{2*n} $\newline
+忽略常数项的系数 $ t >= \sqrt{n}$ \newline
+得知时间复杂度是 $ O(\sqrt{n})$
+
+
+
+
+
+

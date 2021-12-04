@@ -1,0 +1,30 @@
+%# -*- coding: utf-8-unix -*-
+%%==================================================
+\chapter{系统设计题}
+\label{chap1}
+\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+	\item ...
+\end{itemize}
+
+\section{知识点和方法论}
+\subsubsection{分布式ID生成器}
+
+使用UUID
+4个字节表示的Unix timestamp,
+3个字节表示的机器的ID
+2个字节表示的进程ID
+3个字节表示的计数器
+
+SnowFlake 算法，是 Twitter 开源的分布式 id 生成算法。其核心思想就是：使用一个 64 bit 的 long 型的数字作为全局唯一 id。在分布式系统中的应用十分广泛，且ID 引入了时间戳，基本上保持自增的，后面的代码中有详细的注解。
+
+给大家举个例子吧，比如下面那个 64 bit 的 long 型数字：
+
+第一个部分，是 1 个 bit：0，这个是无意义的。
+
+第二个部分是 41 个 bit：表示的是时间戳。
+
+第三个部分是 5 个 bit：表示的是机房 id，10001。
+
+第四个部分是 5 个 bit：表示的是机器 id，1 1001。
+
+第五个部分是 12 个 bit：表示的序号，就是某个机房某台机器上这一毫秒内同时生成的 id 的序号，0000 00000000。

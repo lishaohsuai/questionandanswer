@@ -1,0 +1,25 @@
+%# -*- coding: utf-8-unix -*-
+%%==================================================
+\chapter{bash}
+\label{chap1}
+\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+	\item ...
+\end{itemize}
+
+\section{知识点和方法论}
+
+\subsubsection{awk 命令}
+\% 是用来格式化字符串的
+\$ 是用来取出变量的
+
+$$
+	ps -ef | grep "synergy" | awk 'print \$2' | xargs kill -9
+$$
+
+\subsubsection{找出那些js文件没有设置好权限}
+
+find + perm + mode
+
+$$
+	find . -name "*.js" -perm 644 -print
+$$
